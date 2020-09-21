@@ -153,17 +153,17 @@
 <li class="row row--3">
 <ol class="seats" type="A">
 <li class="seat">
-<input type="checkbox" id="B6" />
-<label for="B6">B6</label>
+<input type="checkbox" id="A10" />
+<label for="A10">A10</label>
 </li>
 <li class="seat">
-<input type="checkbox" id="B5" />
-<label for="B5">B5</label>
+<input type="checkbox" id="A9" />
+<label for="A9">A9</label>
 </li>
 <br>
 <li class="seat">
-<input type="checkbox" id="B4" />
-<label for="B4">B4</label>
+<input type="checkbox" id="A8" />
+<label for="A8">A8</label>
 </li>
 <li class="seat">
 <input type="checkbox" id="A7" />
