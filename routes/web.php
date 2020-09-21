@@ -49,5 +49,12 @@ Route::post('makereservation', 'HomeController@makereservation')->name('makerese
 Route::get('openion', 'HomeController@openion')->name('openion');
 
 Route::post('saveopenion', 'HomeController@saveopenion')->name('saveopenion');
+//place
+Route::get('place', 'HomeController@place')->name('place');
+
+
+
+
+
 
 });

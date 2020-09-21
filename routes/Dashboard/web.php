@@ -8,6 +8,7 @@ Route::get('/', 'HomeController@index');
 
 Route::resource('category', 'CategoryController');
 
+
 Route::resource('pcategory', 'PcategoryController');
 
 Route::resource('blog', 'BlogController');
@@ -15,6 +16,7 @@ Route::resource('blog', 'BlogController');
 Route::resource('slider', 'SliderController')->except(['show', 'create']);
 
 Route::resource('project', 'ProjectController');
+Route::resource('openion', 'ProjectController');
 
 Route::resource('about', 'AboutController')->except(['show', 'create']);
 

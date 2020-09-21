@@ -55,4 +55,5 @@ return [
     'menu' => 'Menu',
     'back' => 'Back',
     'openion' => 'Your Opinion',
+    'place' => 'Our Place',
 ];

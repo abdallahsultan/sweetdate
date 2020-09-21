@@ -16,6 +16,7 @@
 <link rel="stylesheet"  href="{{ asset('main/css/sweetalert2.css') }}">
 <link href="{{ asset('website/fonts/selima/stylesheet.css') }}" rel="stylesheet">
 <link href="{{ asset('website/css/mokh_style.css') }}" rel="stylesheet">
+<link href="{{ asset('website/bookingstyle/style.css') }}" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lato" rel="stylesheet">
 @if(app()->getLocale() == 'ar')
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
@@ -1509,8 +1510,10 @@
                         <li><a href="{{ route('services')}}">@lang('site.services')</a></li>
                         <li><a href="{{ route('events')}}">@lang('site.events')</a></li>
                         <li><a href="{{ route('blogs')}}">@lang('site.blogs')</a></li>
-                        <li><a href="{{ route('openion')}}">@lang('site.openion')</a></li>
-                        <li><a href="{{ route('reserve')}}">@lang('site.reserve')</a></li>
+						<li><a href="{{ route('openion')}}">@lang('site.openion')</a></li>
+						
+						<li><a href="{{ route('reserve')}}">@lang('site.reserve')</a></li>
+						<li><a href="{{ route('place')}}">@lang('site.place')</a></li>
                         <li><a href="{{ route('contact')}}">@lang('site.contact')</a></li>
                     </ul>
                     <div class="date_main_menu_content_menu_copy">

@@ -143,7 +143,14 @@ class HomeController extends Controller
 
         return view('products', compact('products'));
     }
+     
+    public function place ()
+    {
 
+       
+
+        return view('place');
+    }
     public function reserve ()
     {
 

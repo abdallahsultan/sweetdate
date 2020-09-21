@@ -1,0 +1,144 @@
+
+.product-fields .product-field, .product-related-categories .product-field{
+	margin-top: 20px;
+}
+.product-field-display {
+    float: left;
+    width: 100%;
+}
+.smartcms_slider_block{
+    float: left;
+    width: 100%;
+}
+
+.jslider .jslider-bg{
+	background: #f7f7f7 none repeat scroll 0 0;
+	box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.07) inset, 0 2px 2px rgba(0, 0, 0, 0.07) inset;
+    box-sizing: border-box;
+	overflow: hidden;
+	height: 15px;
+}
+.jslider {
+    display: block;
+    width: auto;
+    height: 1em;
+    position: relative;
+    top: 1.6em;
+    font-family: Arial, sans-serif;
+}
+.jslider table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+}
+.jslider td,
+.jslider th {
+    padding: 0;
+    vertical-align: top;
+    text-align: left;
+    border: 0;
+}
+.jslider table,
+.jslider table tr,
+.jslider table tr td {
+    width: 100%;
+    vertical-align: top;
+}
+.jslider .jslider-bg {
+    position: relative;
+}
+.jslider .jslider-bg i {
+    height: 15px;
+    position: absolute;
+    font-size: 0;
+    top: 0;
+}
+.jslider .jslider-bg .l {
+    width: 10%;
+    left: 0;
+}
+.jslider .jslider-bg .f {
+    width: 80%;
+    left: 10%;
+}
+.jslider .jslider-bg .r {
+    width: 10%;
+    left: 90%;
+}
+.jslider .jslider-bg .v {
+    background: green none repeat scroll 0 0;
+    height: 15px;
+    left: 20%;
+    position: absolute;
+    top: 0;
+    width: 60%;
+}
+
+.jslider .jslider-pointer-hover {
+    background-position: -20px -60px;
+}
+.jslider .jslider-pointer-to {
+    left: 80%;
+}
+.jslider .jslider-label {
+    font-size: 9px;
+    line-height: 12px;
+    color: black;
+    opacity: 0.4;
+    white-space: nowrap;
+    padding: 0px 2px;
+    position: absolute;
+    top: -18px;
+    left: 0px;
+}
+.jslider .jslider-label-to {
+    left: auto;
+    right: 0;
+}
+.jslider .jslider-value {
+    font-size: 9px;
+    white-space: nowrap;
+    padding: 1px 2px 0;
+    position: absolute;
+    top: -19px;
+    left: 20%;
+    background: white;
+    line-height: 12px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.jslider .jslider-value-to {
+    left: 80%;
+}
+.jslider .jslider-label small,
+.jslider .jslider-value small {
+    position: relative;
+    top: -0.4em;
+}
+.jslider .jslider-scale {
+    position: relative;
+    top: 9px;
+}
+.jslider .jslider-scale span {
+    width: 50px;
+    position: absolute;
+    height: 5px;
+    border-left: 1px solid #999;
+    font-size: 0;
+}
+.jslider .jslider-scale ins {
+    font-size: 9px;
+    text-decoration: none;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    color: #999;
+}
+.jslider-single .jslider-pointer-to,
+.jslider-single .jslider-value-to,
+.jslider-single .jslider-bg .v,
+.jslider-limitless .jslider-label {
+    display: none;
+}
