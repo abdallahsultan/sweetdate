@@ -1,0 +1,81 @@
+@extends('layouts.admin')
+
+@section('content')
+
+
+<div class="page-body">
+    <div class="container-fluid">
+      <div class="page-header">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>المقالات</h3>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{{ route('dashboard.')}}"><i data-feather="home"></i></a></li>
+              <li class="breadcrumb-item">الرئيسيه</li>
+              <li class="breadcrumb-item">المقالات</li>
+              <li class="breadcrumb-item active">اضافه جديد</li>
+            </ol>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="bookmark pull-right">
+                  <a href="{{ route('dashboard.blog.create') }}"  class="btn btn-primary"> اضافه جديد </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+
+                @include('partials.error')
+
+              <form id="personal-info" method="POST" action="{{ route('dashboard.blog.store') }}" enctype="multipart/form-data">
+                  @csrf
+                  @foreach (config('translatable.locales') as $index=>$locale)
+                <div class="form-group row">
+                  <label for="input-1" class="col-sm-3 col-form-label">>@lang('admin.' . $locale . '.title')</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="input-1" name="{{$locale}}[title]" value="{{ old('title') }}" required>
+                  </div>
+                </div>
+
+
+                <div class="form-group row">
+                  <label for="input-4" class="col-sm-3 col-form-label">>@lang('admin.' . $locale . '.body')</label>
+                  <div class="col-sm-8">
+                    <textarea class="summernote" style="height: 300px;" cols="70" name="{{$locale}}[body]">{{ old('body') }}</textarea>
+                  </div>
+                </div>
+
+                @endforeach
+
+                <div class="form-group row">
+                    <label for="input-2" class="col-sm-3 col-form-label">@lang('admin.avatar')</label>
+                    <div class="col-sm-6">
+                      <input type="file" name="avatar" class="form-control" id="input-2" required>
+                    </div>
+                  </div>
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> @lang('admin.save')</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><!--End Row-->
+@endsection
+
+
+@push('js')
+
+<script src="{{ asset('main/summernote.js') }}"></script>
+<script src="{{ asset('main/summernote.custom.js') }}"></script>
+    
+@endpush

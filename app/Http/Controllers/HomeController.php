@@ -1,0 +1,268 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\About;
+use App\Blog;
+use App\Category;
+use App\contactsection;
+use App\Counter;
+use App\Latest;
+use App\Mail;
+use App\Partner;
+use App\Product;
+use App\Project;
+use App\Reservation;
+use App\Scategory;
+use App\Service;
+use App\Slider;
+use App\Team;
+use App\Test;
+use App\Video;
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+
+    public function index()
+    {
+
+    //    $contact = contactsection::findOrFail(1);
+
+       $counters = Counter::all();
+
+        $slider = Slider::findOrFail(1);
+
+        $partners = Partner::latest()->get();
+
+        $about = About::findOrFail(1);
+
+        $story = Latest::findOrFail(1);
+
+        $categories = Category::latest()->get();
+
+        $services = Service::latest()->get();
+
+        $teams = Team::latest()->get();
+
+        $blogs = Blog::latest()->take(3)->get();
+
+        $tests = Test::where('status', '=', 1)->latest()->get();
+
+        $lprojects = Project::latest()->take(10)->get();
+
+        $projectz = Project::first();
+
+        $video = Video::findOrFail(1);
+
+        $products = Product::all();
+
+
+        return view('index', compact('video', 'products', 'lprojects', 'counters', 'story', 'projectz', 'blogs', 'partners', 'about', 'categories', 'services', 'slider', 'teams', 'tests'));
+    }
+
+    public function blogs()
+    {
+        $blogs = Blog::latest()->paginate(12);
+
+        return view('blogs', compact('blogs'));
+    }
+
+    public function events()
+    {
+        $blogs = Project::latest()->paginate(12);
+
+        return view('events', compact('blogs'));
+    }
+
+
+
+
+    public function blogdetails($id)
+    {
+        $blog = Blog::findOrFail($id);
+
+        return view('singleblog', compact('blog'));
+    }
+
+    public function eventdetails($id)
+    {
+        $blog = Project::findOrFail($id);
+
+        return view('singleevent', compact('blog'));
+    }
+
+
+    public function services()
+    {
+        $partners = Partner::latest()->get();
+
+        $services = Service::latest()->get();
+
+        return view('services', compact('services', 'partners'));
+    }
+
+
+    public function about()
+    {
+        $partners = Partner::latest()->get();
+
+        $about = About::findOrFail(1);
+
+        $services = Service::latest()->get();
+
+        $teams = Team::latest()->get();
+
+        $tests = Test::latest()->get();
+
+
+        return view('about', compact('partners', 'about', 'teams', 'tests', 'services'));
+    }
+
+
+    public function projects()
+    {
+
+        $projects = Project::latest()->get();
+
+        return view('portfolio', compact('projects'));
+    }
+
+    public function projectcat($id)
+    {
+
+        $projects = Project::where('category_id', $id)->latest()->get();
+
+        return view('portfolio', compact('projects'));
+    }
+
+    public function products ()
+    {
+
+        $products = Product::all();
+
+        return view('products', compact('products'));
+    }
+
+    public function reserve ()
+    {
+
+        return view('reserve');
+    }
+
+
+    public function projectdetails($id)
+    {
+        $project = Project::findOrFail($id);
+
+        return view('project', compact('project'));
+    }
+
+    public function product($id)
+    {
+        $product = Product::findOrFail($id);
+
+        return view('product', compact('product'));
+    }
+
+    public function showservices($id)
+    {
+        $services = Service::where('scategory_id', $id)->latest()->get();
+
+        return view('services', compact('services'));
+    }
+
+    public function service($id)
+    {
+        $service = Service::findOrFail($id);
+
+        return view('service', compact('service'));
+    }
+
+
+
+    public function contactform (Request $request){
+
+
+
+        $request->validate([
+
+            'name'        => 'required',
+            'email'       => 'required',
+            'phone'       => 'required',
+            'body'        => 'required',
+        ]);
+
+        $input = $request->all();
+
+        Mail::create($input);
+
+        session()->flash('message', 'Message Sent Successfully');
+
+        return redirect()->back();
+
+    }
+
+
+    public function makereservation (Request $request){
+
+        $request->validate([
+
+            'name'         => 'required',
+            'email'        => 'required',
+            'phone'        => 'required',
+            'message'      => 'required',
+            'date'         => 'required',
+            'time'         => 'required',
+            'number'       => 'required',
+        ]);
+
+        $input = $request->all();
+
+        Reservation::create($input);
+
+        session()->flash('message', 'Reserved Successfully');
+
+        return redirect()->route('home');
+
+    }
+
+
+    public function openion(){
+
+        return view('openion');
+    }
+
+
+    public function saveopenion(Request $request){
+
+
+        $request->validate([
+
+            'name' => 'required',
+            'phone' => 'required',
+            'message' => 'required',
+        ]);
+
+        $input = [];
+
+        $input['ar']['title'] = $request->name;
+        $input['ar']['body'] = $request->message;
+
+        $input['en']['title'] = $request->name;
+        $input['en']['body'] = $request->message;
+
+        $input['avatar']     = 'defualt.png';
+        $input['phone']      =  $request->phone;
+        $input['status']     = 0;
+
+        Test::create($input);
+
+        session()->flash('message', 'Thank You Openion Saved Successfully');
+
+        return redirect()->route('home');
+
+    }
+
+
+}
