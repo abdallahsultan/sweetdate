@@ -546,15 +546,7 @@
         }else{
             alert('Are You Sure  to cancel your reservation'+' '+'Table '+' '+id);
         }
-        et OKAction = UIAlertAction(title: "Yes, I'm sure!", style: .default) { (action:UIAlertAction!) in
-        // Code in this block will trigger when OK button tapped.
-        print("Ok button tapped");
-    if (input.text != "")
-    {
-        list.append(input.text!)
-        input.text = ""
-    }
-}
+  
         
         console.log(data);
 
