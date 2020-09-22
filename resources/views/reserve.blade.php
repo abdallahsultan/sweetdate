@@ -42,18 +42,14 @@
                             <input type="number" placeholder="Phone" class="form-control" name="phone" required>
                              <br>
                             
-                            <!-- <input type="submit" class="btn" value="@lang('site.send')" > -->
+                           
                         
                         </div>
-
+                    
                        
                         
                     </div>
-
-
-                </div>
-          <!-- booking table -->
-        <div class="indoor">
+                    <div class="indoor">
         <div class="container-fluid text-center">
 
 <div class="row">
@@ -80,21 +76,21 @@
 <li class="row row--1">
 <ul class="seats" type="A">
 <li class="seat">
-<input type="checkbox"  data-toggle="tooltip" title="Hooray!" class="click"  id="vip1" />
+<input type="checkbox" name="table[vip1]"     id="vip1" />
 <label for="vip1">VIP1</label>
 </li>
 <br>
 <li class="seat">
-<input type="checkbox" id="vip2" />
+<input type="checkbox" name="table[vip2]"  id="vip2" />
 <label for="vip2">VIP2</label>
 </li>
 <li class="seat">
-<input type="checkbox" id="A1" />
+<input type="checkbox" name="table[A1]" id="A1" />
 <label for="A1">A1</label>
 </li>
 
 <li class="seat">
-<input type="checkbox" id="B1" />
+<input type="checkbox" name="table[B1]" id="B1" />
 <label for="B1">B1</label>
 </li>
 </ul>
@@ -103,20 +99,20 @@
 <li class="row row--1">
 <ul class="seats" type="A">
 <li class="seat">
-<input type="checkbox"  class="click"  id="vip3" />
+<input type="checkbox" name="table[vip3]"    id="vip3" />
 <label for="vip3">VIP3</label>
 </li><br>
 <li class="seat">
-<input type="checkbox" id="vip4" />
+<input type="checkbox" name="table[vip4]" id="vip4" />
 <label for="vip4">VIP4</label>
 </li>
 
 <li class="seat">
-<input type="checkbox" id="A2" />
+<input type="checkbox" name="table[A2]" id="A2" />
 <label for="A2">A2</label>
 </li>
 <li class="seat">
-<input type="checkbox" id="B2" />
+<input type="checkbox" name="table[B2]" id="B2" />
 <label for="B2">B2</label>
 </li>
 </ul>
@@ -126,26 +122,26 @@
 <li class="row row--2">
 <ol class="seats" type="A">
 <li class="seat">
-<input type="checkbox" id="A6" />
+<input type="checkbox" name="table[A6]" id="A6" />
 <label for="A6">A6</label>
 </li>
 <li class="seat">
-<input type="checkbox" id="A5" />
+<input type="checkbox" name="table[A5]" id="A5" />
 <label for="A5">A5</label>
 </li>
 
 <br>
 <li class="seat">
-<input type="checkbox" id="A4" />
+<input type="checkbox" name="table[A4]" id="A4" />
 <label for="A4">A4</label>
 </li>
 <li class="seat">
-<input type="checkbox" id="A3" />
+<input type="checkbox" name="table[A3]" id="A3" />
 <label for="A3">A3</label>
 </li>
 
 <li class="seat">
-<input type="checkbox" id="B3" />
+<input type="checkbox" name="table[B3]" id="B3" />
 <label for="B3">B3</label>
 </li>
 </ol>
@@ -153,24 +149,24 @@
 <li class="row row--3">
 <ol class="seats" type="A">
 <li class="seat">
-<input type="checkbox" id="A10" />
+<input type="checkbox" name="table[A10]" id="A10" />
 <label for="A10">A10</label>
 </li>
 <li class="seat">
-<input type="checkbox" id="A9" />
+<input type="checkbox" name="table[A9]" id="A9" />
 <label for="A9">A9</label>
 </li>
 <br>
 <li class="seat">
-<input type="checkbox" id="A8" />
+<input type="checkbox" name="table[A8]" id="A8" />
 <label for="A8">A8</label>
 </li>
 <li class="seat">
-<input type="checkbox" id="A7" />
+<input type="checkbox" name="table[A7]" id="A7" />
 <label for="A7">A7</label>
 </li>
 <li class="seat">
-<input type="checkbox" id="B4" />
+<input type="checkbox" name="table[B4]" id="B4" />
 <label for="B4">B4</label>
 </li>
 </ol>
@@ -183,13 +179,13 @@
 <li class="row row--1">
 <ul class="seats" type="A">
 <li class="seat">
-<input type="checkbox"  disabled=""  id="vip1" />
-<label style="    padding: 9px 57px;     font-size: 40px; line-height: 2rem;" for="">xx</label>
+<input type="checkbox"   disabled=""  id="4" />
+<label style="    padding: 9px 57px;     font-size: 40px; line-height: 2rem;" for="">x</label>
 </li>
 
 
 <li class="seat">
-<input type="checkbox" id="vipplus" />
+<input type="checkbox" name="table[vipplus]" id="vipplus" />
 <label  style=" font-size: 30px; " for="vipplus">VIP+</label>
 </li>
 </ul>
@@ -209,9 +205,17 @@
 </div>
 
 </div>
+
+ <input type="submit" class="btn" value="@lang('site.send')" >
+     </form>
+
+
+                </div>
+          <!-- booking table -->
+        
         </div>
 
-
+<!-- 
 <div class="container-fluid text-center">
 
 <div class="row">
@@ -220,7 +224,7 @@
 </div>
 
 
-</div>
+</div> -->
 
 
 
@@ -536,34 +540,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script>
-    $('input[type="checkbox"]').on('click', function(){
-        
-        var data = {};
-       var id= data.id = $(this).attr('id');
-        var value =data.value = $(this).is(':checked') ? 1 : 0;
-        if(value == 1){
-            alert('Are You Sure Of your reservation'+' '+'Table '+' '+id);
-        }else{
-            alert('Are You Sure  to cancel your reservation'+' '+'Table '+' '+id);
-        }
-  
-        
-        console.log(data);
+       
+         
+//        $.ajaxSetup({
 
-        $.ajax({
-            type: "POST",
-            url: "/ajax.php",
-            data: data,
-        }).done(function(data) {
-                console.log(data);
-        });
-    });
+// headers: {
+
+//     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+
+// }
+// });
+    
+        
+//     $('input[type="checkbox"]').on('click', function(){
+        
+//         var data = {};
+//        var id= data.id = $(this).attr('id');
+//         var value =data.value = $(this).is(':checked') ? 1 : 0;
+        
+//         if(value == 1){
+//             alert('Are You Sure Of your reservation'+' '+'Table '+' '+id);
+//             swal("Good job!", "sdfasfasf", "success");
+//         }else{
+//             alert('Are You Sure  to cancel your reservation'+' '+'Table '+' '+id);
+//         }
+    
+//         console.log(data);
+
+//         $.ajax({
+//             type: "POST",
+//             url: $("form").attr('action'),
+//             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+//             data: data,
+//         }).done(function(data) {
+//                 console.log(data);
+//                 alert(error);
+//         });
+//     });
 
  
 
 </script>
 
     <script>
+         
+
+
     var menuItems = $('.main-navigation li');
 
 menuItems.on("click", function(event) {

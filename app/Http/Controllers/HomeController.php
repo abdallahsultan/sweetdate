@@ -156,6 +156,7 @@ class HomeController extends Controller
 
         return view('reserve');
     }
+   
 
 
     public function projectdetails($id)
@@ -212,25 +213,37 @@ class HomeController extends Controller
 
 
     public function makereservation (Request $request){
-
+        
+        if($request->table ==null){
+            session()->flash('error','you Should Complete information Your Booking');
+            return back();
+        }
         $request->validate([
 
             'name'         => 'required',
-            'email'        => 'required',
             'phone'        => 'required',
-            'message'      => 'required',
-            'date'         => 'required',
-            'time'         => 'required',
-            'number'       => 'required',
+            'table'        =>'required',
+            
         ]);
+        
+       
+        
+        $values=[];
+        $table=$request->table;
+        foreach($table as $key => $value)
+    {
+        $values[] = $key;
+    }
+        
 
-        $input = $request->all();
-
+        
+        $input = array_merge(request()->all(), ['table' => implode(",",$values)]);
+        
         Reservation::create($input);
+       
+        session()->flash('message', 'Your request has been booked'.' '.implode(",",$values));
 
-        session()->flash('message', 'Reserved Successfully');
-
-        return redirect()->route('home');
+        return back();
 
     }
 

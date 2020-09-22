@@ -1579,6 +1579,15 @@
 
 @php }  @endphp
 
+@php if(session()->has('error')){  @endphp
+
+<script>swal("Check Your Information", "<?php echo session()->get('error') ?>", "warning")
+
+</script>
+
+@php }  @endphp
+
+
 <script>$(window).on('load', function() { $(".loading").remove(); });</script>
 </body>
 </html>

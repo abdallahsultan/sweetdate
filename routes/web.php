@@ -29,8 +29,10 @@ Route::get('contact', function () {
 Route::get('project/{id}', 'HomeController@projectcat')->name('project');
 
 Route::get('product', 'HomeController@products')->name('products');
-
+//reserve
 Route::get('reserve', 'HomeController@reserve')->name('reserve');
+Route::post('makereservation', 'HomeController@makereservation')->name('makereservation');
+
 
 Route::get('product/{id}', 'HomeController@product')->name('product');
 
@@ -44,7 +46,7 @@ Auth::routes(['register' => false]);
 
 Route::get('showservices/{id}', 'HomeController@showservices')->name('showservices');
 
-Route::post('makereservation', 'HomeController@makereservation')->name('makereservation');
+
 
 Route::get('openion', 'HomeController@openion')->name('openion');
 
