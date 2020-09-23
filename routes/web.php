@@ -31,8 +31,8 @@ Route::get('project/{id}', 'HomeController@projectcat')->name('project');
 Route::get('product', 'HomeController@products')->name('products');
 //reserve
 Route::get('reserve', 'HomeController@reserve')->name('reserve');
-Route::get('reserve/indoor', 'HomeController@reserveindoor')->name('reserve');
-Route::get('reserve/outdoor', 'HomeController@reserveoutdoor')->name('reserve');
+Route::get('reserve/indoor', 'HomeController@reserveindoor')->name('reserve/indoor');
+Route::get('reserve/outdoor', 'HomeController@reserveoutdoor')->name('reserve/outdoor');
 Route::post('makereservationindoor', 'HomeController@makereservation')->name('makereservationindoor');
 Route::post('makereservationoutdoor', 'HomeController@makereservation')->name('makereservationoutdoor');
 

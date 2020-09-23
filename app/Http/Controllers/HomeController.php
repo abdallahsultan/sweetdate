@@ -273,7 +273,7 @@ class HomeController extends Controller
         Reservation::create($input);
         
        
-       session()->flash('message', 'Hi'.' '.$request->name.' '.'Your request has been booked'.' '.implode(",",$values));
+       session()->flash('message', 'Hi'.' '.$request->name.','.' '.'Your request has been booked'.' '.implode(",",$values));
 
         return back();
 
