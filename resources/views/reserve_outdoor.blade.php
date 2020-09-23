@@ -494,41 +494,41 @@
     <ol class="seats" type="B" >
     <ul class="seats">
               <li style="right: 20%;" class="seat">
-                @if(in_array('C5', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="C5 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+                @if(in_array('E1', $tables))
+                <label ><img type="image"  data-toggle="tooltip"   title="E1 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
                 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
                 <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg></div>
                 @else
-                <input type="checkbox" name="table[C5]" id="C5" />
-                <label for="C5"><img type="image" for="C5" data-toggle="tooltip"   title="C5" src="{{asset('website/img/c.png')}}"   /> </label>
+                <input type="checkbox" name="table[E1]" id="E1" />
+                <label for="E1"><img type="image" for="E1" data-toggle="tooltip"   title="E1" src="{{asset('website/img/c.png')}}"   /> </label>
             
                 @endif
             </li>
     
                 <li style="right: 10%;"  class="seat">
-                @if(in_array('C7', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="C7 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+                @if(in_array('E2', $tables))
+                <label ><img type="image"  data-toggle="tooltip"   title="E2 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
                 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
                 <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg></div>
                 @else
-                <input type="checkbox" name="table[C7]" id="C7" />
-                <label for="C7"><img type="image" for="C7" data-toggle="tooltip"   title="C7" src="{{asset('website/img/c.png')}}"   /> </label>
+                <input type="checkbox" name="table[E2]" id="E2" />
+                <label for="E2"><img type="image" for="E2" data-toggle="tooltip"   title="E2" src="{{asset('website/img/c.png')}}"   /> </label>
             
                 @endif
                 </li>
 
               <ul class="seats">
                 <li  class="seat">
-                @if(in_array('C6', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="C6 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+                @if(in_array('E3', $tables))
+                <label ><img type="image"  data-toggle="tooltip"   title="E3 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
                 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
                 <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg></div>
                 @else
-                <input type="checkbox" name="table[C6]" id="C6" />
-                <label for="C6"><img type="image" for="C6" data-toggle="tooltip"   title="C6" src="{{asset('website/img/c.png')}}"   /> </label>
+                <input type="checkbox" name="table[E3]" id="E3" />
+                <label for="E3"><img type="image" for="E3" data-toggle="tooltip"   title="E3" src="{{asset('website/img/c.png')}}"   /> </label>
             
                 @endif
                 </li>
@@ -539,28 +539,28 @@
               <ul class="seats">
                 <ul class="seats">
                 <li style="left: -29%%;" class="seat">
-                @if(in_array('C5', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="C5 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+                @if(in_array('E4', $tables))
+                <label ><img type="image"  data-toggle="tooltip"   title="E4 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
                 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
                 <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg></div>
                 @else
-                <input type="checkbox" name="table[C5]" id="C5" />
-                <label for="C5"><img type="image" for="C5" data-toggle="tooltip"   title="C5" src="{{asset('website/img/c.png')}}"   /> </label>
+                <input type="checkbox" name="table[E4]" id="E4" />
+                <label for="E4"><img type="image" for="E4" data-toggle="tooltip"   title="E4" src="{{asset('website/img/c.png')}}"   /> </label>
             
                 @endif
                 </li>
 
                 </ul>
                 <li style="left: -29%%;" class="seat">
-                @if(in_array('C5', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="C5 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+                @if(in_array('E5', $tables))
+                <label ><img type="image"  data-toggle="tooltip"   title="E5 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
                 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
                 <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg></div>
                 @else
-                <input type="checkbox" name="table[C5]" id="C5" />
-                <label for="C5"><img type="image" for="C5" data-toggle="tooltip"   title="C5" src="{{asset('website/img/c.png')}}"   /> </label>
+                <input type="checkbox" name="table[E5]" id="E5" />
+                <label for="E5"><img type="image" for="E5" data-toggle="tooltip"   title="E5" src="{{asset('website/img/c.png')}}"   /> </label>
             
                 @endif
                 </li>
@@ -575,44 +575,44 @@
   
 <div class="col-md-12">
   
-  <ol class="seats" type="B" >
+  <ol class="seats" type="D" >
   <ul class="seats">
             <li style="right: 20%;" class="seat">
-              @if(in_array('C5', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="C5 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+              @if(in_array('D1', $tables))
+              <label ><img type="image"  data-toggle="tooltip"   title="D1 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
               <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
               <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
               </svg></div>
               @else
-              <input type="checkbox" name="table[C5]" id="C5" />
-              <label for="C5"><img type="image" for="C5" data-toggle="tooltip"   title="C5" src="{{asset('website/img/c.png')}}"   /> </label>
+              <input type="checkbox" name="table[D1]" id="D1" />
+              <label for="D1"><img type="image" for="D1" data-toggle="tooltip"   title="D1" src="{{asset('website/img/c.png')}}"   /> </label>
           
               @endif
           </li>
   
               <li style="right: 10%;"  class="seat">
-              @if(in_array('C7', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="C7 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+              @if(in_array('D2', $tables))
+              <label ><img type="image"  data-toggle="tooltip"   title="D2 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
               <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
               <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
               </svg></div>
               @else
-              <input type="checkbox" name="table[C7]" id="C7" />
-              <label for="C7"><img type="image" for="C7" data-toggle="tooltip"   title="C7" src="{{asset('website/img/c.png')}}"   /> </label>
+              <input type="checkbox" name="table[D2]" id="D2" />
+              <label for="D2"><img type="image" for="D2" data-toggle="tooltip"   title="D2" src="{{asset('website/img/c.png')}}"   /> </label>
           
               @endif
               </li>
 
             <ul class="seats">
               <li  class="seat">
-              @if(in_array('C6', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="C6 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+              @if(in_array('D3', $tables))
+              <label ><img type="image"  data-toggle="tooltip"   title="D3 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
               <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
               <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
               </svg></div>
               @else
-              <input type="checkbox" name="table[C6]" id="C6" />
-              <label for="C6"><img type="image" for="C6" data-toggle="tooltip"   title="C6" src="{{asset('website/img/c.png')}}"   /> </label>
+              <input type="checkbox" name="table[D3]" id="D3" />
+              <label for="D3"><img type="image" for="D3" data-toggle="tooltip"   title="D3" src="{{asset('website/img/c.png')}}"   /> </label>
           
               @endif
               </li>
@@ -623,28 +623,28 @@
             <ul class="seats">
               <ul class="seats">
               <li style="left: -29%%;" class="seat">
-              @if(in_array('C5', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="C5 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+              @if(in_array('D4', $tables))
+              <label ><img type="image"  data-toggle="tooltip"   title="D4 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
               <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
               <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
               </svg></div>
               @else
-              <input type="checkbox" name="table[C5]" id="C5" />
-              <label for="C5"><img type="image" for="C5" data-toggle="tooltip"   title="C5" src="{{asset('website/img/c.png')}}"   /> </label>
+              <input type="checkbox" name="table[D4]" id="D4" />
+              <label for="D4"><img type="image" for="D4" data-toggle="tooltip"   title="D4" src="{{asset('website/img/c.png')}}"   /> </label>
           
               @endif
               </li>
 
               </ul>
               <li style="left: -29%%;" class="seat">
-              @if(in_array('C5', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="C5 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
+              @if(in_array('D5', $tables))
+              <label ><img type="image"  data-toggle="tooltip"   title="D5 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
               <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
               <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
               </svg></div>
               @else
-              <input type="checkbox" name="table[C5]" id="C5" />
-              <label for="C5"><img type="image" for="C5" data-toggle="tooltip"   title="C5" src="{{asset('website/img/c.png')}}"   /> </label>
+              <input type="checkbox" name="table[D5]" id="D5" />
+              <label for="D5"><img type="image" for="D5" data-toggle="tooltip"   title="D5" src="{{asset('website/img/c.png')}}"   /> </label>
           
               @endif
               </li>
