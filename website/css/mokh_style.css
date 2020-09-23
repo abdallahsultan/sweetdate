@@ -7018,7 +7018,8 @@ path{
 
     animation: loading 3s linear infinite;
     stroke-dasharray: 0;
-    stroke-dashoffset: 0;
+	stroke-dashoffset: 0;
+	color: #e3cd71;
 }
 
 @keyframes loading {

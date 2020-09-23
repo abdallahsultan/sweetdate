@@ -49,6 +49,7 @@ return [
     'egallery' => 'Event Gallery',
     'evideo' => 'Event Video',
     'reserve' => 'Reservation',
+    'reserve' => 'Reserved',
     'date' => 'Date',
     'time' => 'Time',
     'tnumber' => 'Table Number',
@@ -56,4 +57,6 @@ return [
     'back' => 'Back',
     'openion' => 'Your Opinion',
     'place' => 'Our Place',
+    'indoor' => 'Indoor',
+    'outdoor' => 'Outdoor',
 ];

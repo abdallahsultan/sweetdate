@@ -93,10 +93,10 @@ html {
   right: 0;
 }
 
-.fuselage {
-  /* border-right: 5px solid #d8d8d8; */
+/* .fuselage {
+   border-right: 5px solid #d8d8d8; 
   border-left: 5px solid #d8d8d8;
-}
+} */
 
 ol {
   list-style: none;
@@ -149,26 +149,28 @@ ol {
   cursor: not-allowed;
 }
 .seat label {
-    display: block;
+  display: block;
     position: relative;
     width: 100%;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    line-height: 1.5rem;
-    padding: 8px 47px;
+    line-height: 2.5rem;
+    padding: 4px 4px;
     color: black;
-    background: #e3cd71;
-    border-radius: 5px;
+    background: #e3cd714f;
+    border-radius: 11px;
     animation-duration: 300ms;
     animation-fill-mode: both;
+    width: 100px;
 }
 .vip-plus{
-    margin-left: -530px;
-    transform: rotate(90deg);
-    margin-top: 26px;
-
+  margin-left: -570px;
+  transform: rotate(90deg);
+  margin-top: -18px;
 }
+
+
 /* .seat label {
     display: block;
     position: relative;
@@ -265,11 +267,18 @@ ol {
   animation-name: rubberBand;
 }
 .indoor{
-    border: 14px dashed;
+    border: 5px dashed;
     border-color: #e3cd71;
     margin: 2%;
     padding: 14px;
 
 }
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 /* taps */

@@ -156,7 +156,33 @@ class HomeController extends Controller
 
         return view('reserve');
     }
+    public function reserveindoor ()
+    {
+        $reserve_indoor=Reservation::where('type','indoor')->latest()->get();
+       
+        $tables=[];
+        foreach($reserve_indoor as $key => $value){
+
+           $count= explode(',', $value['table']);
+            if(count($count) == 1 ){
+                array_push($tables,$value['table'] );
+            }else{
+                for ($i = 0; $i < count($count); $i++) {            
+                    array_push($tables,$count[$i] );
+                  }
+            }
+       
+        }
+     
    
+    
+        return view('reserve_indoor',compact("tables","reserve_indoor"));
+    }
+    public function reserveoutdoor ()
+    {
+
+        return view('reserve_outdoor');
+    }
 
 
     public function projectdetails($id)
@@ -214,6 +240,7 @@ class HomeController extends Controller
 
     public function makereservation (Request $request){
         
+        
         if($request->table ==null){
             session()->flash('error','you Should Complete information Your Booking');
             return back();
@@ -234,14 +261,19 @@ class HomeController extends Controller
     {
         $values[] = $key;
     }
+        if($request->route()->getName() === "makereservationindoor" ){
+            $type="indoor";
+        }else{
+            $type="outdoor";
+        }
+         
         
-
-        
-        $input = array_merge(request()->all(), ['table' => implode(",",$values)]);
+        $input = array_merge(request()->all(), ['table' => implode(",",$values),'type'=>$type]);
         
         Reservation::create($input);
+        
        
-        session()->flash('message', 'Your request has been booked'.' '.implode(",",$values));
+       session()->flash('message', 'Hi'.' '.$request->name.' '.'Your request has been booked'.' '.implode(",",$values));
 
         return back();
 
