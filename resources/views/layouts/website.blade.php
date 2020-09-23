@@ -1511,7 +1511,7 @@
                         <li><a href="{{ route('events')}}">@lang('site.events')</a></li>
                         <li><a href="{{ route('blogs')}}">@lang('site.blogs')</a></li>
 						<li><a href="{{ route('openion')}}">@lang('site.openion')</a></li>
-						
+						<li><a href="{{ route('menu')}}">@lang('site.menu')</a></li>
 						<li><a href="{{ route('reserve')}}">@lang('site.reserve')</a></li>
 						<li><a href="{{ route('place')}}">@lang('site.place')</a></li>
                         <li><a href="{{ route('contact')}}">@lang('site.contact')</a></li>
