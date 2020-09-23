@@ -59,4 +59,7 @@ return [
     'place' => 'Our Place',
     'indoor' => 'Indoor',
     'outdoor' => 'Outdoor',
+    'food_service' => 'Food Service',
+    'waiting_time' => 'Waiting Time ',
+    'sanitization' => 'Sanitization' ,
 ];

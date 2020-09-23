@@ -1,6 +1,15 @@
 @extends('layouts.admin')
 
 @section('content')
+<style>
+.checked {
+  color: #FFD700;
+}
+.color_rat{
+  color: black;
+}
+}
+</style>
 
 <div class="page-body">
   <div class="container-fluid">
@@ -42,7 +51,9 @@
                     <th>الصوره</th>
                     <th>الهاتف</th>
                     <th>تاريخ  الاضافه</th>
+                    <th style="text-align:center">التقيم</th>
                     <th>الحاله</th>
+                   
                     <th>التحكم</th>
                   </tr>
                 </thead>
@@ -55,6 +66,27 @@
                       <td> <img src="{{ asset('images/' . $test->avatar ) }}" style="max-width: 100px;"> </td>
                       <td>{{ $test->phone  }}</td>
                       <td>{{ date('Y M d', strtotime($test->created_at))  }}</td>
+                      <td>
+                    
+                    <table>
+                        <tr>
+                      <th>  الخدمة</th>
+                    <th>  الإنتظار</th>
+                    <th>  الطعام</th>
+                    <th>   الطاقم</th>
+                    <th>  الجودة</th>
+                        </tr>
+                        <tr>
+                        <td>  <span class="fa fa-star checked"></span> <br> <b class="color_rat">{{ $test->services  }} </b>  </td>
+                        <td>  <span class="fa fa-star checked"></span> <br> <b class="color_rat">{{ $test->waiting_time  }} </b>  </td>
+                        <td>  <span class="fa fa-star checked"></span> <br> <b class="color_rat">{{ $test->food_srevice  }} </b>  </td>
+                        <td>  <span class="fa fa-star checked"></span> <br> <b class="color_rat">{{ $test->team  }} </b>  </td>
+                        <td>  <span class="fa fa-star checked"></span> <br> <b class="color_rat">{{ $test->sanitization  }} </b></td>
+                        </tr>
+                        
+                      </table>
+                      </td>
+                     
                       <td> @if($test->status == 0)
                              <a href="{{ route('dashboard.test.show', $test->id)}}" class="btn btn-info"> تفعيل </a>
                         @else
@@ -85,8 +117,11 @@
                     <th>#</th>
                     <th>العنوان</th>
                     <th>الصوره</th>
+                    <th>الهاتف</th>
                     <th>تاريخ  الاضافه</th>
-                    <th>الحاله</th>
+                    <th style="text-align:center">التقيم</th>
+                    
+                    <th >الحاله</th>
                     <th>التحكم</th>
                   </tr>
                 </tfoot>

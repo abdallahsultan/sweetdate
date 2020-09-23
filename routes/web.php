@@ -56,6 +56,9 @@ Route::get('openion', 'HomeController@openion')->name('openion');
 Route::post('saveopenion', 'HomeController@saveopenion')->name('saveopenion');
 //place
 Route::get('place', 'HomeController@place')->name('place');
+//menu
+Route::get('menu', 'HomeController@menu')->name('menu');
+
 
 
 

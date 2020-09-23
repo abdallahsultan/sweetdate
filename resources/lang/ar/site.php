@@ -55,5 +55,8 @@ return [
     'place' => 'الأماكن',
     'indoor' => 'الداخل ',
     'outdoor' => 'الخارج',
+    'food_service' => 'خدمة الطعام',
+    'waiting_time' => 'وقت الأنتظار ',
+    'sanitization' => 'النظافة' ,
 
 ];

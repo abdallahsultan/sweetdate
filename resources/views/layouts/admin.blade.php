@@ -116,7 +116,7 @@
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.latest.index') }}"><i data-feather="command"></i><span>رؤيتنا</span></a> </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.blog.index') }}"><i data-feather="folder-plus"></i><span>المقالات</span></a> </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.test.index') }}"><i data-feather="edit-3"></i><span>اراء العملاء</span> @if($testcount > 0) <label class="badge badge-danger"> {{ $testcount }}</label> @endif </a> </li>
-                   <li class="dropdown"><a class="nav-link" href="@{{ route('dashboard.openion') }}"><i data-feather="edit-3"></i><span> تصويت العملاء</span>  </a> </li> <!--  error in not found  -->
+                   <!-- <li class="dropdown"><a class="nav-link" href="@{{ route('dashboard.openion') }}"><i data-feather="edit-3"></i><span> تصويت العملاء</span>  </a> </li>  error in not found  -->
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.team.index') }}"><i data-feather="cloud-drizzle"></i><span>فريق العمل</span></a>  </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.partner.index') }}"><i data-feather="cloud"></i><span>شركاء النجاح</span></a> </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.mail.index') }}"><i data-feather="file-text"></i><span>البريد</span> @if($mailcount > 0) <label class="badge badge-danger"> {{ $mailcount }}</label> @endif </a> </li>
