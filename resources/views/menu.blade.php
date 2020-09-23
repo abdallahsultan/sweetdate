@@ -43,10 +43,10 @@
 </div>  
       
       <div class="col-md-6">             
-<a href="#" title=""><img src="{{asset('website/img/menu/menu1.jpg')}}"  class="img-responsive img-thumbnail"></a>
+<a href="#" title=""><img src="{{asset('website/img/menu/menu3.jpg')}}"  class="img-responsive img-thumbnail"></a>
 </div>
         <div class="col-md-6">             
-<a href="#" title=""><img src="{{asset('website/img/menu/menu2.jpg')}}"  class="img-responsive img-thumbnail"></a>
+<a href="#" title=""><img src="{{asset('website/img/menu/menu4.jpg')}}"  class="img-responsive img-thumbnail"></a>
 </div>  
       </div>
                    
