@@ -12,8 +12,8 @@
 
         <div class="date_slide_txt date_slide_center_middle text-center">
             <img src="images/bbq/bbq_logo.png" alt="" height="180"><br>
-            <div class="date_gold date_title_animation">{{ $slider->title }}</div>
-            <div class="date_slide_subtitle">{{ strip_tags($slider->body) }}</div>
+            <div class="date_gold date_title_animation">Sweet Date</div>
+            <!-- <div class="date_slide_subtitle">{{ strip_tags($slider->body) }}</div> -->
         </div>
 
     </div>
@@ -35,16 +35,20 @@
 
                 <div class="row">
                     <div class="col-md-10 date_animation_block" data-bottom-top="transform:translate3d(0px, 80px, 0px)" data-top-bottom="transform:translate3d(0px, -80px, 0px)">
-                        <img src="{{ asset('images/' . $about->avatar) }}" alt="">
-                    </div>
+                    <video loop autoplay muted="false"  id="vid" >
+  <source src="{{ asset('images/videosotry.mp4') }}" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
 
+</video>
+                    </div>
+          
                     <div class="col-md-5 date_animation_block date_animation_abs_block date_posr date_image_bck" data-bottom-top="transform:translate3d(0px, 0px, 0px)" data-top-bottom="transform:translate3d(0px, 80px, 0px)" data-image="images/main_back_gr.jpg">
 
                         <div class="date_parallax_menu date_image_bck date_fixed date_wht_txt">
-                            <h2 class="date_gold date_title_counter">@lang('site.about')</h2>
+                            <h2 class="date_gold date_title_counter">@lang('site.ourstory')</h2>
 
-                            <p>{{ strip_tags($about->small_title) }}</p>
-                            <a href="{{ route('about')}}" class="btn"> @lang('site.view_more') <i class="ti ti-truck"></i></a>
+                            <p>{{ strip_tags($story->body) }}</p>
+                            <a href="{{ route('ourstory')}}" class="btn"> @lang('site.view_more') <i class="ti ti-truck"></i></a>
 
                         </div>
                     </div>
@@ -124,7 +128,7 @@
     @endif
 
 
-    <section class="date_section date_section_no_overlay">
+    <!-- <section class="date_section date_section_no_overlay">
 
             <div class="date_over" data-color="#333" data-opacity="0.05"></div>
 
@@ -141,7 +145,7 @@
                         <div class="date_over" data-color="#000" data-opacity="0.05"></div>
 
                         <div class="date_parallax_menu date_image_bck date_fixed date_wht_txt">
-                            <h2 class="date_gold date_title_counter">@lang('site.story')</h2>
+                            <h2 class="date_gold date_title_counter">@lang('site.ourstory')</h2>
                             <p>{{ strip_tags($story->body)}}.</p>
 
                         </div>
@@ -149,9 +153,9 @@
                     </div>
                 </div>
             </div>
-    </section>
+    </section> -->
 
-    <section class="date_section date_image_bck date_fixed date_wht_txt" data-stellar-background-ratio="0.2" data-image="{{ asset('images/slider/sl13.jpg') }}" data-bottom-top="@data-animation:noactive" data-200-bottom="@data-animation:active">
+    <!-- <section class="date_section date_image_bck date_fixed date_wht_txt" data-stellar-background-ratio="0.2" data-image="{{ asset('images/slider/sl13.jpg') }}" data-bottom-top="@data-animation:noactive" data-200-bottom="@data-animation:active">
 
         <div class="date_over" data-color="#000" data-opacity="0.6"></div>
         <div class="container text-center">
@@ -176,7 +180,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
 
 
     @if (count($lprojects) > 0)

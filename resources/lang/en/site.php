@@ -62,4 +62,5 @@ return [
     'food_service' => 'Food Service',
     'waiting_time' => 'Waiting Time ',
     'sanitization' => 'Sanitization' ,
+    'ourstory' => 'Our Story' ,
 ];

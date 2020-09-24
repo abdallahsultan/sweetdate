@@ -1473,11 +1473,18 @@
 
     <header>
         <div class="container">
+		 @php $locale = App::getLocale();@endphp
 
-            <a href="" class="date_logo">Sweet Date <i><span>Coffee</span><span>Club</span></i></a>
-
-
-            {{--  <ul class="date_main_lang">
+		 <div  class="date_logo">Sweet Date <i>
+		
+		@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+		
+		<span><a style="color: #e3cc6f; text-decoration: none;" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">{{ $properties['native'] }}</a></span>
+		
+	
+        @endforeach
+		</i></div>
+             {{-- <ul >
 
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
 
@@ -1486,7 +1493,7 @@
 
                 @endforeach
 
-            </ul>  --}}
+            </ul> --}}
 
             <div class="date_main_menu">
 
@@ -1505,13 +1512,14 @@
                 <div class="container">
                     <ul>
                         <li><a href="{{ route('home')}}">@lang('site.home')</a></li>
-                        <li><a href="{{ route('about')}}">@lang('site.about')</a></li>
+                        <li><a href="{{ route('ourstory')}}">@lang('site.ourstory')</a></li>
                         <li><a href="{{ route('products')}}">@lang('site.products')</a></li>
-                        <li><a href="{{ route('services')}}">@lang('site.services')</a></li>
-                        <li><a href="{{ route('events')}}">@lang('site.events')</a></li>
-                        <li><a href="{{ route('blogs')}}">@lang('site.blogs')</a></li>
-						<li><a href="{{ route('openion')}}">@lang('site.openion')</a></li>
 						<li><a href="{{ route('menu')}}">@lang('site.menu')</a></li>
+                        <!-- <li><a href="{{ route('services')}}">@lang('site.services')</a></li> -->
+                        <li><a href="{{ route('events')}}">@lang('site.events')</a></li>
+                        <!-- <li><a href="{{ route('blogs')}}">@lang('site.blogs')</a></li> -->
+						<li><a href="{{ route('openion')}}">@lang('site.openion')</a></li>
+						
 						<li><a href="{{ route('reserve')}}">@lang('site.reserve')</a></li>
 						<li><a href="{{ route('place')}}">@lang('site.place')</a></li>
                         <li><a href="{{ route('contact')}}">@lang('site.contact')</a></li>

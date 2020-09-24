@@ -58,5 +58,6 @@ return [
     'food_service' => 'خدمة الطعام',
     'waiting_time' => 'وقت الأنتظار ',
     'sanitization' => 'النظافة' ,
-
+    'ourstory' => 'موضوعنا' ,
+    
 ];

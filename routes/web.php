@@ -43,7 +43,7 @@ Route::get('service/{id}', 'HomeController@service')->name('service');
 
 Route::post('contactform',  'HomeController@contactform')->name('contactform');
 
-Route::get('about', 'HomeController@about')->name('about');
+Route::get('ourstory', 'HomeController@about')->name('ourstory');
 
 Auth::routes(['register' => false]);
 
