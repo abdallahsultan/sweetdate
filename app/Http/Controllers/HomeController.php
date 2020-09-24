@@ -149,45 +149,20 @@ class HomeController extends Controller
 
         return view('place');
     }
-    public function reserve ()
-    {
-
-        return view('reserve');
-    }
+   
     
     public function menu ()
     {
 
         return view('menu');
     }
-    public function reserveindoor ()
-    {
-        $reserve_indoor=Reservation::where('type','indoor')->latest()->get();
-       
-        $tables=[];
-        foreach($reserve_indoor as $key => $value){
-
-           $count= explode(',', $value['table']);
-            if(count($count) == 1 ){
-                array_push($tables,$value['table'] );
-            }else{
-                for ($i = 0; $i < count($count); $i++) {            
-                    array_push($tables,$count[$i] );
-                  }
-            }
-       
-        }
-     
    
-    
-        return view('reserve_indoor',compact("tables","reserve_indoor"));
-    }
-    public function reserveoutdoor ()
+    public function reserve ()
     { 
-        $reserve_outdoor=Reservation::where('type','outdoor')->latest()->get();
+        $reserve=Reservation::all();
        
         $tables=[];
-        foreach($reserve_outdoor as $key => $value){
+        foreach($reserve as $key => $value){
 
            $count= explode(',', $value['table']);
             if(count($count) == 1 ){
@@ -202,7 +177,7 @@ class HomeController extends Controller
      
    
     
-        return view('reserve_outdoor',compact("tables","reserve_outdoor"));
+        return view('reserve',compact("tables","reserve"));
     }
 
 

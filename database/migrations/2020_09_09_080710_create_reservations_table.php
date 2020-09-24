@@ -13,8 +13,7 @@ class CreateReservationsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('phone');
-            $table->string('table');
-            $table->string('type');  
+            $table->string('table');  
             $table->timestamps();
         });
     }
