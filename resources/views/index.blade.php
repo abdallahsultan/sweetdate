@@ -306,7 +306,7 @@
 
     <section class="date_section partner_section">
 
-        <div class="container text-center">
+        <div style="width: 80%;" class="container text-center">
             <h2 class="date_gold date_title_counter">@lang('site.partners')</h2>
 
             <div class="date_slider_partners date_wht_txt date_lm_type_i" data-dots="false" data-autoplay="true">
