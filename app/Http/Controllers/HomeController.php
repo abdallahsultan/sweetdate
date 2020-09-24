@@ -257,14 +257,10 @@ class HomeController extends Controller
     {
         $values[] = $key;
     }
-        if($request->route()->getName() === "makereservationindoor" ){
-            $type="indoor";
-        }else{
-            $type="outdoor";
-        }
+        
          
         
-        $input = array_merge(request()->all(), ['table' => implode(",",$values),'type'=>$type]);
+        $input = array_merge(request()->all(), ['table' => implode(",",$values)]);
         
         Reservation::create($input);
         
