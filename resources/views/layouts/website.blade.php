@@ -1571,8 +1571,11 @@
 </div>
 
 
-
+@if (Request::path() == 'en/menu' || Request::path() == 'ar/menu' )
+   
+@else
 <script src="{{ asset('website/js/jquery-1.12.4.min.js') }}"></script>
+@endif
 <script src="{{ asset('website/js/mokh_library.js') }}"></script>
 <script src="{{ asset('website/js/mokh_script.js') }}"></script>
 <script src="{{ asset('main/js/sweet-alert/sweetalert.min.js') }}"></script>
