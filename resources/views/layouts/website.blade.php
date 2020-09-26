@@ -1571,7 +1571,7 @@
 </div>
 
 
-@if (Request::path() == 'en/menu' || Request::path() == 'ar/menu' )
+@if (Request::path() == 'en/menu' || Request::path() == 'ar/menu' ||Request::path() == 'menu' )
    
 @else
 <script src="{{ asset('website/js/jquery-1.12.4.min.js') }}"></script>

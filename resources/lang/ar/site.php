@@ -59,5 +59,8 @@ return [
     'waiting_time' => 'وقت الأنتظار ',
     'sanitization' => 'النظافة' ,
     'ourstory' => 'موضوعنا' ,
+    'drinksmenu' => 'قائمة المشروبات' ,
+    'foodmenu' => 'قائمة الطعام' ,
+    
     
 ];

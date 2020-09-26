@@ -63,4 +63,6 @@ return [
     'waiting_time' => 'Waiting Time ',
     'sanitization' => 'Sanitization' ,
     'ourstory' => 'Our Story' ,
+    'drinksmenu' => 'Drinks Menu' ,
+    'foodmenu' => 'Food Menu ' ,
 ];
