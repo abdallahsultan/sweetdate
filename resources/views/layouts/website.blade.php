@@ -1518,9 +1518,8 @@
                         <!-- <li><a href="{{ route('services')}}">@lang('site.services')</a></li> -->
                         <li><a href="{{ route('events')}}">@lang('site.events')</a></li>
                         <!-- <li><a href="{{ route('blogs')}}">@lang('site.blogs')</a></li> -->
-						<li><a href="{{ route('openion')}}">@lang('site.openion')</a></li>
-						
 						<li><a href="{{ route('reserve')}}">@lang('site.reserve')</a></li>
+						<li><a href="{{ route('openion')}}">@lang('site.openion')</a></li>
 						<li><a href="{{ route('place')}}">@lang('site.place')</a></li>
                         <li><a href="{{ route('contact')}}">@lang('site.contact')</a></li>
                     </ul>
@@ -1549,7 +1548,31 @@
     <footer class="date_image_bck text-center date_wht_txt" data-image="{{ asset('images/main_back_bl.jpg') }}">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+			 
+               
+				<div class="col-md-4">
+						
+					<h4 class="mb-4 font-weight-bold text-uppercase" style="color: #e3cc6f; font-weight: bold;font-size: medium;"><b> @lang('site.contact')</b> </h4>
+					<div class="date_wht_txt text-right">
+					<ol class="list-group" style="text-align: right;">
+					<li	 class="item">
+						<a href="https://goo.gl/maps/ECriumozHAMBtf9u9"> {{ $setting->address  }} &nbsp;&nbsp;&nbsp;<i class="ti ti-location-pin mr-1"></i></a>
+					</li>
+					<br>
+					<li class="item">
+						<a href="mailto:{{ $setting->itemail}}">  {{ $setting->itemail}} &nbsp;&nbsp;&nbsp;<i class="ti ti-email mr-1"></i></a>       
+					</li>
+					<br>
+					<li class="item"> 
+						<a href="Tel:{{ $setting->itphone}}">  {{ $setting->itphone}} &nbsp;&nbsp;&nbsp;<i class="ti ti-mobile mr-1"></i></a>
+					</li>
+					
+				
+					</ol>
+					</div>
+			
+				</div>
+				<div class="col-md-4">
                     <p><img src="{{ asset('images/' . $setting->logo ) }}" alt="" height="220" style="min-height: 220px;"></p>
                     <div class="date_footer_social">
                         <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
@@ -1563,6 +1586,13 @@
                     <p>© {{ $setting->name }} 2020</p>
 
                 </div>
+				<div class="col-md-4">
+				<h4 class="mb-4 font-weight-bold text-uppercase" style="color: #e3cc6f;"><b> @lang('site.address')</b> </h4>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.229435459473!2d46.72819091500138!3d24.78759598408837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efdd33fb34cad%3A0x9ea5f5a339c61d53!2zU3dlZXQgRGF0ZeKAjw!5e0!3m2!1sen!2sae!4v1601153755932!5m2!1sen!2sae" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+                
+               
+				
             </div>
         </div>
     </footer>
@@ -1571,11 +1601,135 @@
 </div>
 
 
-@if (Request::path() == 'en/menu' || Request::path() == 'ar/menu' ||Request::path() == 'menu' )
-   
-@else
+
 <script src="{{ asset('website/js/jquery-1.12.4.min.js') }}"></script>
-@endif
+
+	<!-- start script menue -->
+<script src="{{asset('website/magazine/js/jquery.js')}}"></script>
+    <script>
+        imageBook = ["1", "8"][ Math.floor(Math.random()*2)];
+        imageBookPath = "./img/magazine_template_0"+imageBook;
+        $("#book1-trigger .book-thumb").attr("src", imageBookPath+"/image_000.jpg")
+    </script>
+	 <script type="text/javascript" src="{{asset('website/magazine/js/wow_book.min.js')}}"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            function fullscreenErrorHandler(){
+                if (self!=top) return "The frame is blocking full screen mode. Click on 'remove frame' button above and try to go full screen again."
+            }
+
+            // imageBook = ["1", "8"][ Math.floor(Math.random()*2)];
+            // imageBookPath = "./img/magazine_template_0"+imageBook+"/";
+            // $("#book1-trigger .book-thumb").attr("src", imageBookPath+"image_000.jpg")
+
+            var optionsBook1 = {
+                 height   : 1056
+                ,width    : 816*2
+                // ,maxWidth : 800
+                // ,maxHeight : 800
+                ,pageCount : 40
+                ,images : imageBookPath+"/image_2.jpg"
+
+                ,lightbox : "#book1-trigger"
+                ,lightboxClass : "lightbox-images"+( imageBook=="1" ? "1" : "2" )
+                ,centeredWhenClosed : true
+                ,hardcovers : true
+                ,style: "wowbook-cs-white"
+                ,toolbar : "lastLeft, left, currentPage, right, lastRight, zoomin, zoomout, slideshow, flipsound, fullscreen, thumbnails"
+                ,thumbnailsPosition : 'bottom'
+                ,thumbnailScale: 0.12
+                ,thumbnailsSprite: imageBookPath+"/thumbnails_sprite_0.12.jpg"
+                ,perspective: 4000
+                ,responsiveHandleWidth: 50
+
+                ,onFullscreenError: fullscreenErrorHandler
+            };
+
+            var optionsBook2 = {
+                 height   : 1024
+                ,width    : 725*2
+                // ,maxWidth : 800
+                // ,maxHeight : 400
+                ,pageNumbers: false
+
+                ,pdf: "./img/menuar.pdf"
+                ,pdfFind: true
+                ,pdfTextSelectable: true
+
+                ,lightbox : "#book2-trigger"
+                ,lightboxClass : "lightbox-pdf"
+                ,centeredWhenClosed : true
+                ,hardcovers : true
+                ,curl: false
+                ,toolbar: "lastLeft, left, currentPage, right, lastRight, find, toc, zoomin, zoomout, download, flipsound, fullscreen, thumbnails"
+                ,thumbnailsPosition : 'bottom'
+                ,responsiveHandleWidth : 50
+                ,onFullscreenError: fullscreenErrorHandler
+            };
+
+            var optionsBook3 = {
+                 height   : 600
+                ,width    : 880
+                ,maxWidth : 880
+                // ,maxHeight : 800
+                ,lightbox : "#book3-trigger"
+                ,lightboxClass : "lightbox-html"
+                ,lightboxBackground : "url(img/book_html/wood.jpg)"
+                ,centeredWhenClosed : true
+                ,hardcovers : true
+                ,toolbar : "lastLeft, left, right, lastRight, zoomin, zoomout, slideshow, flipsound, fullscreen, thumbnails"
+                ,toolbarPosition: 'top'
+                ,thumbnailsPosition : 'bottom'
+                ,responsiveHandleWidth : 50
+
+                ,onFullscreenError: fullscreenErrorHandler
+            };
+            var optionsBook4 = {
+                 height   : 600
+                ,width    : 880
+                ,maxWidth : 880
+                // ,maxHeight : 800
+                ,lightbox : "#book4-trigger"
+                ,lightboxClass : "lightbox-html"
+                ,lightboxBackground : "url(img/book_html/wood.jpg)"
+                ,centeredWhenClosed : true
+                ,hardcovers : true
+                ,toolbar : "lastLeft, left, right, lastRight, zoomin, zoomout, slideshow, flipsound, fullscreen, thumbnails"
+                ,toolbarPosition: 'top'
+                ,thumbnailsPosition : 'bottom'
+                ,responsiveHandleWidth : 50
+
+                ,onFullscreenError: fullscreenErrorHandler
+            };
+
+            var books = {
+                "#book1" : optionsBook1,
+                "#book2" : optionsBook2,
+                "#book3" : optionsBook3,
+                "#book4" : optionsBook4
+            };
+            $("#book1-trigger, #book2-trigger, #book3-trigger,#book4-trigger").on("click",function(){
+                buildBook( "#"+this.id.replace("-trigger", "") );
+            })
+
+            function buildBook( elem ){
+                var book=$.wowBook(elem);
+                if (!book) {
+                    $(elem).wowBook( books[elem] );
+                    book=$.wowBook(elem);
+                }
+                // book.opts.onHideLightbox = function(){
+                //     setTimeout( function(){ book.destroy(); }, 1000);
+                // }
+                book.showLightbox();
+            }
+
+
+        });
+    </script>
+	<!-- end script menue -->
+
 <script src="{{ asset('website/js/mokh_library.js') }}"></script>
 <script src="{{ asset('website/js/mokh_script.js') }}"></script>
 <script src="{{ asset('main/js/sweet-alert/sweetalert.min.js') }}"></script>

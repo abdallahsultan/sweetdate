@@ -65,4 +65,5 @@ return [
     'ourstory' => 'Our Story' ,
     'drinksmenu' => 'Drinks Menu' ,
     'foodmenu' => 'Food Menu ' ,
+    'map' => 'Map' ,
 ];

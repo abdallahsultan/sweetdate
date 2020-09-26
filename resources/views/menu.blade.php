@@ -50,30 +50,30 @@
    
     <section id="services" style="background: #fefefe;">
         
-    <div class="container">
-            <div class="row">
-         
-            <div id='book3-trigger' class=" col-md-6 text-center">
-                    <div class="service-box">
-                    <h2>@lang('site.drinksmenu')</h2>
-                        <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
-                        
-                        
-                    </div>
-                </div>
-           
+        <div class="container">
+                <div class="row">
             
-            <div id='book4-trigger' class=" col-md-6 text-center">
-                    <div class="service-box">
-                    <h2>@lang('site.foodmenu')</h2>
-                        <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
-                        
-                        
+                <div id='book3-trigger' class=" col-md-6 text-center">
+                        <div class="service-box">
+                        <h2>@lang('site.drinksmenu')</h2>
+                            <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
+                            
+                            
+                        </div>
                     </div>
-                </div>
+            
+                
+                <div id='book4-trigger' class=" col-md-6 text-center">
+                        <div class="service-box">
+                        <h2>@lang('site.foodmenu')</h2>
+                            <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
+                            
+                            
+                        </div>
+                    </div>
 
+                </div>
             </div>
-        </div>
     </section>
 
    
@@ -241,13 +241,7 @@
 		}
 	</style>
 
-    <!-- jQuery -->
-    <script src="{{asset('website/magazine/js/jquery.js')}}"></script>
-    <script>
-        imageBook = ["1", "8"][ Math.floor(Math.random()*2)];
-        imageBookPath = "./img/magazine_template_0"+imageBook;
-        $("#book1-trigger .book-thumb").attr("src", imageBookPath+"/image_000.jpg")
-    </script>
+   
 
     <!-- Bootstrap Core JavaScript -->
     <!-- <script src="{{asset('website/magazine/js/bootstrap.min.js')}}"></script> -->
@@ -277,123 +271,7 @@
         }
 	</style>
     <!-- <script type="text/javascript" src="{{asset('website/magazine/js/pdf.combined.min.js')}}"></script> -->
-    <script type="text/javascript" src="{{asset('website/magazine/js/wow_book.min.js')}}"></script>
-    <script type="text/javascript">
-        $(function(){
-
-            function fullscreenErrorHandler(){
-                if (self!=top) return "The frame is blocking full screen mode. Click on 'remove frame' button above and try to go full screen again."
-            }
-
-            // imageBook = ["1", "8"][ Math.floor(Math.random()*2)];
-            // imageBookPath = "./img/magazine_template_0"+imageBook+"/";
-            // $("#book1-trigger .book-thumb").attr("src", imageBookPath+"image_000.jpg")
-
-            var optionsBook1 = {
-                 height   : 1056
-                ,width    : 816*2
-                // ,maxWidth : 800
-                // ,maxHeight : 800
-                ,pageCount : 40
-                ,images : imageBookPath+"/image_2.jpg"
-
-                ,lightbox : "#book1-trigger"
-                ,lightboxClass : "lightbox-images"+( imageBook=="1" ? "1" : "2" )
-                ,centeredWhenClosed : true
-                ,hardcovers : true
-                ,style: "wowbook-cs-white"
-                ,toolbar : "lastLeft, left, currentPage, right, lastRight, zoomin, zoomout, slideshow, flipsound, fullscreen, thumbnails"
-                ,thumbnailsPosition : 'bottom'
-                ,thumbnailScale: 0.12
-                ,thumbnailsSprite: imageBookPath+"/thumbnails_sprite_0.12.jpg"
-                ,perspective: 4000
-                ,responsiveHandleWidth: 50
-
-                ,onFullscreenError: fullscreenErrorHandler
-            };
-
-            var optionsBook2 = {
-                 height   : 1024
-                ,width    : 725*2
-                // ,maxWidth : 800
-                // ,maxHeight : 400
-                ,pageNumbers: false
-
-                ,pdf: "./img/menuar.pdf"
-                ,pdfFind: true
-                ,pdfTextSelectable: true
-
-                ,lightbox : "#book2-trigger"
-                ,lightboxClass : "lightbox-pdf"
-                ,centeredWhenClosed : true
-                ,hardcovers : true
-                ,curl: false
-                ,toolbar: "lastLeft, left, currentPage, right, lastRight, find, toc, zoomin, zoomout, download, flipsound, fullscreen, thumbnails"
-                ,thumbnailsPosition : 'bottom'
-                ,responsiveHandleWidth : 50
-                ,onFullscreenError: fullscreenErrorHandler
-            };
-
-            var optionsBook3 = {
-                 height   : 600
-                ,width    : 880
-                ,maxWidth : 880
-                // ,maxHeight : 800
-                ,lightbox : "#book3-trigger"
-                ,lightboxClass : "lightbox-html"
-                ,lightboxBackground : "url(img/book_html/wood.jpg)"
-                ,centeredWhenClosed : true
-                ,hardcovers : true
-                ,toolbar : "lastLeft, left, right, lastRight, zoomin, zoomout, slideshow, flipsound, fullscreen, thumbnails"
-                ,toolbarPosition: 'top'
-                ,thumbnailsPosition : 'bottom'
-                ,responsiveHandleWidth : 50
-
-                ,onFullscreenError: fullscreenErrorHandler
-            };
-            var optionsBook4 = {
-                 height   : 600
-                ,width    : 880
-                ,maxWidth : 880
-                // ,maxHeight : 800
-                ,lightbox : "#book4-trigger"
-                ,lightboxClass : "lightbox-html"
-                ,lightboxBackground : "url(img/book_html/wood.jpg)"
-                ,centeredWhenClosed : true
-                ,hardcovers : true
-                ,toolbar : "lastLeft, left, right, lastRight, zoomin, zoomout, slideshow, flipsound, fullscreen, thumbnails"
-                ,toolbarPosition: 'top'
-                ,thumbnailsPosition : 'bottom'
-                ,responsiveHandleWidth : 50
-
-                ,onFullscreenError: fullscreenErrorHandler
-            };
-
-            var books = {
-                "#book1" : optionsBook1,
-                "#book2" : optionsBook2,
-                "#book3" : optionsBook3,
-                "#book4" : optionsBook4
-            };
-            $("#book1-trigger, #book2-trigger, #book3-trigger,#book4-trigger").on("click",function(){
-                buildBook( "#"+this.id.replace("-trigger", "") );
-            })
-
-            function buildBook( elem ){
-                var book=$.wowBook(elem);
-                if (!book) {
-                    $(elem).wowBook( books[elem] );
-                    book=$.wowBook(elem);
-                }
-                // book.opts.onHideLightbox = function(){
-                //     setTimeout( function(){ book.destroy(); }, 1000);
-                // }
-                book.showLightbox();
-            }
-
-
-        });
-    </script>
+    
 
 </section>
 </section>
