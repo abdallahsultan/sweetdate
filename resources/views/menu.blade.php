@@ -55,7 +55,7 @@
          
             <div id='book3-trigger' class=" col-md-6 text-center">
                     <div class="service-box">
-                        <img  class='book-thumb' src="{{asset('images/menu/ar/drinks/menu.jpg')}}" style="height: -webkit-fill-available;" />
+                        <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
                         <h3>@lang('site.drinksmenu')</h3>
                         
                     </div>
@@ -64,7 +64,7 @@
             
             <div id='book4-trigger' class=" col-md-6 text-center">
                     <div class="service-box">
-                        <img  class='book-thumb' src="{{asset('images/menu/ar/food/menu.jpg')}}" style="height: -webkit-fill-available;" />
+                        <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
                         <h3>@lang('site.foodmenu')</h3>
                         
                     </div>
@@ -144,7 +144,7 @@
 			padding-left: 1em;
 		}
         .book-thumb {
-            height: -webkit-fill-available;
+            /* height: -webkit-fill-available; */
             box-shadow: 0 0 3px rgba(0, 0, 0, 0.5)
 
         }
