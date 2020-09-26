@@ -55,8 +55,9 @@
          
             <div id='book3-trigger' class=" col-md-6 text-center">
                     <div class="service-box">
+                    <h2>@lang('site.drinksmenu')</h2>
                         <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
-                        <h3>@lang('site.drinksmenu')</h3>
+                        
                         
                     </div>
                 </div>
@@ -64,8 +65,9 @@
             
             <div id='book4-trigger' class=" col-md-6 text-center">
                     <div class="service-box">
+                    <h2>@lang('site.foodmenu')</h2>
                         <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
-                        <h3>@lang('site.foodmenu')</h3>
+                        
                         
                     </div>
                 </div>
