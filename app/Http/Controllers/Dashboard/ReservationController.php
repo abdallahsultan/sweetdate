@@ -25,6 +25,6 @@ class ReservationController extends Controller
 
         session()->flash('message', ' Deleted Successfully');
 
-        return redirect('dashboard/reserve');
+        return redirect('dashboard/reservation');
     }
 }

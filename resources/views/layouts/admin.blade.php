@@ -117,7 +117,7 @@
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.blog.index') }}"><i data-feather="folder-plus"></i><span>المقالات</span></a> </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.test.index') }}"><i data-feather="edit-3"></i><span>اراء العملاء</span> @if($testcount > 0) <label class="badge badge-danger"> {{ $testcount }}</label> @endif </a> </li>
                    <!-- <li class="dropdown"><a class="nav-link" href="@{{ route('dashboard.openion') }}"><i data-feather="edit-3"></i><span> تصويت العملاء</span>  </a> </li>  error in not found  -->
-                  <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.team.index') }}"><i data-feather="cloud-drizzle"></i><span>فريق العمل</span></a>  </li>
+                  <!-- <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.team.index') }}"><i data-feather="cloud-drizzle"></i><span>فريق العمل</span></a>  </li> -->
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.partner.index') }}"><i data-feather="cloud"></i><span>شركاء النجاح</span></a> </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.mail.index') }}"><i data-feather="file-text"></i><span>البريد</span> @if($mailcount > 0) <label class="badge badge-danger"> {{ $mailcount }}</label> @endif </a> </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.product.index') }}"><i data-feather="server"></i><span>المنتجات</span></a></li>
@@ -125,12 +125,17 @@
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.project.index') }}"><i data-feather="grid"> </i><span> الاحداث والمناسبات</span></a> </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.video.index') }}"><i data-feather="video"></i><span> الفيديو</span></a></li>
                   <li class="mega-menu"><a class="nav-link" href="{{ route('dashboard.setting.index') }}"><i data-feather="layers"></i><span>الاعدادات</span></a>  </li>
-                </ul>
+               <br>
+               <br>
+               <br>
+               </ul>
+                
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
           </nav>
         </header>
+
         <!-- Page Sidebar Ends-->
 
 

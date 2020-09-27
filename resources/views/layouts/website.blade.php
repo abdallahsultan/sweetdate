@@ -1556,15 +1556,15 @@
 					<div class="date_wht_txt text-right">
 					<ol class="list-group" style="text-align: right;">
 					<li	 class="item">
-						<a href="https://goo.gl/maps/ECriumozHAMBtf9u9"> {{ $setting->address  }} &nbsp;&nbsp;&nbsp;<i class="ti ti-location-pin mr-1"></i></a>
+						<a  target="_blank" href="https://goo.gl/maps/ECriumozHAMBtf9u9"> {{ $setting->address  }} &nbsp;&nbsp;&nbsp;<i class="ti ti-location-pin mr-1"></i></a>
 					</li>
 					<br>
 					<li class="item">
-						<a href="mailto:{{ $setting->itemail}}">  {{ $setting->itemail}} &nbsp;&nbsp;&nbsp;<i class="ti ti-email mr-1"></i></a>       
+						<a  target="_blank" href="mailto:{{ $setting->itemail}}">  {{ $setting->itemail}} &nbsp;&nbsp;&nbsp;<i class="ti ti-email mr-1"></i></a>       
 					</li>
 					<br>
 					<li class="item"> 
-						<a href="Tel:{{ $setting->itphone}}">  {{ $setting->itphone}} &nbsp;&nbsp;&nbsp;<i class="ti ti-mobile mr-1"></i></a>
+						<a  target="_blank" href="Tel:{{ $setting->itphone}}">  {{ $setting->itphone}} &nbsp;&nbsp;&nbsp;<i class="ti ti-mobile mr-1"></i></a>
 					</li>
 					
 				

@@ -33,27 +33,37 @@
                     <th>#</th>
                     <th>الاسم</th>
                     <th>الهاتف</th>
-                    <th>  البريد</th>
+                    <th>  رقم الطاوله </th>
+                   
                     <th>  تاريخ الحجز</th>
                     <th>  الوقت الحجز</th>
-                    <th>  رقم الطاوله </th>
+                    
                     <th>التحكم</th>
                   </tr>
                 </thead>
                 <tbody>
 
-                    @foreach($reservs as $index=>$blog)
+                    @foreach($reservs as $key=>$value)
                     <tr>
-                    <td>{{ $index + 1}}</td>
-                    <td>{{ $blog->name }}</td>
-                    <td>{{ $blog->phone }}</td>
-                    <td>{{ $blog->email }}</td>
-                    <td>{{ $blog->date }}</td>
-                    <td>{{ $blog->time }}</td>
-                    <td>{{ $blog->number }}</td>
+                    <td>{{ $key + 1}}</td>
+                    <td>{{ $value->name }}</td>
+                    <td>{{ $value->phone }}</td>
+                    @php
+                    $table=$value->table; 
+                     $table=str_replace(",","  ","$table") @endphp
+                    <td>{{$table}} </td>
+                    @php 
+                    $splitTimeStamp= explode(" ",$value->created_at);
+                    $date = $splitTimeStamp[0];
+                    $time = $splitTimeStamp[1];
+                    @endphp
+                 
+                    <td>{{ $date }}</td>
+                    <td>{{ $time }}</td>
+                   
                     <td>
                         <div class="btn-group m-1">
-                            <form method="post" action="{{ route('dashboard.reservation.destroy', $blog->id ) }}">
+                            <form method="post" action="{{ route('dashboard.reservation.destroy', $value->id ) }}">
 
                                @method('DELETE')
                                @csrf
@@ -72,10 +82,10 @@
                     <th>#</th>
                     <th>الاسم</th>
                     <th>الهاتف</th>
-                    <th>  البريد</th>
+                    <th>  رقم الطاوله </th>
                     <th>  تاريخ الحجز</th>
                     <th>  الوقت الحجز</th>
-                    <th>  رقم الطاوله </th>
+                   
                     <th>التحكم</th>
                   </tr>
                 </tfoot>
