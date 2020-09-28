@@ -481,7 +481,7 @@
 
                             
                         <div class="date_parallax_menu date_image_bck date_fixed date_wht_txt">
-                            <h2 class="date_gold date_title_counter">@lang('site.ourstory')</h2>
+                            <h2 class="date_gold date_title_counter">@lang('site.team')</h2>
 
                             <p>@lang('site.ourteamtext')</p>
                             <!-- <a href="{{ route('ourstory')}}" class="btn"> @lang('site.view_more') <i class="ti ti-truck"></i></a> -->
