@@ -1,6 +1,32 @@
 @extends('layouts.website')
 
 @section('content')
+<style>
+  @media (min-width: 1024px)/*or anything else you what this to show/hide*/{
+        .respoonsive-on{
+        text-decoration: none;
+        display: block;
+    }
+    .respoonsive-off{
+        text-decoration: underline;
+        font-weight: bold;
+        display: none;
+    }
+
+}
+}
+@media (max-width: 1024px){
+            .respoonsive-on{
+        text-decoration: underline;
+        font-weight: bold;
+        display: none;
+    }
+        .respoonsive-off{
+        display: block;
+        font-weight: normal;
+    }
+}
+</style>
 
 <div class="date_slider date_slider_inside date_image_bck date_fixed date_wht_txt" data-stellar-background-ratio="0.3" data-image="{{ asset('images/slider/sl5.jpg') }}">
 
