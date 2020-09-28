@@ -467,9 +467,34 @@
     </section>
 
     @endif
+    <section class="date_section  date_image_bck">
+    <div class="date_over" data-color="#111" data-opacity="0.05"></div>
+
+                <div class="container text-center">
+
+                    <div class="row">
+                    <div class="col-md-10 col-md-offset-2 date_animation_block" data-bottom-top="transform:translate3d(0px, 80px, 0px)" data-top-bottom="transform:translate3d(0px, -80px, 0px)">
+                        <img src="{{ asset('images/team/teams.jpg') }}" alt="">
+                    </div>
+
+                        <div class="col-md-5 date_animation_block  date_animation_abs_block date_posl date_image_bck" data-bottom-top="transform:translate3d(0px, 0px, 0px)" data-top-bottom="transform:translate3d(0px, 50px, 0px)" style="background:#00000070" >
+
+                            
+                        <div class="date_parallax_menu date_image_bck date_fixed date_wht_txt">
+                            <h2 class="date_gold date_title_counter">@lang('site.ourstory')</h2>
+
+                            <p>@lang('site.ourteamtext')</p>
+                            <!-- <a href="{{ route('ourstory')}}" class="btn"> @lang('site.view_more') <i class="ti ti-truck"></i></a> -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+    </section>
 
 
-    @if (count($teams) > 0)
+    <!-- @if (count($teams) > 0)
     <section class="date_section date_image_bck text-center date_wht_txt" data-image="images/main_back_bl.jpg">
 
 
@@ -506,7 +531,7 @@
 
 
    </section>
-   @endif
+   @endif -->
 
 
     @if (count($partners) > 0)
