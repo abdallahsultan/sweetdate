@@ -557,7 +557,7 @@
               </ul>
 
               <ul class="seats">
-                <li  class="seat">
+                <li  class="seat D3table">
                 @if(in_array('D3', $tables))
                 <label ><img type="image"  data-toggle="tooltip"   title="D3 @lang('site.reserved')" src="{{asset('website/img/d.png')}}"   /> </label>
                 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
@@ -570,7 +570,7 @@
                 </li>
               </ul>
             
-                <li style="top:100%;"  class="seat">
+                <li style="top:100%;"  class="seat D7table">
                 @if(in_array('D7', $tables))
                 <label ><img type="image"  data-toggle="tooltip"   title="D7 @lang('site.reserved')" src="{{asset('website/img/d.png')}}"   /> </label>
                 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
@@ -590,7 +590,7 @@
 
  <!-- trabezah DE -->
   <div class="col-md-12 ">
-      <div class="col-md-offset-4">
+      <div class="col-md-offset-4 DEtable">
       <li  class="seat">
               @if(in_array('DE', $tables))
               <label ><img type="image"  data-toggle="tooltip"   title="DE @lang('site.reserved')" src="{{asset('website/img/de.png')}}"   /> </label>
@@ -656,7 +656,7 @@
           
             
               <ul class="seats">
-              <li  class="seat">
+              <li  class="seat D%table">
               @if(in_array('D5', $tables))
               <label ><img type="image"  data-toggle="tooltip"   title="D5 @lang('site.reserved')" src="{{asset('website/img/d.png')}}"   /> </label>
               <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
@@ -693,7 +693,7 @@
 </div>
 <div class="col-md-12">
   
-  <ol class="seats" type="D" >
+  <ol class="seats ftables" type="D" >
   <ul class="seats">
             <li style="right: 20%;" class="seat">
               @if(in_array('F1', $tables))

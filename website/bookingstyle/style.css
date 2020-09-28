@@ -163,8 +163,8 @@ ol {
     line-height: 2.5rem;
     padding: 4px 4px;
     color: black;
-    background: #e3cd714f;
-    border-radius: 30px;
+    /* background: #e3cd714f;
+    border-radius: 30px; */
     animation-duration: 300ms;
     animation-fill-mode: both;
     width: 100px;
@@ -283,6 +283,166 @@ ol {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 650px) {
+  .vip-plus {
+    right: 70%;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 42%;
+    /* width: 238px; */
+}
+.fuselage1 {
+  width: 90%;
+  border-bottom: 15px double #555;
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8;
+}
+.DEtable{
+  margin-left: 31%;
+}
+
+.D7table{
+  right: 15%;
+}
+.D3table{
+  right: 17%;
+}
+.D5table{
+  right: 10%;
+  top: 16%;
+}
+.ftables{
+  padding-left: 0px;
+  margin-left: 27px;
+
+}
+.ftables:ul{
+  margin-left: -10%;
+
+}
+.seat label {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2.5rem;
+  padding: 4px 4px;
+  color: black;
+  /* background: #e3cd714f; */
+  /* border-radius: 30px; */
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  
+  width: 75px;
+
+}
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .vip-plus {
+    right: 70%;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 40%;
+    /* width: 238px; */
+}
+.DEtable{
+  margin-left: 31%;
+}
+
+.D7table{
+  right: 15%;
+}
+.D5table{
+  right: 10%;
+  top: 16%;
+}
+.fuselage1 {
+  width: 88%;
+  border-bottom: 15px double #555;
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8;
+}
+.seat label {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2.5rem;
+  padding: 4px 4px;
+  color: black;
+  /* background: #e3cd714f; */
+  /* border-radius: 30px; */
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  width: 82px;
+}
+
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+  .vip-plus {
+    right: 70%;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 40%;
+    /* width: 238px; */
+}
+.DEtable{
+  margin-left: 31%;
+}
+.D7table{
+  right: 15%;
+}
+.D5table{
+  right: 10%;
+  top: 16%;
+}
+.fuselage1 {
+  width: 88%;
+  border-bottom: 15px double #555;
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8;
+}
+.seat label {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2.5rem;
+  padding: 4px 4px;
+  color: black;
+  /* background: #e3cd714f; */
+  /* border-radius: 30px; */
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  width: 82px;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
 }
 
 
