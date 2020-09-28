@@ -474,7 +474,7 @@
 
                     <div class="row">
                     <div class="col-md-10 col-md-offset-2 date_animation_block" data-bottom-top="transform:translate3d(0px, 80px, 0px)" data-top-bottom="transform:translate3d(0px, -80px, 0px)">
-                        <img src="{{ asset('images/team/teams.jpg') }}" alt="">
+                        <img src="{{ asset('images/team/teams.jpg') }}" class="img-thumbnail" alt="" style="width: 100%;">
                     </div>
 
                         <div class="col-md-5 date_animation_block  date_animation_abs_block date_posl date_image_bck" data-bottom-top="transform:translate3d(0px, 0px, 0px)" data-top-bottom="transform:translate3d(0px, 50px, 0px)" style="background:#00000070" >
