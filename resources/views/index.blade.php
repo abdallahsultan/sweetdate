@@ -547,7 +547,7 @@
                     @foreach ($partners as $partner)
                     <div class="col-md-4">
                     <div class="date_lm_type_i_item "style="padding: 0px 15px;">
-                        <img  src="{{ asset('images/'  . $partner->avatar ) }}" style="padding: 0px 15px;" alt="">
+                        <img  src="{{ asset('images/'  . $partner->avatar ) }}" style="width:150px;padding: 0px 15px;" alt="">
                     </div>
                     <div class="date_lm_type_i_item ">
                         
