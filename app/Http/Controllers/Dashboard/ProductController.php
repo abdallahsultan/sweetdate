@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Pcategory;
+use App\PcategoryTranslation;
 use App\Product;
 
 class ProductController extends Controller
@@ -13,6 +14,7 @@ class ProductController extends Controller
     public function index()
     {
         $projects = Product::latest()->get();
+      
 
         return view('admin.product.index', compact('projects'));
     }
@@ -21,7 +23,8 @@ class ProductController extends Controller
     public function create()
     {
 
-        return view('admin.product.create');
+        $pcategories= PcategoryTranslation::all();
+        return view('admin.product.create', compact('pcategories'));
     }
 
 
@@ -33,10 +36,10 @@ class ProductController extends Controller
 
             'ar.*'         => 'required|string | min:5',
             'en.*'         => 'required|string | min:5',
-            'avatar'       => 'required',
+        
         ]);
 
-
+       
         $input = $request->except('avatar', 'video', 'gallery');
 
 
@@ -47,15 +50,19 @@ class ProductController extends Controller
 
             $fileName = $file->getClientOriginalExtension();
 
-            $fileName = 'Mokhtar_ali_' . uniqid() . '_.'  . $fileName;
+            $fileName = 'abdullah_Sultan' . uniqid() . '_.'  . $fileName;
 
             $file->move('images/', $fileName);
 
             $input['avatar'] = $fileName;
 
+       }else{
+        $fileName = 'defualt.png';
+        $input['avatar'] = $fileName;
+
        }
-
-
+      
+       $input['pcategory_id'] = $request->pcategory_id;
        Product::create($input);
 
        session()->flash('message', 'Product Added Successfully');

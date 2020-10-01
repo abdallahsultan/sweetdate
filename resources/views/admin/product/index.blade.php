@@ -37,8 +37,9 @@
                     <tr>
                       <th>#</th>
                       <th>العنوان</th>
-                      <th>الصوره</th>
+                      <th>القسم</th>
                       <th>الوصف</th>
+                      <th>الصوره</th>
                       <th>تاريخ الاضافه</th>
                       <th>التحكم</th>
                     </tr>
@@ -46,10 +47,14 @@
 
                 </thead>
                 <tbody>
+              
                     @foreach ($projects as $index=>$project)
                     <tr>
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $project->title  }}</td>
+                  
+                        <td>{{ $project->category->title  }}</td>
+                      
                         <td>{{ $project->body  }}</td>
                         <td> <img src="{{ asset('images/' . $project->avatar ) }}" style="max-width: 100px;"> </td>
                         <td>{{ date('Y M d', strtotime($project->created_at))  }}</td>
@@ -74,8 +79,9 @@
                     <tr>
                       <th>#</th>
                       <th>العنوان</th>
-                      <th>الصوره</th>
+                      <th>القسم</th>
                       <th>الوصف</th>
+                      <th>الصوره</th>
                       <th>تاريخ الاضافه</th>
                       <th>التحكم</th>
                     </tr>

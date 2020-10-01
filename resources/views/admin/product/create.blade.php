@@ -33,7 +33,20 @@
 
                   @include('partials.error')
 
- 
+                  <div class="form-group row">
+
+                  <label for="pcategory" class="col-sm-3 col-form-label">اختار القسم</label>
+                   <div class="col-md-6">
+                  <select class="form-control" name="pcategory_id" id="pcategory">
+                  @foreach ($pcategories as $key => $value)
+                   @if($value->locale === "ar")
+                    <option value="{{$value->pcategory_id}}">{{$value->title}}</option>
+                    @endif
+                    @endforeach
+                  
+                  </select>
+                  </div>
+                  </div>
 
                 @foreach (config('translatable.locales') as $index=>$locale)
 
@@ -57,7 +70,7 @@
                 <div class="form-group row">
                   <label for="input-2" class="col-sm-3 col-form-label"> الصوره</label>
                   <div class="col-sm-6">
-                    <input type="file" name="avatar" class="form-control" id="input-2" required>
+                    <input type="file" name="avatar" class="form-control" id="input-2" >
                   </div>
                 </div>
 
