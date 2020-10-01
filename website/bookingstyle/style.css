@@ -46,7 +46,7 @@ html {
 
 .cockpit {
   height: 158px;
-  width: 60%;
+  width: 45%;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -295,14 +295,14 @@ ol {
     /* padding: 5px; */
     position: relative;
 }
-  .cockpit {
+  /* .cockpit {
     height: 186px;
     width: 71%;
     position: fixed;
     overflow: hidden;
     position: relative;
     border-bottom: 5px solid #d8d8d8;
-}
+} */
   .indoor {
     border: 5px dashed;
     border-color: #e3cd71;

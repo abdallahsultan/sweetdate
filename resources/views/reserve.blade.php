@@ -69,7 +69,7 @@
 <!-- slider end -->
 <div class="plane">
 <div class="cockpit">
-<h1>Satge Area</h1>
+<h1>Satge </h1>
 </div>
 <div class="row fuselage1">
 <div class="col-md-8">
