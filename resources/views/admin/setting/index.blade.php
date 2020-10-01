@@ -91,7 +91,7 @@
              </div>
            </div>
            <div class="form-group row">
-             <label for="input-28" class="col-sm-2 col-form-label">youtube</label>
+             <label for="input-28" class="col-sm-2 col-form-label">SnapChat</label>
              <div class="col-sm-8">
              <input type="text" class="form-control form-control-rounded" id="input-28" name="linkedin" required value="{{ $setting->linkedin }}">
              </div>

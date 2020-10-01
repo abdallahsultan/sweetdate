@@ -18,6 +18,9 @@
 <link href="{{ asset('website/css/mokh_style.css') }}" rel="stylesheet">
 <link href="{{ asset('website/bookingstyle/style.css') }}" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lato" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 @if(app()->getLocale() == 'ar')
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('website/css/rtl.css') }}">
@@ -1529,7 +1532,7 @@
                         <div class="date_footer_social">
                             <a href="{{ $setting->facebook }}" target="_blank" ><i class="ti ti-facebook date_icon_box"></i></a>
                             <a href="{{ $setting->instagram }}" target="_blank" ><i class="ti ti-instagram date_icon_box"></i></a>
-                            <a href="{{ $setting->youtube }}" target="_blank" ><i class="ti ti-youtube date_icon_box"></i></a>
+                            <a href="{{ $setting->youtube }}" target="_blank" ><i class="fa fa-snapchat-ghost date_icon_box"></i></a>
                             <a href="{{ $setting->twitter }}" target="_blank" ><i class="ti ti-twitter date_icon_box"></i></a>
 
                         </div>
@@ -1578,7 +1581,7 @@
                         <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
                             <a href="{{ $setting->facebook }}" target="_blank"><i class="ti ti-facebook date_icon_box"></i></a>
                             <a href="{{ $setting->instagram }}" target="_blank"><i class="ti ti-instagram date_icon_box"></i></a>
-                            <a href="{{ $setting->youtube }}" target="_blank"><i class="ti ti-youtube date_icon_box"></i></a>
+                            <a href="{{ $setting->youtube }}" target="_blank"><i aria-hidden="true" class="fa fa-snapchat-ghost date_icon_box"></i></a>
                             <a href="{{ $setting->twitter }}" target="_blank"><i class="ti ti-twitter date_icon_box"></i></a>
                          </div>
                     </div>
