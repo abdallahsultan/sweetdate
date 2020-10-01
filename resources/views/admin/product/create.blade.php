@@ -8,11 +8,11 @@
     <div class="page-header">
       <div class="row">
         <div class="col-lg-6">
-          <h3>المنتجات</h3>
+          <h3>قائمة الطعام</h3>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('dashboard.')}}"><i data-feather="home"></i></a></li>
             <li class="breadcrumb-item">الرئيسيه</li>
-            <li class="breadcrumb-item">المنتجات</li>
+            <li class="breadcrumb-item">قائمة الطعام</li>
             <li class="breadcrumb-item active">اضافه جديد</li>
           </ol>
         </div>
@@ -63,8 +63,21 @@
                       <input type="text" class="form-control" name="{{$locale}}[body]" value="{{ old($locale . '.body') }}"> 
                     </div>
                   </div>
+                  
 
                   @endforeach
+                  <div class="form-group row">
+                    <label for="input-5" class="col-sm-3 col-form-label">سعرات حرارية </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" name="calory" value="{{ old('calory') }}"> 
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input-6" class="col-sm-3 col-form-label">السعر </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="input-6" name="price" value="{{ old('price') }}"> 
+                    </div>
+                  </div>
 
 
                 <div class="form-group row">

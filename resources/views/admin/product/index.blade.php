@@ -7,11 +7,11 @@
     <div class="page-header">
       <div class="row">
         <div class="col-lg-6">
-          <h3>المنتجات</h3>
+          <h3>قائمة الطعام</h3>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('dashboard.')}}"><i data-feather="home"></i></a></li>
             <li class="breadcrumb-item">الرئيسيه</li>
-            <li class="breadcrumb-item active">المنتجات</li>
+            <li class="breadcrumb-item active">قائمة الطعام</li>
           </ol>
         </div>
         <div class="col-lg-6">
@@ -39,6 +39,8 @@
                       <th>العنوان</th>
                       <th>القسم</th>
                       <th>الوصف</th>
+                      <th>السعرات الحرارية </th>
+                      <th>السعر</th>
                       <th>الصوره</th>
                       <th>تاريخ الاضافه</th>
                       <th>التحكم</th>
@@ -53,9 +55,11 @@
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $project->title  }}</td>
                   
-                        <td>{{ $project->category->title  }}</td>
+                        <td>{{ $project->category->translate('ar')->title  }}</td>
                       
                         <td>{{ $project->body  }}</td>
+                        <td>{{ $project->calory  }}</td>
+                        <td>{{ $project->price  }}</td>
                         <td> <img src="{{ asset('images/' . $project->avatar ) }}" style="max-width: 100px;"> </td>
                         <td>{{ date('Y M d', strtotime($project->created_at))  }}</td>
                         <td>
@@ -81,6 +85,8 @@
                       <th>العنوان</th>
                       <th>القسم</th>
                       <th>الوصف</th>
+                      <th>السعرات الحرارية </th>
+                      <th>السعر</th>
                       <th>الصوره</th>
                       <th>تاريخ الاضافه</th>
                       <th>التحكم</th>

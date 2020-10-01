@@ -63,6 +63,8 @@ class ProductController extends Controller
        }
       
        $input['pcategory_id'] = $request->pcategory_id;
+       $input['price'] = $request->price;
+       $input['calory'] = $request->calory;
        Product::create($input);
 
        session()->flash('message', 'Product Added Successfully');
@@ -75,9 +77,11 @@ class ProductController extends Controller
     {
 
         $project = Product::findOrFail($id);
+        $pcategories= PcategoryTranslation::all();
+        
+     
 
-
-        return view('admin.product.edit', compact('project'));
+        return view('admin.product.edit', compact('project','pcategories'));
     }
 
     public function update(Request $request, $id)
@@ -111,6 +115,8 @@ class ProductController extends Controller
             $input['avatar'] = $project->avatar;
 
         }
+        $input['price'] = $request->price;
+       $input['calory'] = $request->calory;
 
 
         $project->update($input);
