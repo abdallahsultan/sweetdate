@@ -246,13 +246,16 @@
                             </div>
                                 
                                 <div class="w3-container">
-                                <h3>{{$product->price}} &nbsp;&nbsp; {{$product->price}}</h3>
+                                <h3>{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
                                 <h4><b>{{$product->title}}</b></h4>
                                 
                                
-                                
-                                
+                               
+                                @if (strlen($product->body) < 50) 
                                 <p>{{ strip_tags($product->body) }} </p>
+                                @else
+                                <p>{{  substr($product->body, 0, 50)  }} ... </p>
+                                @endif
                                 </div>
                             </div>
                  @endif

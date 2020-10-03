@@ -85,9 +85,9 @@
                       @php $locale='ar'; @endphp
                       <!-- <div class="date_slider_single date_wht_txt date_lm_type_i" data-dots="true" data-autoplay="true"> -->
                       @foreach ($pcategory as $key => $value)
-                    <button class="tablinks btn success" style="background: #e3cc6f;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->title}}</button>
+                    <button class="tablinks btn success" style="    background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->title}}</button>
                     @endforeach
-                    <button class="tablinks active btn success" style="background: #e3cc6f;border-radius: 12px; font-weight: bold; font-size: larger;" onclick="openCity(event, 'all')">جميع الأقسام</button>
+                    <button class="tablinks active btn success" style=" background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px; font-weight: bold; font-size: larger;" onclick="openCity(event, 'all')">جميع الأقسام</button>
                                 
                      </div>      
                 
@@ -114,13 +114,17 @@
                             </div>
                                 
                                 <div class="w3-container">
-                                <h3>{{$product->price}} &nbsp;&nbsp; {{$product->price}}</h3>
+                                <h3>{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
                                 <h4><b>{{$product->title}}</b></h4>
                                 
                                
                                 
                                 
+                                @if (strlen($product->body) < 100) 
                                 <p>{{ strip_tags($product->body) }} </p>
+                                @else
+                                <p>{{  substr($product->body, 0, 100)  }} ... </p>
+                                @endif
                                 </div>
                             </div>
                             @endforeach
@@ -142,13 +146,17 @@
                             </div>
                             </div>
                             <div class="w3-container">
-                            <h3>{{$product->price}} &nbsp;&nbsp; {{$product->price}}</h3>
+                            <h3>{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
                                 <h4><b>{{$product->title}}</b></h4>
                                 
                                
                                 
                                 
+                                @if (strlen($product->body) < 100) 
                                 <p>{{ strip_tags($product->body) }} </p>
+                                @else
+                                <p>{{  substr($product->body, 0, 100)  }} ... </p>
+                                @endif
                             </div>
                          </div>
                         @endif
