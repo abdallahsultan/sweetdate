@@ -81,9 +81,9 @@
                 <h2 class="date_gold date_title_counter">@lang('site.menu')</h2>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-                <div class="tab">
+                <div class="tab" style=" text-align: -webkit-center; ">
                       
-                <div class="date_slider_partners date_wht_txt date_lm_type_i" >
+                <div class="date_slider_partners date_wht_txt date_lm_type_i" style="margin:0px; width: 90%;" data-dots="false" data-autoplay="true">
                       @foreach ($pcategory as $key => $value)
                       
                     <div class="date_lm_type_i_item ">
@@ -110,7 +110,7 @@
                   
                             @foreach ($products as $product)
                             
-                            <div class="w3-card col-lg-3" style="margin:10px"   >
+                            <div class="w3-card col-lg-3" style="     height: 400px;margin:10px"   >
                             <div class="flip-box">
                             <div class="flip-box-inner">
                                 <div class="flip-box-front">
@@ -129,11 +129,9 @@
                                
                                 
                                 
-                                @if (strlen($product->body) < 50 || strlen($product->body) == 0 ) 
+                          
                                 <p>{{ strip_tags($product->body) }} </p>
-                                @else
-                                <p>{{  substr($product->body, 0, 50)  }} ... </p>
-                                @endif
+                               
                                 </div>
                             </div>
                             @endforeach
@@ -143,7 +141,7 @@
                     
                         @foreach ($products as $product)
                         @if($product->pcategory_id == $i)
-                        <div class="w3-card col-lg-3"  style="margin:10px" >
+                        <div class="w3-card col-lg-3"  style="    height: 400px;margin:10px" >
                         <div class="flip-box">
                             <div class="flip-box-inner">
                                 <div class="flip-box-front">
@@ -161,11 +159,9 @@
                                
                                 
                                 
-                                @if (strlen($product->body) < 50 || strlen($product->body) == 0 ) 
+                               
                                 <p>{{ strip_tags($product->body) }} </p>
-                                @else
-                                <p>{{  substr($product->body, 0, 50)  }} ... </p>
-                                @endif
+                                
                             </div>
                          </div>
                         @endif
