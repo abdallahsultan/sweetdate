@@ -83,7 +83,7 @@
                 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
                 <div class="tab" style=" text-align: -webkit-center; ">
                       
-                <div class="date_slider_partners date_wht_txt date_lm_type_i" style="margin:0px; width: 90%;" data-dots="false" data-autoplay="true">
+                <div class="date_slider_event date_wht_txt date_lm_type_i" style="margin:0px; width: 90%;" data-dots="false" data-autoplay="true">
                       @foreach ($pcategory as $key => $value)
                       
                     <div class="date_lm_type_i_item ">
