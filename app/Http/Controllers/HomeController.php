@@ -19,7 +19,7 @@ use App\Slider;
 use App\Team;
 use App\Test;
 use App\Video;
-use App\PcategoryTranslation;
+use App\Pcategory;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -141,7 +141,7 @@ class HomeController extends Controller
     {
 
         $products = Product::all();
-        $pcategory= PcategoryTranslation::where('locale','ar')->get();
+        $pcategory= Pcategory::all();
         
 
         return view('products', compact('products','pcategory'));

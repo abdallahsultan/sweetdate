@@ -85,9 +85,9 @@
                       @php $locale='ar'; @endphp
                       <!-- <div class="date_slider_single date_wht_txt date_lm_type_i" data-dots="true" data-autoplay="true"> -->
                       @foreach ($pcategory as $key => $value)
-                    <button class="tablinks btn success" style="    background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->title}}</button>
+                    <button class="tablinks btn success" style="    background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
                     @endforeach
-                    <button class="tablinks active btn success" style=" background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px; font-weight: bold; font-size: larger;" onclick="openCity(event, 'all')">جميع الأقسام</button>
+                    <button class="tablinks active btn success" style=" background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px; font-weight: bold; font-size: larger;" onclick="openCity(event, 'all')">@lang('site.all_parts')</button>
                                 
                      </div>      
                 
