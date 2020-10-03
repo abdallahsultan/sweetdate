@@ -57,88 +57,7 @@
                 </div>
 
     </section>
-
-        <section class="date_section date_image_bck date_fixed  date_wht_txt" data-stellar-background-ratio="0.2" data-image="images/slider/sl13.jpg">
-            <div class="date_over" data-color="#000" data-opacity="0.8"></div>
-
-                <div class="container text-center">
-
-                    <h2 class="date_gold date_title_counter">@lang('site.menu')</h2>
-                    
-                
-                    <div id='book3-trigger' class=" col-md-6 ">
-                        <div class="service-box" >
-                            <h2 class="date_gold date_title_counter">@lang('site.drinksmenu')</h2>
-                             <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
-                                
-                                
-                         </div>
-
-                    </div>
-                
-                    
-                    <div id='book4-trigger' class=" col-md-6 ">
-                        <div class="service-box" >
-                            <h2 class="date_gold date_title_counter" >@lang('site.foodmenu')</h2>
-                                <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
-                                
-                                
-                        </div>
-                     </div>
-
-                </div>
-            </div>
-        </section> 
-   
-    
-   
-
-    <section id="contact">
-    </section>
-
-    <div style='display: none'>
-        <div id='book1'>
-            
-        </div>
-        <div id='book2'></div>
-        <div id='book3'>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu1.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu2.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu3.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-        </div>
-        <div id='book4'>
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu1.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu2.jpg')}}" class='wowbook-lazy' />
-            </div>
-          
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-        </div>
-        <img src="{{asset('images/menu/ar/food/menu.jpg')}}" style='visibility: hidden' />
-    </div>
-	<style>
+    <style>
 		
 	
 	
@@ -254,7 +173,186 @@
 		hr {
 			max-width: 450px;
 		}
+        
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+
 	</style>
+
+    @if (count($products) > 1)
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <section class="date_section">
+
+        <div class="container-fluid text-center">
+
+            <h2 class="date_gold date_title_counter"> @lang('site.menu') </h2>
+
+
+            <div class="row">
+ 
+            <div class="col-md-12" style="margin-left:10%"  >
+               @php $count=1; @endphp
+                @foreach ($products as $product)
+
+                @if($count < 7)
+                 <div class="w3-card col-lg-3" style="margin:10px"   >
+                            <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                <img src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
+                                </div>
+                                <div class="flip-box-back">
+                                <img src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
+                                </div>
+                            </div>
+                            </div>
+                                
+                                <div class="w3-container">
+                                <h3>{{$product->price}} &nbsp;&nbsp; {{$product->price}}</h3>
+                                <h4><b>{{$product->title}}</b></h4>
+                                
+                               
+                                
+                                
+                                <p>{{ strip_tags($product->body) }} </p>
+                                </div>
+                            </div>
+                 @endif
+                 @php $count+=1; @endphp
+                @endforeach
+
+              
+                </div>
+                <div class="col-md-12">
+              <a class="tablinks active btn success" href="{{route('menu')}}" style="background: #e3cc6f;border-radius: 4px; font-weight: bold; color:#ffffff;" >@lang('site.show_more')</a>
+              </div>
+                </div>
+               <br>
+               <br>
+
+        </div>
+    </section>
+
+    @endif
+        <section class="date_section date_image_bck date_fixed  date_wht_txt" data-stellar-background-ratio="0.2" data-image="images/slider/sl13.jpg">
+            <div class="date_over" data-color="#000" data-opacity="0.8"></div>
+
+                <div class="container text-center">
+
+                    <h2 class="date_gold date_title_counter">@lang('site.menu_catalog')</h2>
+                    
+                
+                    <div id='book3-trigger' class=" col-md-6 ">
+                        <div class="service-box" >
+                            <h2 class="date_gold date_title_counter">@lang('site.drinksmenu')</h2>
+                             <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
+                                
+                                
+                         </div>
+
+                    </div>
+                
+                    
+                    <div id='book4-trigger' class=" col-md-6 ">
+                        <div class="service-box" >
+                            <h2 class="date_gold date_title_counter" >@lang('site.foodmenu')</h2>
+                                <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
+                                
+                                
+                        </div>
+                     </div>
+
+                </div>
+            </div>
+        </section> 
+   
+    
+   
+
+    <section id="contact">
+    </section>
+
+    <div style='display: none'>
+        <div id='book1'>
+            
+        </div>
+        <div id='book2'></div>
+        <div id='book3'>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu1.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu2.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu3.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+        </div>
+        <div id='book4'>
+            <div>
+                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/food/menu1.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/food/menu2.jpg')}}" class='wowbook-lazy' />
+            </div>
+          
+            <div>
+                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+        </div>
+        <img src="{{asset('images/menu/ar/food/menu.jpg')}}" style='visibility: hidden' />
+    </div>
+	
 
     <!-- jQuery -->
   
@@ -295,44 +393,6 @@
        
 
 
-
-    @if (count($products) > 1)
-
-
-    <section class="date_section">
-
-        <div class="container-fluid text-center">
-
-            <h2 class="date_gold date_title_counter"> @lang('site.products') </h2>
-
-
-            <div class="date_slider_single date_wht_txt date_lm_type_i" data-dots="true" data-autoplay="true">
-
-                @foreach ($products as $product)
-
-
-                <div class="date_lm_type_i_item">
-                    <img src="{{ asset('images/' . $product->avatar ) }}" alt="">
-
-                    <div class="date_lm_type_i_item_desc date_lm_type_i_item_desc_left date_image_bck text-left" data-bottom-top="transform:translate3d(0px, 0px, 0px)" data-top-bottom="transform:translate3d(0px, -50px, 0px)" data-image="images/main_back_gr.jpg">
-
-                        <div class="date_lm_type_i_item_desc_cont">
-                            <h3 class="date_gold"> {{ $product->title }}</h3>
-
-                            <p> {{ strip_tags($product->body) }} </p>
-
-                        </div>
-                    </div>
-                </div>
-
-                @endforeach
-
-            </div>
-
-        </div>
-    </section>
-
-    @endif
 
 
     <!-- <section class="date_section ">
@@ -556,7 +616,7 @@
                    
 
                     @endforeach
-                </div>
+                </div>f
 
             </div>
 

@@ -23,7 +23,7 @@
   <div class="container-fluid">
 
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="margin:10px">
           <div class="card">
             <div class="card-body">
               <form id="personal-info" method="POST" action="{{ route('dashboard.product.update', $project->id) }}" enctype="multipart/form-data">

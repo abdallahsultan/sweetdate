@@ -28,7 +28,7 @@ Route::get('contact', function () {
 
 Route::get('project/{id}', 'HomeController@projectcat')->name('project');
 
-Route::get('product', 'HomeController@products')->name('products');
+Route::get('menu', 'HomeController@products')->name('menu');
 //reserve
 Route::get('reserve', 'HomeController@reserve')->name('reserve');
 Route::get('reserve/indoor', 'HomeController@reserveindoor')->name('reserve/indoor');
@@ -57,7 +57,7 @@ Route::post('saveopenion', 'HomeController@saveopenion')->name('saveopenion');
 //place
 Route::get('place', 'HomeController@place')->name('place');
 //menu
-Route::get('menu', 'HomeController@menu')->name('menu');
+Route::get('catalog', 'HomeController@menu')->name('catalog');
 
 
 

@@ -1516,8 +1516,8 @@
                     <ul>
                         <li><a href="{{ route('home')}}">@lang('site.home')</a></li>
                         <li><a href="{{ route('ourstory')}}">@lang('site.ourstory')</a></li>
-                        <!-- <li><a href="{{ route('products')}}">@lang('site.products')</a></li> -->
-						<li><a href="{{ route('menu')}}">@lang('site.menu')</a></li>
+                        <li><a href="{{ route('menu')}}">@lang('site.menu')</a></li>
+						<li><a href="{{ route('catalog')}}">@lang('site.menu_catalog')</a></li>
                         <!-- <li><a href="{{ route('services')}}">@lang('site.services')</a></li> -->
                         <li><a href="{{ route('events')}}">@lang('site.events')</a></li>
                         <!-- <li><a href="{{ route('blogs')}}">@lang('site.blogs')</a></li> -->

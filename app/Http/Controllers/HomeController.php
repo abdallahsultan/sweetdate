@@ -19,6 +19,7 @@ use App\Slider;
 use App\Team;
 use App\Test;
 use App\Video;
+use App\PcategoryTranslation;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -140,8 +141,10 @@ class HomeController extends Controller
     {
 
         $products = Product::all();
+        $pcategory= PcategoryTranslation::where('locale','ar')->get();
+        
 
-        return view('products', compact('products'));
+        return view('products', compact('products','pcategory'));
     }
      
     public function place ()
