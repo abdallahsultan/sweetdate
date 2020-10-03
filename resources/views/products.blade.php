@@ -120,10 +120,10 @@
                                
                                 
                                 
-                                @if (strlen($product->body) < 60) 
+                                @if (strlen($product->body) < 50) 
                                 <p>{{ strip_tags($product->body) }} </p>
                                 @else
-                                <p>{{  substr($product->body, 0, 60)  }} ... </p>
+                                <p>{{  substr($product->body, 0, 50)  }} ... </p>
                                 @endif
                                 </div>
                             </div>
@@ -152,10 +152,10 @@
                                
                                 
                                 
-                                @if (strlen($product->body) < 60) 
+                                @if (strlen($product->body) < 50) 
                                 <p>{{ strip_tags($product->body) }} </p>
                                 @else
-                                <p>{{  substr($product->body, 0, 60)  }} ... </p>
+                                <p>{{  substr($product->body, 0, 50)  }} ... </p>
                                 @endif
                             </div>
                          </div>
