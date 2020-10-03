@@ -142,8 +142,13 @@
                             </div>
                             </div>
                             <div class="w3-container">
-                            <h4><b>Simon</b></h4>
-                            <p>The boss of all bosses</p>
+                            <h3>{{$product->price}} &nbsp;&nbsp; {{$product->price}}</h3>
+                                <h4><b>{{$product->title}}</b></h4>
+                                
+                               
+                                
+                                
+                                <p>{{ strip_tags($product->body) }} </p>
                             </div>
                          </div>
                         @endif
