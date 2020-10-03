@@ -82,14 +82,23 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
                 <div class="tab">
-                      @php $locale='ar'; @endphp
-                      <!-- <div class="date_slider_single date_wht_txt date_lm_type_i" data-dots="true" data-autoplay="true"> -->
+                      
+                <div class="date_slider_partners date_wht_txt date_lm_type_i" >
                       @foreach ($pcategory as $key => $value)
+                      
+                    <div class="date_lm_type_i_item ">
                     <button class="tablinks btn success" style="    background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
-                    @endforeach
-                    <button class="tablinks active btn success" style=" background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px; font-weight: bold; font-size: larger;" onclick="openCity(event, 'all')">@lang('site.all_parts')</button>
-                                
+                         
                      </div>      
+                    @endforeach
+                    
+                    <div class="date_lm_type_i_item ">
+                    <button class="tablinks active btn success" style=" background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px; font-weight: bold; font-size: larger;" onclick="openCity(event, 'all')">@lang('site.all_parts')</button>
+                         
+                     </div>      
+                     </div>      
+                     </div>      
+                                
                 
                     <div class="row">
 
@@ -192,6 +201,8 @@
 
 
 <script>
+
+
 function openCity(evt, cityName) {
   // Declare all variables
   var i, tabcontent, tablinks;
