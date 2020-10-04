@@ -196,6 +196,48 @@
 		});
     });
 
+    	// OWL Carousel in tabs menu
+		$(".date_slider_menu_tabs ").each(function(){
+			var title = $(this).find('.date_gold').text();
+			$(this).parents('.date_section').find('.date_slider_menu_tabs_btns').append('<div class="date_slider_menu_tabs_btn">'+title+'</div>');
+		});
+	
+		$(".date_slider_menu_tabs").each(function(){
+			var dots = $(this).data('dots');
+			var autoplay = $(this).data('autoplay');
+			$(this).owlCarousel({
+				 addClassActive:true,
+				autoplay : autoplay,
+				stagePadding:0,
+				loop:true,
+				touchDrag:true,
+				margin:0,
+				center:true,
+				singleItem:true,
+				items:3,
+				responsive : {
+				0 : {
+					stagePadding: 0,
+							margin:0,
+							center:false,
+				},
+				768 : {
+					stagePadding: 0,
+							margin:0,
+							center:false,
+				},
+				980 : {
+	
+				}
+				},
+				stagePadding: 100,
+				margin:0,
+				nav: true,
+				navText:['',''],
+				dots : dots,
+				 dotsContainer: '.date_slider_menu_tabs_btns',
+			});
+		});
         // OWL Carousel in Partners
 
 	$(".date_slider_partners .date_lm_type_i_item").each(function(){

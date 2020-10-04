@@ -13,7 +13,20 @@
     .date_lm_type_i_item img{
         max-height: 600px;
     }
-    
+    .zoom {
+  
+ 
+  transition: transform 1.1s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+    border: 2px solid #e3cc6fa8; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+/*     
 .flip-box {
   background-color: transparent;
   width: 300px;
@@ -52,7 +65,7 @@
   background-color: #555;
   color: white;
   transform: rotateY(180deg);
-}
+} */
 
 </style>
     <div class="date_slider date_slider_inside date_image_bck date_fixed date_wht_txt" data-stellar-background-ratio="0.3" data-image="{{ asset('images/slider/sl5.jpg') }}">
@@ -74,8 +87,10 @@
     <section id="date_content" class="date_content">
 
 
-        <section class="date_section" id="products">
+        <section class="date_section" id="products" style="background:url(../images/menucover.jpg);">
+        <div class="date_slider_firefly" data-total="30" data-min="1" data-max="3"></div>
 
+<div class="date_over" data-color="#000" data-opacity="0.8"></div>
             <div class="container-fluid text-center">
 
                 <h2 class="date_gold date_title_counter">@lang('site.menu')</h2>
@@ -83,20 +98,20 @@
                 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
                 <div class="tab" style=" text-align: -webkit-center; ">
                       
-                <div class="date_slider_event date_wht_txt date_lm_type_i" style="margin:0px; width: 90%;" data-dots="false" data-autoplay="true">
+               
                       @foreach ($pcategory as $key => $value)
                       
-                    <div class="date_lm_type_i_item ">
-                    <button class="tablinks btn success" style="    background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
+              
+                    <button class="tablinks btn success" style="   background: linear-gradient(-12deg,#ffffff85, transparent, #ffffffa3);color: white;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
                          
-                     </div>      
+                       
                     @endforeach
                     
-                    <div class="date_lm_type_i_item ">
-                    <button class="tablinks active btn success" style=" background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px; font-weight: bold; font-size: larger;" onclick="openCity(event, 'all')">@lang('site.all_parts')</button>
+                   
+                    <!-- <button class="tablinks active btn success" style=" background: linear-gradient(-12deg,#e3cc6f, black, #e3cc6f);color: white;border-radius: 12px; font-weight: bold; font-size: larger;" onclick="openCity(event, 'all')">@lang('site.all_parts')</button> -->
                          
-                     </div>      
-                     </div>      
+                          
+                           
                      </div>      
                                 
                 
@@ -106,52 +121,18 @@
                      
                      <div class="col-md-12" style="margin-left:10%"  >
 
-                       <div id="all" class="tabcontent">
-                  
-                            @foreach ($products as $product)
-                            
-                            <div class="w3-card col-lg-3" style="     height: 400px;margin:10px"   >
-                            <div class="flip-box">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front">
-                                <img src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
-                                </div>
-                                <div class="flip-box-back">
-                                <img src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
-                                </div>
-                            </div>
-                            </div>
-                                
-                                <div class="w3-container">
-                                <h3>{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
-                                <h4><b>{{$product->title}}</b></h4>
-                                
-                               
-                                
-                                
-                          
-                                <p>{{ strip_tags($product->body) }} </p>
-                               
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
+                       
                         @for( $i = 1 ; $i < 10 ; $i++ )
                       <div id="{{$i}}" class="tabcontent">
                     
                         @foreach ($products as $product)
                         @if($product->pcategory_id == $i)
-                        <div class="w3-card col-lg-3"  style="    height: 400px;margin:10px" >
-                        <div class="flip-box">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front">
-                                <img src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
-                                </div>
-                                <div class="flip-box-back">
-                                <img src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
-                                </div>
-                            </div>
-                            </div>
+                        <div class="w3-card col-lg-3"  style="color: white;background: #00000085; height: 400px;margin:10px" >
+                        
+                                <img class="zoom" src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
+                              
+                               
+                               
                             <div class="w3-container">
                             <h3>{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
                                 <h4><b>{{$product->title}}</b></h4>

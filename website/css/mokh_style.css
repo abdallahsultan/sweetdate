@@ -2809,6 +2809,7 @@ header {
 	display: block!important;
 }
 
+
 /*OWL Controls*/
 .owl-controls {
 	position: absolute;
@@ -2922,6 +2923,30 @@ header {
 	.date_slider_event_btns.active {
 		color: #fff;
     }
+
+	
+.date_slider_menu_tabs_btns,
+.date_slider_single_btns {
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+	margin: 30px 0 0;
+	display: block!important;
+}
+.date_slider_menu_tabs_btns {
+	font: 20px/24px Bree Serif, Arial;
+	display: inline-block;
+	margin: 0 10px;
+	cursor: pointer;
+	color: #E7CD74;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.date_slider_menu_tabs_btns.active {
+	color: #fff;
+}
+
 
 .owl-dot span {
 	background: url(/../images/badge_mini.png);
@@ -6818,7 +6843,16 @@ header nav.active .date_logo {
 	}
 	.date_slider_event  .owl-prev,
 	.date_slider_single  .owl-prev {
+		right: 15px;
+		
+	}
+	.date_slider_menu_tabs  .owl-next {
 		left: 15px;
+		background-image: none!important;
+	}
+	.date_slider_menu_tabs  .owl-prev {
+		left: 15px;
+		background-image: none!important;
 	}
 
 	.date_gold {
