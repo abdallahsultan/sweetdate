@@ -33,7 +33,7 @@
          color: white;
          border-radius: 12px;
          font-weight: bold; 
-         font-size: larger;
+         
 }
 /*     
 .flip-box {
