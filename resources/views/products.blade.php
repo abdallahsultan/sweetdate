@@ -26,6 +26,15 @@
     transform: scale(1.1);
     border: 2px solid #e3cc6fa8; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+.tabsmenu{
+    font-family: mokhfonts !important; 
+      margin-left: 10px;
+         background: linear-gradient(0deg,#ffffff52, transparent, #ffffff52);
+         color: white;
+         border-radius: 12px;
+         font-weight: bold; 
+         font-size: larger;
+}
 /*     
 .flip-box {
   background-color: transparent;
@@ -102,7 +111,7 @@
                       @foreach ($pcategory as $key => $value)
                       
               
-                    <button class="tablinks btn success" style="    margin-left: 10px;   background: linear-gradient(0deg,#ffffff52, transparent, #ffffff52);color: white;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
+                    <button class="tablinks btn success tabsmenu"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
                          
                        
                     @endforeach
