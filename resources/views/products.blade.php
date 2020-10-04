@@ -27,7 +27,7 @@
     border: 2px solid #e3cc6fa8; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .tabsmenu{
-    font-family: mokhfonts !important; 
+     
       margin-left: 10px;
          background: linear-gradient(0deg,#ffffff52, transparent, #ffffff52);
          color: white;
