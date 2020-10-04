@@ -170,56 +170,38 @@
 			text-shadow: 0 1px 0 #fff, 0 0px 3px #fff;
 		}
 */
-		hr {
-			max-width: 450px;
-		}
-        
-.flip-box {
-  background-color: transparent;
-  width: 300px;
+.zoom {
+  
+ 
+  transition: transform 1.1s; /* Animation */
+  width: 200px;
   height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
+  margin: 0 auto;
 }
 
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.zoom:hover {
+    transform: scale(1.1);
+    border: 2px solid #e3cc6fa8; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
-
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
+.tabsmenu{
+     
+      margin-left: 10px;
+         background: linear-gradient(0deg,#ffffff52, transparent, #ffffff52);
+         color: white;
+         border-radius: 12px;
+         font-weight: bold; 
+         
 }
-
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-box-back {
-  background-color: #555;
-  color: white;
-  transform: rotateY(180deg);
-}
-
 	</style>
 
     @if (count($products) > 1)
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <section class="date_section">
+    <section class="date_section" id="products" style="background:url(images/menucover.jpg);">
+      
+
+      <div class="date_over" data-color="#000" data-opacity="0.8"></div>
+     <div class="container-fluid text-center">
 
         <div class="container-fluid text-center">
 
@@ -233,31 +215,24 @@
                 @foreach ($products as $product)
 
                 @if($count < 7)
-                 <div class="w3-card col-lg-3" style="margin:10px"   >
-                            <div class="flip-box">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front">
-                                <img src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
-                                </div>
-                                <div class="flip-box-back">
-                                <img src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
-                                </div>
-                            </div>
-                            </div>
-                                
-                                <div class="w3-container">
-                                <h3>{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
-                                <h4><b>{{$product->title}}</b></h4>
-                                
-                               
-                               
-                                @if (strlen($product->body) < 50) 
-                                <p>{{ strip_tags($product->body) }} </p>
-                                @else
-                                <p>{{  substr($product->body, 0, 50)  }} ... </p>
-                                @endif
-                                </div>
-                            </div>
+                <div class="w3-card col-lg-3"  style="color: white;background: #00000085; height: 400px;margin:10px" >
+                        
+                        <img class="zoom" src="{{ asset('images/' . $product->avatar ) }}" alt="" style="width:100%; height: 200px;">
+                      
+                       
+                       
+                    <div class="w3-container">
+                    <h3>{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
+                        <h4><b>{{$product->title}}</b></h4>
+                        
+                       
+                        
+                        
+                       
+                        <p>{{ strip_tags($product->body) }} </p>
+                        
+                    </div>
+                 </div>
                  @endif
                  @php $count+=1; @endphp
                 @endforeach
@@ -275,120 +250,7 @@
     </section>
 
     @endif
-        <section class="date_section date_image_bck date_fixed  date_wht_txt" data-stellar-background-ratio="0.2" data-image="images/slider/sl13.jpg">
-            <div class="date_over" data-color="#000" data-opacity="0.8"></div>
-
-                <div class="container text-center">
-
-                    <h2 class="date_gold date_title_counter">@lang('site.menu_catalog')</h2>
-                    
-                
-                    <div id='book3-trigger' class=" col-md-6 ">
-                        <div class="service-box" >
-                            <h2 class="date_gold date_title_counter">@lang('site.drinksmenu')</h2>
-                             <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
-                                
-                                
-                         </div>
-
-                    </div>
-                
-                    
-                    <div id='book4-trigger' class=" col-md-6 ">
-                        <div class="service-box" >
-                            <h2 class="date_gold date_title_counter" >@lang('site.foodmenu')</h2>
-                                <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
-                                
-                                
-                        </div>
-                     </div>
-
-                </div>
-            </div>
-        </section> 
-   
-    
-   
-
-    <section id="contact">
-    </section>
-
-    <div style='display: none'>
-        <div id='book1'>
-            
-        </div>
-        <div id='book2'></div>
-        <div id='book3'>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu1.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu2.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu3.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-        </div>
-        <div id='book4'>
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu1.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu2.jpg')}}" class='wowbook-lazy' />
-            </div>
-          
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-        </div>
-        <img src="{{asset('images/menu/ar/food/menu.jpg')}}" style='visibility: hidden' />
-    </div>
-	
-
-    <!-- jQuery -->
-  
-
-    <!-- Bootstrap Core JavaScript -->
-    <!-- <script src="{{asset('website/magazine/js/bootstrap.min.js')}}"></script> -->
-
-    <!-- Plugin JavaScript -->
-    <!-- <script src="{{asset('website/magazine/js/jquery.easing.min.js')}}"></script> -->
-    <!-- <script src="{{asset('website/magazine/js/jquery.fittext.js')}}"></script> -->
-    <!-- <script src="{{asset('website/magazine/js/wow.min.js')}}"></script> -->
-
-    <!-- Custom Theme JavaScript -->
-    <!-- <script src="{{asset('website/magazine/js/creative.js')}}"></script> -->
-
-    <link rel="stylesheet" href="{{asset('website/magazine/css/wow_book.css')}}" type="text/css" />
-	<style>
-		.wowbook-right .wowbook-gutter-shadow {
-			background-image: url("https://previews.customer.envatousercontent.com/files/251648489/img/page_right_background.png");
-			background-position: 0 0;
-			width: 75px;
-		}
-		.wowbook-left .wowbook-gutter-shadow {
-			background-image: url("https://previews.customer.envatousercontent.com/files/251648489/img/page_left_background.png");
-			opacity: 0.5;
-			width: 60px;
-		}
-        .wowbook-control-currentPage {
-            font-family: "Segoe UI",Helvetica,Arial,sans-serif;
-        }
-	</style>
-    <!-- <script type="text/javascript" src="{{asset('website/magazine/js/pdf.combined.min.js')}}"></script> -->
-   
+        
 
                 
 
@@ -530,6 +392,120 @@
     </section>
 
     @endif
+    <section class="date_section date_image_bck date_fixed  date_wht_txt" data-stellar-background-ratio="0.2" data-image="images/slider/sl13.jpg">
+            <div class="date_over" data-color="#000" data-opacity="0.8"></div>
+
+                <div class="container text-center">
+
+                    <h2 class="date_gold date_title_counter">@lang('site.menu_catalog')</h2>
+                    
+                
+                    <div id='book3-trigger' class=" col-md-6 ">
+                        <div class="service-box" >
+                            <h2 class="date_gold date_title_counter">@lang('site.drinksmenu')</h2>
+                             <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
+                                
+                                
+                         </div>
+
+                    </div>
+                
+                    
+                    <div id='book4-trigger' class=" col-md-6 ">
+                        <div class="service-box" >
+                            <h2 class="date_gold date_title_counter" >@lang('site.foodmenu')</h2>
+                                <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
+                                
+                                
+                        </div>
+                     </div>
+
+                </div>
+            </div>
+        </section> 
+   
+    
+   
+
+    <section id="contact">
+    </section>
+
+    <div style='display: none'>
+        <div id='book1'>
+            
+        </div>
+        <div id='book2'></div>
+        <div id='book3'>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu1.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu2.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu3.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+        </div>
+        <div id='book4'>
+            <div>
+                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/food/menu1.jpg')}}" class='wowbook-lazy' />
+            </div>
+            <div>
+                <img src="{{asset('images/menu/ar/food/menu2.jpg')}}" class='wowbook-lazy' />
+            </div>
+          
+            <div>
+                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
+            </div>
+        </div>
+        <img src="{{asset('images/menu/ar/food/menu.jpg')}}" style='visibility: hidden' />
+    </div>
+	
+
+    <!-- jQuery -->
+  
+
+    <!-- Bootstrap Core JavaScript -->
+    <!-- <script src="{{asset('website/magazine/js/bootstrap.min.js')}}"></script> -->
+
+    <!-- Plugin JavaScript -->
+    <!-- <script src="{{asset('website/magazine/js/jquery.easing.min.js')}}"></script> -->
+    <!-- <script src="{{asset('website/magazine/js/jquery.fittext.js')}}"></script> -->
+    <!-- <script src="{{asset('website/magazine/js/wow.min.js')}}"></script> -->
+
+    <!-- Custom Theme JavaScript -->
+    <!-- <script src="{{asset('website/magazine/js/creative.js')}}"></script> -->
+
+    <link rel="stylesheet" href="{{asset('website/magazine/css/wow_book.css')}}" type="text/css" />
+	<style>
+		.wowbook-right .wowbook-gutter-shadow {
+			background-image: url("https://previews.customer.envatousercontent.com/files/251648489/img/page_right_background.png");
+			background-position: 0 0;
+			width: 75px;
+		}
+		.wowbook-left .wowbook-gutter-shadow {
+			background-image: url("https://previews.customer.envatousercontent.com/files/251648489/img/page_left_background.png");
+			opacity: 0.5;
+			width: 60px;
+		}
+        .wowbook-control-currentPage {
+            font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+        }
+	</style>
+    <!-- <script type="text/javascript" src="{{asset('website/magazine/js/pdf.combined.min.js')}}"></script> -->
+   
     <section class="date_section  date_image_bck">
     <div class="date_over" data-color="#111" data-opacity="0.05"></div>
 
@@ -619,7 +595,7 @@
                    
 
                     @endforeach
-                </div>f
+                </div>
 
             </div>
 
