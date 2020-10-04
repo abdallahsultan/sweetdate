@@ -88,9 +88,9 @@
 
 
         <section class="date_section" id="products" style="background:url(../images/menucover.jpg);">
-        <div class="date_slider_firefly" data-total="30" data-min="1" data-max="3"></div>
+      
 
-<div class="date_over" data-color="#000" data-opacity="0.8"></div>
+             <div class="date_over" data-color="#000" data-opacity="0.8"></div>
             <div class="container-fluid text-center">
 
                 <h2 class="date_gold date_title_counter">@lang('site.menu')</h2>
@@ -102,7 +102,7 @@
                       @foreach ($pcategory as $key => $value)
                       
               
-                    <button class="tablinks btn success" style="   background: linear-gradient(-12deg,#ffffff85, transparent, #ffffffa3);color: white;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
+                    <button class="tablinks btn success" style="    margin-left: 10px;   background: linear-gradient(0deg,#ffffff85, transparent, #ffffffa3);color: white;border-radius: 12px;font-weight: bold; font-size: larger;"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
                          
                        
                     @endforeach
