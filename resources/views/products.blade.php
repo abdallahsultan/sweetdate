@@ -179,9 +179,9 @@
             </div>
             <div class="container">
             <div class="col-md-12">
-                <p style="color: #e3cc6f;font-weight: bold;font-size: x-large; text-align:center;" <br>.جمبع الأسعار غبر شاملة ضريبة القيمة المضافة
-                     <br>.البيانات الغذائية الإضافية متاحة عند الطلب  
-                     <br> يحتاج الأشخاص البالغون الى معدل  2000 سعره حرارية  يومياوتختلف الاحتياجات من شخص لآخر </p>
+                <p style="color: #e3cc6f;font-weight: bold;font-size: x-large; text-align:center;" <br>@lang('site.under_menu1')
+                     <br>@lang('site.under_menu2')
+                     <br> @lang('site.under_menu3') </p>
                 </div>
             </div>
             <!-- container end -->
