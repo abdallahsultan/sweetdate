@@ -141,16 +141,18 @@ class HomeController extends Controller
     {
 
         $products = Product::all();
+        $pcategory= Pcategory::all();
         if(app()->getLocale()== 'ar'){
-
-            $pcategory= Pcategory::orderBy('id', 'desc')->get();
+            $dir='rtl';
+            
         }
         else{
-            $pcategory= Pcategory::all();
+           
+            $dir='ltr';
         }
         
 
-        return view('products', compact('products','pcategory'));
+        return view('products', compact('products','pcategory','dir'));
     }
      
     public function place ()

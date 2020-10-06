@@ -71,7 +71,7 @@ return [
     'all_parts' => 'All Parts' ,
     'under_menu1' => 'All prices include VAT.' ,
     'under_menu2' => 'Additional nutritional information is available upon request.' ,
-    'under_menu3' => 'Adults need an average of 2000 calories per day, and needs vary from person to person.' ,
+    'under_menu3' => 'Adults need an average of 2000 calories per day,and this may vary depending on several factors.' ,
     
     'ourteamtext' => 'Our team of administrators, supervisors and employees is a group of passionate Saudi youth combined with a love for development and excellence. Our team undergoes training in the best known vocational training academies in the Kingdom, "Al Hokair Institute for Hotel and Tourism" to ensure qualification and continuous development in our work that guarantees us to provide a product that satisfies our customers with Integrated and innovative services in preparing, presenting and serving international dishes in a modern and sophisticated way.' ,
 ];

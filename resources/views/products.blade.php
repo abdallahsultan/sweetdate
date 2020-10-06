@@ -105,7 +105,7 @@
                 <h2 class="date_gold date_title_counter">@lang('site.menu')</h2>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-                <div class="tab" style=" text-align: -webkit-center; ">
+                <div class="tab" dir="{{$dir}}" style=" text-align: -webkit-center; ">
                       
                
                       @foreach ($pcategory as $key => $value)
