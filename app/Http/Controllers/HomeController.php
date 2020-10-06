@@ -141,7 +141,7 @@ class HomeController extends Controller
     {
 
         $products = Product::all();
-        $pcategory= Pcategory::all();
+        $pcategory= Pcategory::latest()->get();
         
 
         return view('products', compact('products','pcategory'));
