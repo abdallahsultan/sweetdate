@@ -69,7 +69,7 @@ return [
     'map' => 'Map' ,
     'show_more' => 'Show More' ,
     'all_parts' => 'All Parts' ,
-    'under_menu1' => 'All prices include VAT.' ,
+    'under_menu1' => 'All prices do not include VAT.' ,
     'under_menu2' => 'Additional nutritional information is available upon request.' ,
     'under_menu3' => 'Adults need an average of 2000 calories per day,and this may vary depending on several factors.' ,
     
