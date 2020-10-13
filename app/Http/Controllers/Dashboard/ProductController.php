@@ -121,7 +121,7 @@ class ProductController extends Controller
             $img = Image::make('images/'.$fileName)->resize(420, 250);
             $img->sharpen(15);
             $img->pixel('#0000ff', 100, 100);
-            return $img->response('jpg');
+            
             $img->save('images/'.$fileName);
 
 
