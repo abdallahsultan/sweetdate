@@ -58,8 +58,7 @@ class ProductController extends Controller
           
             $file->move('images/', $fileName);
 
-            $img = Image::make('images/'.$fileName)->resize(320, 200);
-            $img->save('images/'.$fileName);
+            $img = Image::make('images/'.$fileName)->resize(420, 250)->sharpen(15)->pixel('#0000ff', 100, 100)->save('images/'.$fileName);
           
            
             $input['avatar'] = $fileName;
