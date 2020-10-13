@@ -118,11 +118,10 @@ class ProductController extends Controller
             $fileName = 'abdullah_sultan_' . uniqid() . '_.'  . $fileName;
 
             $file->move('images/', $fileName);
-            $img = Image::make('images/'.$fileName)->resize(420, 250);
-            $img->sharpen(15);
-            $img->pixel('#0000ff', 100, 100);
+            $img = Image::make('images/'.$fileName)->resize(420, 250)->sharpen(15)->pixel('#0000ff', 100, 100)->save('images/'.$fileName);
+           
             
-            $img->save('images/'.$fileName);
+          
 
 
             $input['avatar'] = $fileName;
