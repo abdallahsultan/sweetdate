@@ -23,7 +23,7 @@
 
 @if(app()->getLocale() == 'ar')
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('website/css/rtl.css') }}">
+<!-- <link rel="stylesheet" href="{{ asset('website/css/rtl.css') }}"> -->
 @endif
 
 
@@ -1736,7 +1736,7 @@
 <script src="{{ asset('website/js/mokh_library.js') }}"></script>
 <script src="{{ asset('website/js/mokh_script.js') }}"></script>
 <script src="{{ asset('main/js/sweet-alert/sweetalert.min.js') }}"></script>
-<script src="{{ asset('main/js/sweet-alert/app.js') }}"></script>
+<!-- <script src="{{ asset('main/js/sweet-alert/app.js') }}"></script> -->
 
 
 @php if(session()->has('message')){  @endphp

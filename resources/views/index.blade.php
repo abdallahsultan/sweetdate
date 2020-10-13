@@ -196,7 +196,7 @@
 
     @if (count($products) > 1)
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ asset('website/css/sulo.css') }}">
     <section class="date_section" id="products" style="background:url(images/menucover.jpg);">
       
 

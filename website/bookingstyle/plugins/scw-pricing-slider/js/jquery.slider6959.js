@@ -11,11 +11,7 @@
  * 
  * Dependencies
  * 
- * jQuery (http://jquery.com)
- * jquery.numberformatter (http://code.google.com/p/jquery-numberformatter/)
- * tmpl (http://ejohn.org/blog/javascript-micro-templating/)
- * jquery.dependClass
- * draggable
+ 
  * 
  **/
 

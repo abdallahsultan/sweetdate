@@ -7,7 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Pcategory;
 use App\PcategoryTranslation;
 use App\Product;
-
+use Image; 
+use File;
 class ProductController extends Controller
 {
 
@@ -48,13 +49,22 @@ class ProductController extends Controller
 
        if($file){
 
+     
+      
             $fileName = $file->getClientOriginalExtension();
 
             $fileName = 'abdullah_Sultan' . uniqid() . '_.'  . $fileName;
-
+       
+          
             $file->move('images/', $fileName);
 
+            $img = Image::make('images/'.$fileName)->resize(320, 200);
+            $img->save('images/'.$fileName);
+          
+           
             $input['avatar'] = $fileName;
+            
+           
 
        }else{
         $fileName = 'defualt.png';
@@ -101,12 +111,19 @@ class ProductController extends Controller
 
 
        if($file){
-
+        
+        File::delete('images/'.$project->avatar);
             $fileName = $file->getClientOriginalExtension();
 
-            $fileName = 'Mokhtar_ali_' . uniqid() . '_.'  . $fileName;
+            $fileName = 'abdullah_sultan_' . uniqid() . '_.'  . $fileName;
 
             $file->move('images/', $fileName);
+            $img = Image::make('images/'.$fileName)->resize(420, 250);
+            $img->sharpen(15);
+            $img->pixel('#0000ff', 100, 100);
+            return $img->response('jpg');
+            $img->save('images/'.$fileName);
+
 
             $input['avatar'] = $fileName;
 
