@@ -56,8 +56,8 @@
 
     </section>
 
-
-    @if ( $blog->gallery)
+    @php $photos = explode('/', $blog->gallery);  @endphp
+    @if ( $photos)
 
 
     <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
