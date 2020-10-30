@@ -111,7 +111,7 @@
                       @foreach ($pcategory as $key => $value)
                       
               
-                    <button class="tablinks  btn success tabsmenu @if($count == '1') active @endif "  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
+                    <button class="tablinks  btn success tabsmenu @if($count == '1')  active @endif "  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
                          
                     @php $count+=1; @endphp
                     @endforeach
