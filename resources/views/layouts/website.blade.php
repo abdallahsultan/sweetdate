@@ -1472,7 +1472,7 @@
     </div>
 <div class="date_page" id="date_page">
 
-    <a href="#date_page" class="date_top date_go"><b class="ti ti-angle-up"></b></a>
+    <!-- <a href="#date_page" class="date_top date_go"><b class="ti ti-angle-up"></b></a> -->
 
     <header>
         <div class="container">
@@ -1481,9 +1481,10 @@
 		 <div  class="date_logo">Sweet Date <i>
 		
 		@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-		
-		<span><a style="color: #e3cc6f; text-decoration: none;" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">{{ $properties['native'] }}</a></span>
-		
+		@if(app()->getLocale() == $localeCode ) 
+		@else
+		<span  style="margin-top: 5px;"><a style="color: #e3cc6f; text-decoration: none; font-size: large;" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">{{ $properties['native'] }}</a></span>
+		@endif
 	
         @endforeach
 		</i></div>
@@ -1591,7 +1592,7 @@
                 </div>
 				<div class="col-md-4">
 				<h4 class="mb-4 font-weight-bold text-uppercase" style="color: #e3cc6f;"><b> @lang('site.address')</b> </h4>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.229435459473!2d46.72819091500138!3d24.78759598408837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efdd33fb34cad%3A0x9ea5f5a339c61d53!2zU3dlZXQgRGF0ZeKAjw!5e0!3m2!1sen!2sae!4v1601153755932!5m2!1sen!2sae" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				<iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.229435459473!2d46.72819091500138!3d24.78759598408837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efdd33fb34cad%3A0x9ea5f5a339c61d53!2zU3dlZXQgRGF0ZeKAjw!5e0!3m2!1sen!2sae!4v1601153755932!5m2!1sen!2sae" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>
                 
                

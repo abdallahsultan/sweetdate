@@ -11,22 +11,23 @@
     <div class="container">
 
         <div class="date_slide_txt date_slide_center_middle text-center">
-            <img src="images/bbq/bbq_logo.png" alt="" height="180"><br>
+            <img src="images/logo.png" alt="" height="180"><br>
             <div class="date_gold date_title_animation">Sweet Date</div>
+        
             <!-- <div class="date_slide_subtitle">{{ strip_tags($slider->body) }}</div> -->
         </div>
 
     </div>
 
-    <a class="date_scroll_down date_go" href="#date_content"> <b></b> <i class="ti ti-angle-double-down"></i> </a>
+    <a class="date_scroll_down date_go" href="#date_content"> <b></b> <i class="ti ti-angle-down"></i> </a>
 
 
 </div>
 
-<section id="date_content" class="date_content">
 
-    <section class="date_section  date_image_bck">
-    <div class="date_over" data-color="#111" data-opacity="0.05"></div>
+
+    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
+    <!-- <div class="date_over" data-color="#111" data-opacity="0.05"></div> -->
 
                 <div class="container text-center">
 
@@ -46,9 +47,9 @@
 
                             
                         <div class="date_parallax_menu date_image_bck date_fixed date_wht_txt">
-                            <h2 class="date_gold date_title_counter">@lang('site.ourstory')</h2>
-
-                            <p>{{ strip_tags($about->body) }}</p>
+                            <h2 class="date_gold date_title_animation">@lang('site.ourstory')</h2>
+                            <p style="color: #e3cc6f;"><b>{{ strip_tags($about->body) }}</b></p>
+                            
                             <a href="{{ route('ourstory')}}" class="btn"> @lang('site.view_more') <i class="ti ti-truck"></i></a>
 
                         </div>
@@ -155,43 +156,43 @@
 		}
       
 
-/*		.lightbox-html .wowbook-controls {
-			border-radius: 6px;
-			width: auto;
-			background: none;
-			color: rgba(60, 20, 20, 0.8);
-			text-shadow: 0 1px 0 #fff;
-			box-shadow: none;
-		}
-		.lightbox-html .wowbook-control:hover {
-			background: none;
-			color: white;
-			text-shadow: 0 1px 0 #fff, 0 0px 5px rgba(60, 20, 20, 1);
-			text-shadow: 0 1px 0 #fff, 0 0px 3px #fff;
-		}
-*/
-.zoom {
-  
- 
-  transition: transform 1.1s; /* Animation */
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
+        /*		.lightbox-html .wowbook-controls {
+                    border-radius: 6px;
+                    width: auto;
+                    background: none;
+                    color: rgba(60, 20, 20, 0.8);
+                    text-shadow: 0 1px 0 #fff;
+                    box-shadow: none;
+                }
+                .lightbox-html .wowbook-control:hover {
+                    background: none;
+                    color: white;
+                    text-shadow: 0 1px 0 #fff, 0 0px 5px rgba(60, 20, 20, 1);
+                    text-shadow: 0 1px 0 #fff, 0 0px 3px #fff;
+                }
+        */
+        .zoom {
+        
+        
+        transition: transform 1.1s; /* Animation */
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        }
 
-.zoom:hover {
-    transform: scale(1.1);
-    border: 2px solid #e3cc6fa8; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-.tabsmenu{
-     
-      margin-left: 10px;
-         background: linear-gradient(0deg,#ffffff52, transparent, #ffffff52);
-         color: white;
-         border-radius: 12px;
-         font-weight: bold; 
-         
-}
+        .zoom:hover {
+            transform: scale(1.1);
+            border: 2px solid #e3cc6fa8; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+        .tabsmenu{
+            
+            margin-left: 10px;
+                background: linear-gradient(0deg,#ffffff52, transparent, #ffffff52);
+                color: white;
+                border-radius: 12px;
+                font-weight: bold; 
+                
+        }
 	</style>
 
     @if (count($products) > 1)
@@ -201,7 +202,7 @@
       
 
       <div class="date_over" data-color="#000" data-opacity="0.8"></div>
-     <div class="container-fluid text-center">
+   
 
         <div class="container-fluid text-center">
 
@@ -210,7 +211,7 @@
 
             <div class="row">
  
-            <div class="col-md-12" style="margin-left:10%"  >
+            <div class="col-md-12 menu_center"   >
                @php $count=1; @endphp
                 @foreach ($products as $product)
 
@@ -240,7 +241,7 @@
               
                 </div>
                 <div class="col-md-12">
-              <a class="tablinks active btn success" href="{{route('menu')}}" style="background: #e3cc6f;border-radius: 4px; font-weight: bold; color:#ffffff;" >@lang('site.show_more')</a>
+              <a class="tablinks active btn success" href="{{route('menu')}}" style="background: #e3cc6f3b;border-radius: 4px; font-weight: bold; color:#ffffff;" >@lang('site.show_more')</a>
               </div>
                 </div>
                <br>
@@ -317,19 +318,19 @@
 
     @if (count($lprojects) > 0)
 
-    <section class="date_section">
+    <section class="date_section date_image_bck" data-image="{{ asset('images/darksection2.jpg') }}">
 
         <div class="container text-center">
             <h2 class="date_gold date_title_counter">@lang('site.events')</h2>
 
-            <div class="date_slider_event date_wht_txt date_lm_type_i" data-dots="false" data-autoplay="true">
+            <div class="date_reviews_single date_wht_txt " data-dots="true" data-autoplay="false">
 
                 @foreach ($lprojects as $event)
 
-                <div class="date_lm_type_i_item">
-                    <a href="">
+                <div class="date_reviews_item">
+                    <a href="{{ route('eventdetails', $event->id ) }}">
                     <div class="event_box">
-                    <img src="{{ asset('images/'  . $event->avatar ) }}" alt="">
+                    <img style="    height:350px;" src="{{ asset('images/'  . $event->avatar ) }}" alt="">
                      <h3> {{ $event->title }} </h3>
                     </div>
                     </a>
@@ -392,122 +393,12 @@
     </section>
 
     @endif
-    <section class="date_section date_image_bck date_fixed  date_wht_txt" data-stellar-background-ratio="0.2" data-image="images/slider/sl13.jpg">
-            <div class="date_over" data-color="#000" data-opacity="0.8"></div>
-
-                <div class="container text-center">
-
-                    <h2 class="date_gold date_title_counter">@lang('site.menu_catalog')</h2>
-                    
-                
-                    <div id='book3-trigger' class=" col-md-6 ">
-                        <div class="service-box" >
-                            <h2 class="date_gold date_title_counter">@lang('site.drinksmenu')</h2>
-                             <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
-                                
-                                
-                         </div>
-
-                    </div>
-                
-                    
-                    <div id='book4-trigger' class=" col-md-6 ">
-                        <div class="service-box" >
-                            <h2 class="date_gold date_title_counter" >@lang('site.foodmenu')</h2>
-                                <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
-                                
-                                
-                        </div>
-                     </div>
-
-                </div>
-            </div>
-        </section> 
-   
     
    
 
-    <section id="contact">
-    </section>
 
-    <div style='display: none'>
-        <div id='book1'>
-            
-        </div>
-        <div id='book2'></div>
-        <div id='book3'>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu1.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu2.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu3.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/drinks/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-        </div>
-        <div id='book4'>
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu1.jpg')}}" class='wowbook-lazy' />
-            </div>
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu2.jpg')}}" class='wowbook-lazy' />
-            </div>
-          
-            <div>
-                <img src="{{asset('images/menu/ar/food/menu.jpg')}}" class='wowbook-lazy' />
-            </div>
-        </div>
-        <img src="{{asset('images/menu/ar/food/menu.jpg')}}" style='visibility: hidden' />
-    </div>
-	
-
-    <!-- jQuery -->
-  
-
-    <!-- Bootstrap Core JavaScript -->
-    <!-- <script src="{{asset('website/magazine/js/bootstrap.min.js')}}"></script> -->
-
-    <!-- Plugin JavaScript -->
-    <!-- <script src="{{asset('website/magazine/js/jquery.easing.min.js')}}"></script> -->
-    <!-- <script src="{{asset('website/magazine/js/jquery.fittext.js')}}"></script> -->
-    <!-- <script src="{{asset('website/magazine/js/wow.min.js')}}"></script> -->
-
-    <!-- Custom Theme JavaScript -->
-    <!-- <script src="{{asset('website/magazine/js/creative.js')}}"></script> -->
-
-    <link rel="stylesheet" href="{{asset('website/magazine/css/wow_book.css')}}" type="text/css" />
-	<style>
-		.wowbook-right .wowbook-gutter-shadow {
-			background-image: url("https://previews.customer.envatousercontent.com/files/251648489/img/page_right_background.png");
-			background-position: 0 0;
-			width: 75px;
-		}
-		.wowbook-left .wowbook-gutter-shadow {
-			background-image: url("https://previews.customer.envatousercontent.com/files/251648489/img/page_left_background.png");
-			opacity: 0.5;
-			width: 60px;
-		}
-        .wowbook-control-currentPage {
-            font-family: "Segoe UI",Helvetica,Arial,sans-serif;
-        }
-	</style>
-    <!-- <script type="text/javascript" src="{{asset('website/magazine/js/pdf.combined.min.js')}}"></script> -->
-   
-    <section class="date_section  date_image_bck">
-    <div class="date_over" data-color="#111" data-opacity="0.05"></div>
+    <section class="date_section  date_image_bck" data-image="{{ asset('images/darksection.jpg') }}">
+    <!-- <div class="date_over" data-color="#111" data-opacity="0.05"></div> -->
 
                 <div class="container text-center">
 
@@ -522,13 +413,14 @@
                         <div class="date_parallax_menu date_image_bck date_fixed date_wht_txt">
                             <h2 class="date_gold date_title_counter">@lang('site.team')</h2>
 
-                            <p>@lang('site.ourteamtext')</p>
+                            <p style="color: #e3cc6f;font-weight: bold;">@lang('site.ourteamtext')</p>
                             <!-- <a href="{{ route('ourstory')}}" class="btn"> @lang('site.view_more') <i class="ti ti-truck"></i></a> -->
 
                         </div>
                     </div>
 
                 </div>
+            </div>
 
     </section>
 
@@ -575,7 +467,7 @@
 
     @if (count($partners) > 0)
 
-    <section class="date_section partner_section">
+    <section class="date_section partner_section date_image_bck" data-image="{{ asset('images/darksection4.jpg') }}">
 
         <div style="width: 75%;" class="container text-center">
             <h2 class="date_gold date_title_counter">@lang('site.partners')</h2>
@@ -605,4 +497,5 @@
     </section>
 
     @endif
-       @endsection
+
+  @endsection

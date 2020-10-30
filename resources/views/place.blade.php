@@ -111,7 +111,7 @@
         <div class="date_slide_txt date_slide_center_middle text-center">
             <img  src="{{ asset('images/' . $setting->logo ) }}" alt="" height="180"><br>
             <!-- <div class="date_gold">{{ $setting->name }}</div> -->
-            <div class="date_slide_subtitle">@lang('site.place')</div>
+            <div class="date_gold">@lang('site.place')</div>
             
         </div>
         
@@ -121,7 +121,7 @@
 
    
         
-<div class="date_slider  date_image_bck  date_wht_txt" style="min-height: 569px;" data-stellar-background-ratio="0.3" data-image="{{ asset('images/slider/sl5.jpg') }}">
+<div class="date_section  date_image_bck  date_wht_txt" style="min-height: 569px;"  data-image="{{ asset('images/slider/sl5.jpg') }}">
 
 <div class="date_slider_firefly" data-total="30" data-min="1" data-max="3"></div>
 
@@ -129,36 +129,37 @@
                  
 <div class="container ">
 <div class="row">
-    <div class="col-md-6">
-    <div class="date_slide_subtitle text-center">@lang('site.indoor')</div>
+<h2 class="date_gold text-center">@lang('site.indoor')</h2>
+    <div class="col-md-12">
+   
 <!-- Full-width images with number text -->
 <div class="mySlides">
   <div class="numbertext">1 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/1.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/indoor/1.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 <div class="mySlides">
   <div class="numbertext">2 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/2.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/indoor/2.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 <div class="mySlides">
   <div class="numbertext">3 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/3.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/indoor/3.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 <div class="mySlides">
   <div class="numbertext">4 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/4.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/indoor/4.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 <div class="mySlides">
   <div class="numbertext">5 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/5.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/indoor/5.jpg')}}" style=" height:550px; width:100%">
 </div>
 <div class="mySlides">
   <div class="numbertext">6 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/6.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/indoor/6.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 
@@ -194,37 +195,38 @@
  
 </div>
     </div>
-
-    <div class="col-md-6">
-    <div class="date_slide_subtitle text-center">@lang('site.indoor')</div>
+    <br><br>
+    <h2 class="date_gold text-center">@lang('site.indoor')</h2>
+    <div class="col-md-12">
+    
 <!-- Full-width images with number text -->
 <div class="mySlides2">
   <div class="numbertext">1 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/1.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/outdoor/1.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 <div class="mySlides2">
   <div class="numbertext">2 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/2.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/outdoor/2.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 <div class="mySlides2">
   <div class="numbertext">3 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/3.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/outdoor/3.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 <div class="mySlides2">
   <div class="numbertext">4 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/4.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/outdoor/4.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 <div class="mySlides2">
   <div class="numbertext">5 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/5.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/outdoor/5.jpg')}}" style=" height:550px; width:100%">
 </div>
 <div class="mySlides2">
   <div class="numbertext">6/ 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/6.jpg')}}" style=" height:auto; width:100%">
+    <img class="img-thumbnail" src="{{asset('images/place/outdoor/6.jpg')}}" style=" height:550px; width:100%">
 </div>
 
 
@@ -261,7 +263,7 @@
 </div>
     </div>
     <div class="col-md-12">
-        <br><br>
+       
     </div>
 </div>
 

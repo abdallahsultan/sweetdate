@@ -11,15 +11,14 @@
     <div class="container">
         <div class="date_slide_txt date_slide_center_middle text-center">
             <img src="{{ asset('images/' . $setting->logo ) }}" alt="" height="180"><br>
-            <div class="date_gold">{{ $setting->name }}</div>
-            <div class="date_slide_subtitle"> @lang('site.events')</div>
+            <!-- <div class="date_gold">{{ $setting->name }}</div> -->
+            <div class="date_gold"> @lang('site.events')</div>
         </div>
     </div>
 </div>
     <section id="date_content" class="date_content">
 
-        <section class="date_section date_section_no_overlay">
-
+    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
 
             <div class="container text-center">
 
@@ -29,9 +28,9 @@
 
                     <div class="col-md-4">
                     <div class="date_news_block text-center">
-                        <a href="{{ route('eventdetails', $blog->id ) }}">
+                        <a style="color: #e3cc6f;" href="{{ route('eventdetails', $blog->id ) }}">
                         <span class="date_news_img_parent"><span class="date_news_img date_image_bck" data-image="{{ asset('images/' . $blog->avatar ) }}"></span></span>
-                        <span class="date_news_title date_gold_subtitle" style="margin-top: 13px;">{{ $blog->title }}</span>
+                        <span class="date_news_title date_gold_subtitle" style=" margin-top: 13px;">{{ $blog->title }}</span>
                         <p>{{ strip_tags(substr($blog->body,0,90)) }}</p>
                         </a>
                     </div>

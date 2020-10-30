@@ -12,7 +12,7 @@
         <div class="date_slide_txt date_slide_center_middle text-center">
             <img src="{{ asset('images/' . $setting->logo ) }}" alt="" height="180"><br>
             <!-- <div class="date_gold">{{ $setting->name }}</div> -->
-            <div class="date_slide_subtitle">@lang('site.menu')</div>
+            <div class="date_gold">@lang('site.menu_catalog')</div>
             
         </div>
         
@@ -24,8 +24,8 @@
 
         
 <section id="date_content" class="date_content">
+<section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
 
-<section class="date_section" style="background: #0f0a08;">
 <script>
 
         var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -48,14 +48,14 @@
     <!-- <link rel="stylesheet" href="{{asset('website/magazine/css/creative.css')}}" type="text/css"> -->
     
    
-    <section id="services" style="background: #fefefe;">
+    <section id="services" >
         
         <div class="container">
                 <div class="row">
             
                 <div id='book3-trigger' class=" col-md-6 text-center">
                         <div class="service-box">
-                        <h2>@lang('site.drinksmenu')</h2>
+                        <h2 class="date_gold date_title_counter">@lang('site.drinksmenu')</h2>
                             <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/drinks/menu.jpg')}}"  />
                             
                             
@@ -65,7 +65,7 @@
                 
                 <div id='book4-trigger' class=" col-md-6 text-center">
                         <div class="service-box">
-                        <h2>@lang('site.foodmenu')</h2>
+                        <h2 class="date_gold date_title_counter">@lang('site.foodmenu')</h2>
                             <img  class='book-thumb img-thumbnail' src="{{asset('images/menu/ar/food/menu.jpg')}}"  />
                             
                             

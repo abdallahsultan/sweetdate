@@ -49,7 +49,7 @@ return [
     'egallery' => 'Event Gallery',
     'evideo' => 'Event Video',
     'reserve' => 'Reservation',
-    'reserve' => 'Reserved',
+  
     'date' => 'Date',
     'time' => 'Time',
     'tnumber' => 'Table Number',

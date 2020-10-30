@@ -22,8 +22,8 @@
     <div class="container">
         <div class="date_slide_txt date_slide_center_middle text-center">
             <img src="{{ asset('images/' . $setting->logo ) }}" alt="" height="180"><br>
-            <div class="date_gold">{{ $setting->name }}</div>
-            <div class="date_slide_subtitle">  @lang('site.events')</div>
+            <!-- <div class="date_gold">{{ $setting->name }}</div> -->
+            <div class="date_gold">  @lang('site.events')</div>
         </div>
     </div>
 </div>
@@ -31,17 +31,22 @@
 
     <section id="date_content" class="date_content">
 
-        <section class="date_section">
+    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
 
             <div class="container text-center">
                 <h2 class="date_gold">  {{ $blog->title  }}</h2>
-
-                <img src="{{ asset('images/' . $blog->avatar ) }}" alt="image">
-
-
-                <blockquote class="wp-block-quote">
+                <div class="col-md-6">
+               <blockquote style=" text-align: initial;   color: #e3cc6f;" class="wp-block-quote">
                     {!! $blog->body !!}
                 </blockquote>
+               </div>
+               <div class="col-md-6">
+               <img class="img-thumbnail" src="{{ asset('images/' . $blog->avatar ) }}" alt="image">
+               </div>
+               
+               
+
+               
 
             </div>
 
@@ -55,9 +60,9 @@
     @if ( $blog->gallery)
 
 
-            <section class="date_section">
+    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
 
-                <div class="container-fluid text-center">
+                <div class=" text-center">
                     <h2 class="date_gold">@lang('site.egallery')</h2>
                     <div class="date_slider_single date_slider_single_wm date_wht_txt date_lm_type_i" data-dots="false" data-autoplay="true">
 
@@ -84,12 +89,12 @@
             @if ($blog->video)
 
 
-            <section class="date_section">
+            <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
 
-                <div class="container-fluid text-center">
+                <div class=" text-center">
                     <h2 class="date_gold">@lang('site.evideo')</h2>
 
-                        <video width="620" height="420" controls style="margin: 0 auto;" poster="{{ asset('images/' . $blog->avatar) }}">
+                        <video  width="620" height="420" controls style="margin: 0 auto;" poster="{{ asset('images/' . $blog->avatar) }}">
                             <source src="{{ asset('images/' . $blog->video ) }}" type="video/mp4">
                             <source src="{{ asset('images/' . $blog->video ) }}" type="video/ogg">
                           </video>

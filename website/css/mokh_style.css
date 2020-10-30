@@ -97,6 +97,7 @@ html {
 
 	.text-center .date_wht_txt h3 {
 		/* max-width: 40%; */
+		color: #e3cc6f;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -6268,7 +6269,9 @@ footer a {
 	font-size: 16px;
 }
 
-
+.menu_center{
+	margin-left:10%;
+}
 
 /*===============================================*/
 /* 09. Mobile, Tablet                            */
@@ -6281,12 +6284,14 @@ footer a {
 	.date_simple_block {
 		padding: 56px 45px 46px;
 	}
+	
 }
 
 @media (max-width:1024px){
 .date_gold {
 	font:75px/85px selima;
 }
+
 div.date_gold {
 	font:80px/90px selima;
 }
@@ -6719,7 +6724,7 @@ header nav.active .date_logo {
     padding-bottom: 148px;
 	}
 
-
+	.menu_center{margin-left:0%}
 
 }
 
@@ -6784,6 +6789,7 @@ header nav.active .date_logo {
 .date_simple_block {
 	padding: 56px 45px 46px;
 }
+
 
 }
 
@@ -6888,6 +6894,8 @@ header nav.active .date_logo {
 	}
 
 
+	.menu_center{margin-left:0%}
+
 }
 
 @media (max-width:480px){
@@ -6897,6 +6905,8 @@ header nav.active .date_logo {
 	.date_top_menu > li > a {
 		padding: 13px 16px;
 	}
+
+	
 }
 
 

@@ -12,8 +12,8 @@
     <div class="container">
         <div class="date_slide_txt date_slide_center_middle text-center">
             <img src="{{ asset('images/' . $setting->logo ) }}" alt="" height="180"><br>
-            <div class="date_gold">{{ $setting->name }}</div>
-            <div class="date_slide_subtitle">@lang('site.reserve')</div>
+            <!-- <div class="date_gold">{{ $setting->name }}</div> -->
+            <div class="date_gold">@lang('site.reserve')</div>
         </div>
     </div>
 </div>

@@ -28,11 +28,11 @@
 }
 .tabsmenu{
      
-      margin-left: 10px;
-         background: linear-gradient(0deg,#ffffff52, transparent, #ffffff52);
-         color: white;
-         border-radius: 12px;
-         font-weight: bold; 
+  margin-left: 10px;
+    color: white;
+    border: 2px solid #dcc66c;
+    font-weight: bold;
+    padding: 8px;
          
 }
 /*     
@@ -86,8 +86,8 @@
         <div class="container">
             <div class="date_slide_txt date_slide_center_middle text-center">
                 <img src="{{ asset('images/' . $setting->logo ) }}" alt="" height="180"><br>
-                <div class="date_gold">{{ $setting->name }}</div>
-                <div class="date_slide_subtitle"> @lang('site.menu')</div>
+                <!-- <div class="date_gold">{{ $setting->name }}</div> -->
+                <h2 class="date_gold">@lang('site.menu')</h2>
             </div>
         </div>
     </div>
@@ -102,7 +102,7 @@
              <div class="date_over" data-color="#000" data-opacity="0.8"></div>
             <div class="container-fluid text-center">
 
-                <h2 class="date_gold date_title_counter">@lang('site.menu')</h2>
+                <!-- <h2 class="date_gold date_title_counter">@lang('site.menu')</h2> -->
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="stylesheet" href="{{ asset('website/css/sulo.css') }}">
                 <div class="tab" dir="{{$dir}}" style=" text-align: -webkit-center; ">
@@ -111,7 +111,7 @@
                       @foreach ($pcategory as $key => $value)
                       
               
-                    <button class="tablinks btn success tabsmenu"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
+                    <button class="tablinks  btn success tabsmenu"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
                          
                        
                     @endforeach
@@ -143,8 +143,8 @@
                                
                                
                             <div class="w3-container">
-                            <h3>{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
-                                <h4><b>{{$product->title}}</b></h4>
+                            <h3 style="color: #e3cc6f;">{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
+                                <h4 style="color: #e3cc6f;"><b>{{$product->title}}</b></h4>
                                 
                                
                                 

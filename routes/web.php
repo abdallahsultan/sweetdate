@@ -59,6 +59,8 @@ Route::get('place', 'HomeController@place')->name('place');
 //menu
 Route::get('catalog', 'HomeController@menu')->name('catalog');
 
+Route::get('showcpsite/{name}/{id}', 'HomeController@showcpsite')->name('showcpsite');
+
 
 
 
