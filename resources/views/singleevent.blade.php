@@ -56,7 +56,7 @@
 
     </section>
 
-    @php $photos = explode('/', $blog->gallery);  @endphp
+    <!-- @php $photos = explode('/', $blog->gallery);  @endphp
     @if ( $photos)
 
 
@@ -83,7 +83,7 @@
 
             </section>
 
-          @endif
+          @endif -->
 
 
             @if ($blog->video)
