@@ -107,13 +107,13 @@
                 <link rel="stylesheet" href="{{ asset('website/css/sulo.css') }}">
                 <div class="tab" dir="{{$dir}}" style=" text-align: -webkit-center; ">
                       
-               
+                      @php $count=1; @endphp
                       @foreach ($pcategory as $key => $value)
                       
               
-                    <button class="tablinks  btn success tabsmenu"  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
+                    <button class="tablinks  btn success tabsmenu @if($count == '1') active @endif "  onclick="openCity(event, {{$value->id}})">{{$value->translate(Config::get('app.locale'))->title}}</button>
                          
-                       
+                    @php $count+=1; @endphp
                     @endforeach
                     
                    
@@ -135,6 +135,7 @@
                       <div id="{{$i}}" class="tabcontent">
                     
                         @foreach ($products as $product)
+                        
                         @if($product->pcategory_id == $i)
                         <div class="w3-card col-lg-3"  style="color: white;background: #00000085; height: 400px;margin:10px" >
                         
