@@ -23,8 +23,8 @@
     
 
         
-<section id="date_content" class="date_content">
-<section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
+<section id="date_content" class="date_content" >
+<section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/main_back_bl.jpg') }}">
 
 <script>
 
@@ -272,7 +272,10 @@
 	</style>
     <!-- <script type="text/javascript" src="{{asset('website/magazine/js/pdf.combined.min.js')}}"></script> -->
     
+    
+</section>
 
 </section>
-</section>
+
+
 @endsection

@@ -223,8 +223,8 @@
                        
                        
                     <div class="w3-container">
-                    <h3>{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
-                        <h4><b>{{$product->title}}</b></h4>
+                    <h3 style="color: #e3cc6f;">{{$product->price}} &nbsp;&nbsp; {{$product->calory}}</h3>
+                        <h4 style="color: #e3cc6f;"><b>{{$product->title}}</b></h4>
                         
                        
                         
