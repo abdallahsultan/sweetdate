@@ -196,7 +196,7 @@
           </div>
         </div>
         <br><br>
-        <div class="date_slide_subtitle text-center">@lang('site.outdoor')</div>
+        <h2 class=" date_wht_txt  date_gold text-center">@lang('site.outdoor')</h2>
         <div class="col-md-12">
         
             <!-- Full-width images with number text -->
