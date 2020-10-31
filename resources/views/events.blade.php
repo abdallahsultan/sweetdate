@@ -18,7 +18,7 @@
 </div>
     <section id="date_content" class="date_content">
 
-    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
+    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/main_back_bl.jpg') }}">
 
             <div class="container text-center">
 

@@ -328,10 +328,18 @@
                 @foreach ($lprojects as $event)
 
                 <div class="date_reviews_item">
-                    <a href="{{ route('eventdetails', $event->id ) }}">
+                    <a style="text-decoration:none;" href="{{ route('eventdetails', $event->id ) }}">
                     <div class="event_box">
-                    <img style="    height:350px;" src="{{ asset('images/'  . $event->avatar ) }}" alt="">
-                     <h3> {{ $event->title }} </h3>
+                   
+                    <img class="img-thumbnail" style="    height:350px;" src="{{ asset('images/'  . $event->avatar ) }}" alt=""> 
+                    <br>
+                    <h3> {{ $event->title }} </h3>
+                    <br>
+                    <blockquote style="color: #e3cc6f;border-left: none;" class="wp-block-quote">
+                    
+                    {{ strip_tags(substr($event->body,0,200)) }}
+                </blockquote>
+                     
                     </div>
                     </a>
                 </div>
