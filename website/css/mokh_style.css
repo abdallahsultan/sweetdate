@@ -6992,7 +6992,10 @@ h2.date_gold, .date_wht_txt h2.date_gold {
 
 .date_slide_subtitle {
 
-    font-family: mokhfonts;
+	color: white;
+    background: url(/images/gold_foil.png) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 60px;
     text-transform: capitalize;
 }

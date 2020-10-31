@@ -340,6 +340,68 @@ class HomeController extends Controller
         return redirect()->route('home');
 
     }
+    
+public function generate_key($trackId=null,$amount='1.00')
+{
+    $amount ='1.00';
+    $trackId =10;
+    $customerEmail="adiab9800@gmail.com";
+    $Terminalid='sweetdate';
+    $password ="4Cy@qs62VSPqC4h";
+    $secret_key="33e5ab01b510526247c869ab7764a649a24509af9b8b6645bda9be89204f66a1";
+    $currency_code="SAR";
+    $txn_details =$trackId."|".$Terminalid."|".$password."|".$secret_key."|".$amount."|".$currency_code;
+    $hash=hash('sha256', $txn_details);
+   $fields = array(
+        'trackid' => $trackId ,
+        'terminalId' => $Terminalid,
+        'customerEmail' => $customerEmail,
+        'action' => "1", // action is always 1
+        'merchantIp' =>'127.0.0.1',
+        'password'=> $password,
+        'currency' => $currency_code,
+        'country'=>"SA",
+        'amount' => $amount,
+        'requestHash' => $hash ,
+        'udf1'=>'trest',
+        'udf2'=>route('pay_response'),
+        'udf3'=>'',
+        'udf4'=>'',
+        'udf5'=>'trest',
 
-
+    );
+    $data = json_encode($fields);
+    $ch=curl_init('https://payments-dev.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest');
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Content-Type: application/json',
+    'Content-Length: ' . strlen($data))
+    );
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+    //execute post
+    $result = curl_exec($ch);
+    //close connection
+    curl_close($ch);
+    
+    $urldecode=(json_decode($result));
+    // dd($urldecode['payid']);
+    if (!empty($urldecode->payid) && !empty($urldecode->targetUrl)) {
+        dd('as');
+        $url = $urldecode->targetUrl . '?paymentid=' .  $urldecode->payid;
+         header('Location: '. $url, true, 307);//Redirect to Payment Page
+      }else{
+    dd($urldecode);
+   echo "<br/><br/>";
+    print_r($data);
+    die();
+ }
 }
+public function pay_response()
+{
+    return 'done';
+}
+}
+ 

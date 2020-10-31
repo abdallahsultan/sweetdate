@@ -123,151 +123,150 @@
         
 <div class="date_section  date_image_bck  date_wht_txt" style="min-height: 569px;"  data-image="{{ asset('images/slider/sl5.jpg') }}">
 
-<div class="date_slider_firefly" data-total="30" data-min="1" data-max="3"></div>
+  <div class="date_slider_firefly" data-total="30" data-min="1" data-max="3"></div>
 
-<div class="date_over" data-color="#000" data-opacity="0.8"></div>
+  <div class="date_over" data-color="#000" data-opacity="0.8"></div>
                  
-<div class="container ">
-<div class="row">
-<h2 class="date_gold text-center">@lang('site.indoor')</h2>
-    <div class="col-md-12">
-   
-<!-- Full-width images with number text -->
-<div class="mySlides">
-  <div class="numbertext">1 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/1.jpg')}}" style=" height:550px; width:100%">
-</div>
+  <div class="container "> 
+      <div class="row">
+      <h2 class="date_gold text-center">@lang('site.indoor')</h2>
+        <div class="col-md-12">
+      
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/indoor/1.jpg')}}" style=" height:550px; width:100%">
+            </div>
 
-<div class="mySlides">
-  <div class="numbertext">2 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/2.jpg')}}" style=" height:550px; width:100%">
-</div>
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/indoor/2.jpg')}}" style=" height:550px; width:100%">
+            </div>
 
-<div class="mySlides">
-  <div class="numbertext">3 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/3.jpg')}}" style=" height:550px; width:100%">
-</div>
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/indoor/3.jpg')}}" style=" height:550px; width:100%">
+            </div>
 
-<div class="mySlides">
-  <div class="numbertext">4 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/4.jpg')}}" style=" height:550px; width:100%">
-</div>
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/indoor/4.jpg')}}" style=" height:550px; width:100%">
+            </div>
 
-<div class="mySlides">
-  <div class="numbertext">5 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/5.jpg')}}" style=" height:550px; width:100%">
-</div>
-<div class="mySlides">
-  <div class="numbertext">6 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/indoor/6.jpg')}}" style=" height:550px; width:100%">
-</div>
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/indoor/5.jpg')}}" style=" height:550px; width:100%">
+            </div>
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/indoor/6.jpg')}}" style=" height:550px; width:100%">
+            </div>
 
 
-<!-- Next and previous buttons -->
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-<!-- Image text -->
-<div class="caption-container">
-  <p id="caption" hidden></p>
-</div>
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption" hidden></p>
+            </div>
 
-<!-- Thumbnail images -->
-<div class="row">
-  <div class="column">
-    <img class="demo cursor" src="{{asset('images/place/indoor/1.jpg')}}" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+          <!-- Thumbnail images -->
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="{{asset('images/place/indoor/1.jpg')}}" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="{{asset('images/place/indoor/2.jpg')}}" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="{{asset('images/place/indoor/3.jpg')}}" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="{{asset('images/place/indoor/4.jpg')}}" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="{{asset('images/place/indoor/5.jpg')}}" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="{{asset('images/place/indoor/6.jpg')}}" style="width:100%" onclick="currentSlide(6)" alt="Nature and sunrise">
+            </div>
+          
+          </div>
+        </div>
+        <br><br>
+        <div class="date_gold text-center">@lang('site.indoor')</div>
+        <div class="col-md-12">
+        
+            <!-- Full-width images with number text -->
+            <div class="mySlides2">
+              <div class="numbertext">1 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/outdoor/1.jpg')}}" style=" height:550px; width:100%">
+            </div>
+
+            <div class="mySlides2">
+              <div class="numbertext">2 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/outdoor/2.jpg')}}" style=" height:550px; width:100%">
+            </div>
+
+            <div class="mySlides2">
+              <div class="numbertext">3 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/outdoor/3.jpg')}}" style=" height:550px; width:100%">
+            </div>
+
+            <div class="mySlides2">
+              <div class="numbertext">4 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/outdoor/4.jpg')}}" style=" height:550px; width:100%">
+            </div>
+
+            <div class="mySlides2">
+              <div class="numbertext">5 / 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/outdoor/5.jpg')}}" style=" height:550px; width:100%">
+            </div>
+            <div class="mySlides2">
+              <div class="numbertext">6/ 6</div>
+                <img class="img-thumbnail" src="{{asset('images/place/outdoor/6.jpg')}}" style=" height:550px; width:100%">
+            </div>
+
+
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+
+          <!-- Image text -->
+          <div class="caption-container">
+            <p id="caption2" hidden></p>
+          </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img class="demo2 cursor2" src="{{asset('images/place/outdoor/1.jpg')}}" style="width:100%" onclick="currentSlide2(1)" alt="The Woods">
+              </div>
+              <div class="column">
+                <img class="demo2 cursor2" src="{{asset('images/place/outdoor/2.jpg')}}" style="width:100%" onclick="currentSlide2(2)" alt="Cinque Terre">
+              </div>
+              <div class="column">
+                <img class="demo2 cursor2" src="{{asset('images/place/outdoor/3.jpg')}}" style="width:100%" onclick="currentSlide2(3)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo2 cursor2" src="{{asset('images/place/outdoor/4.jpg')}}" style="width:100%" onclick="currentSlide2(4)" alt="Northern Lights">
+              </div>
+              <div class="column">
+                <img class="demo2 cursor2" src="{{asset('images/place/outdoor/5.jpg')}}" style="width:100%" onclick="currentSlide2(5)" alt="Nature and sunrise">
+              </div>
+              <div class="column">
+                <img class="demo2 cursor2" src="{{asset('images/place/outdoor/6.jpg')}}" style="width:100%" onclick="currentSlide2(6)" alt="Nature and sunrise">
+              </div>
+            </div>
+        </div>
+
+        
+      </div>
+
   </div>
-  <div class="column">
-    <img class="demo cursor" src="{{asset('images/place/indoor/2.jpg')}}" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-  </div>
-  <div class="column">
-    <img class="demo cursor" src="{{asset('images/place/indoor/3.jpg')}}" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-  </div>
-  <div class="column">
-    <img class="demo cursor" src="{{asset('images/place/indoor/4.jpg')}}" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-  </div>
-  <div class="column">
-    <img class="demo cursor" src="{{asset('images/place/indoor/5.jpg')}}" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-  </div>
-  <div class="column">
-    <img class="demo cursor" src="{{asset('images/place/indoor/6.jpg')}}" style="width:100%" onclick="currentSlide(6)" alt="Nature and sunrise">
-  </div>
- 
-</div>
-    </div>
-    <br><br>
-    <h2 class="date_gold text-center">@lang('site.indoor')</h2>
-    <div class="col-md-12">
-    
-<!-- Full-width images with number text -->
-<div class="mySlides2">
-  <div class="numbertext">1 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/1.jpg')}}" style=" height:550px; width:100%">
-</div>
-
-<div class="mySlides2">
-  <div class="numbertext">2 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/2.jpg')}}" style=" height:550px; width:100%">
-</div>
-
-<div class="mySlides2">
-  <div class="numbertext">3 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/3.jpg')}}" style=" height:550px; width:100%">
-</div>
-
-<div class="mySlides2">
-  <div class="numbertext">4 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/4.jpg')}}" style=" height:550px; width:100%">
-</div>
-
-<div class="mySlides2">
-  <div class="numbertext">5 / 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/5.jpg')}}" style=" height:550px; width:100%">
-</div>
-<div class="mySlides2">
-  <div class="numbertext">6/ 6</div>
-    <img class="img-thumbnail" src="{{asset('images/place/outdoor/6.jpg')}}" style=" height:550px; width:100%">
-</div>
-
-
-
-<!-- Next and previous buttons -->
-<a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides2(1)">&#10095;</a>
-
-<!-- Image text -->
-<div class="caption-container">
-  <p id="caption2" hidden></p>
-</div>
-
-<!-- Thumbnail images -->
-<div class="row">
-  <div class="column">
-    <img class="demo2 cursor2" src="{{asset('images/place/outdoor/1.jpg')}}" style="width:100%" onclick="currentSlide2(1)" alt="The Woods">
-  </div>
-  <div class="column">
-    <img class="demo2 cursor2" src="{{asset('images/place/outdoor/2.jpg')}}" style="width:100%" onclick="currentSlide2(2)" alt="Cinque Terre">
-  </div>
-  <div class="column">
-    <img class="demo2 cursor2" src="{{asset('images/place/outdoor/3.jpg')}}" style="width:100%" onclick="currentSlide2(3)" alt="Mountains and fjords">
-  </div>
-  <div class="column">
-    <img class="demo2 cursor2" src="{{asset('images/place/outdoor/4.jpg')}}" style="width:100%" onclick="currentSlide2(4)" alt="Northern Lights">
-  </div>
-  <div class="column">
-    <img class="demo2 cursor2" src="{{asset('images/place/outdoor/5.jpg')}}" style="width:100%" onclick="currentSlide2(5)" alt="Nature and sunrise">
-  </div>
-  <div class="column">
-    <img class="demo2 cursor2" src="{{asset('images/place/outdoor/6.jpg')}}" style="width:100%" onclick="currentSlide2(6)" alt="Nature and sunrise">
-  </div>
-</div>
-    </div>
-    <div class="col-md-12">
-       
-    </div>
-</div>
-
-</div>
      
 
 
