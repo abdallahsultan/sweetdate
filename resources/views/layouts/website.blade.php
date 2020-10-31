@@ -1568,7 +1568,7 @@
 					</li>
 					<br>
 					<li class="item"> 
-						<a  target="_blank" href="Tel:{{ $setting->itphone}}">  {{ $setting->itphone}} &nbsp;&nbsp;&nbsp;<i class="ti ti-mobile mr-1"></i></a>
+						<a  target="_blank" href="Tel:{{ $setting->itphone}}">  {{ $setting->itphone}} &nbsp;&nbsp;&nbsp;<i class="fa fa-whatsapp mr-1"></i></a>
 					</li>
 					
 				

@@ -25,7 +25,7 @@
 
 
     <!-- section -->
-    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
+    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/main_back_bl.jpg') }}">
 
             <!-- Over -->
             <div class="date_over" data-color="#333" data-opacity="0"></div>
@@ -43,9 +43,9 @@
                         </div>
                     </div>
 
-                    <div class="col-md-5 date_animation_block date_animation_abs_block date_posr date_image_bck" data-bottom-top="transform:translate3d(0px, 0px, 0px)" data-top-bottom="transform:translate3d(0px, 80px, 0px)" data-image="images/main_back.jpg">
+                    <div class="col-md-5 date_animation_block date_animation_abs_block date_posr date_image_bck" data-bottom-top="transform:translate3d(0px, 0px, 0px)" data-top-bottom="transform:translate3d(0px, 80px, 0px)">
 
-                        <div class="date_over" data-color="#000" data-opacity="0.5"></div>
+                        <div class="date_over" data-color="#000" data-opacity="0.7"></div>
 
                         <div class="date_parallax_menu date_image_bck date_fixed">
                             <h2 class="date_gold date_title_counter">@lang('site.contact')</h2>
