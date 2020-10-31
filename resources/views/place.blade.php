@@ -196,7 +196,7 @@
           </div>
         </div>
         <br><br>
-        <div class="date_gold text-center">@lang('site.indoor')</div>
+        <h2 class="date_gold text-center">@lang('site.outdoor')</h2>
         <div class="col-md-12">
         
             <!-- Full-width images with number text -->
