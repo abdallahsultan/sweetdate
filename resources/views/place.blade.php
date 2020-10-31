@@ -197,7 +197,7 @@
         </div>
         <br><br>
         <div class="date_gold">@lang('site.place')</div>
-        <h2 class=" text-center">@lang('site.outdoor')</h2>
+       
         <h2 class=" date_wht_txt  date_gold text-center">@lang('site.outdoor')</h2>
         <div class="col-md-12">
         
