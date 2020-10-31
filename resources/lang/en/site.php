@@ -67,6 +67,7 @@ return [
     'drinksmenu' => 'Drinks Menu' ,
     'foodmenu' => 'Food Menu ' ,
     'map' => 'Map' ,
+    'list' => 'Menu' ,
     'show_more' => 'Show More' ,
     'all_parts' => 'All Parts' ,
     'under_menu1' => 'All prices  include VAT.' ,

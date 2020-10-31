@@ -318,7 +318,7 @@
 
     @if (count($lprojects) > 0)
 
-    <section class="date_section date_image_bck" data-image="{{ asset('images/darksection.jpg') }}">
+    <section class="date_section date_image_bck" data-image="{{ asset('images/darksection2.jpg') }}">
 
         <div class="container text-center">
             <h2 class="date_gold date_title_counter">@lang('site.events')</h2>
