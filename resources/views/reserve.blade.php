@@ -30,24 +30,10 @@
                     <div class="row">
                         <form method="POST" action="{{ route('makereservationoutdoor') }}">
                             @csrf
-                        <div class="col-md-5 col-md-offset-1">
-                        <label> @lang('site.name') </label>
-                            <input type="text" placeholder="Name" class="form-control"  name="name" required>
-                           
-                        </div>
-
-                        <div class="col-md-5">
-
-                           
-                            <label> @lang('site.phone') </label>
-                            <input type="number" placeholder="Phone" class="form-control" name="phone" required>
-                             <br>
-                            
-                           
                         
-                        </div>
+
                         <div class="col-md-12">
-                        <div class="date_slide_subtitle">You must choose your location Before Click Send</div>
+                        <div class="date_slide_subtitle">@lang('site.res_req')</div>
                         </div>
                     </div>
                     <div class="indoor">
@@ -794,9 +780,42 @@
 </div>
 
 </div>
+@php $start='2:30 am'; $end='5:30 pm'; @endphp
+        @if(date('h:i a') >= $start && date('h:i a') <= $end )
+                     <div class="col-md-5 col-md-offset-1">
+                        <label> @lang('site.name') </label>
+                            <input type="text" placeholder="Name" class="form-control"  name="name" required>
+                           
+                        </div>
 
- <input type="submit" style="background: #e3cd71;" class="btn btn-warning btn-lg btn-block" value="@lang('site.send')" >
-     </form>
+                        <div class="col-md-5">
+
+                           
+                            <label> @lang('site.phone') </label>
+                            <input type="number" placeholder="Phone" class="form-control" name="phone" required>
+                             <br>
+                            
+                        </div>
+                            <div class="col-md-5 col-md-offset-1">
+          
+                            <label> @lang('site.date')  </label>
+                            <input type="date" placeholder="date" class="form-control" name="date" required>
+                            <br>
+                            </div>
+                            <div class="col-md-5">
+                            <label> @lang('site.time') </label>
+                            <input type="time" placeholder="Time" class="form-control" name="time" required>
+                            <br>
+                            </div>
+ 
+                            <input type="submit" style="background: #e3cd71;" class="btn btn-warning btn-lg btn-block" value="@lang('site.send')" >
+                     @else
+                     <div class="col-md-12">
+                        <div class="date_slide_subtitle">@lang('site.time_booking')</div>
+                        </div>
+                     
+                @endif    
+              </form>
 
 
                 </div>
