@@ -26,7 +26,7 @@
 
 
 
-    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/darksection.jpg') }}">
+    <section class="date_section  date_image_bck" id="date_content" data-image="{{ asset('images/main_back_bl.jpg') }}">
     <!-- <div class="date_over" data-color="#111" data-opacity="0.05"></div> -->
 
                 <div class="container text-center">
@@ -318,7 +318,7 @@
 
     @if (count($lprojects) > 0)
 
-    <section class="date_section date_image_bck" data-image="{{ asset('images/darksection2.jpg') }}">
+    <section class="date_section date_image_bck" data-image="{{ asset('images/darksection.jpg') }}">
 
         <div class="container text-center">
             <h2 class="date_gold date_title_counter">@lang('site.events')</h2>
@@ -397,7 +397,7 @@
    
 
 
-    <section class="date_section  date_image_bck" data-image="{{ asset('images/darksection.jpg') }}">
+    <section class="date_section  date_image_bck" data-image="{{ asset('images/main_back_bl.jpg') }}">
     <!-- <div class="date_over" data-color="#111" data-opacity="0.05"></div> -->
 
                 <div class="container text-center">
