@@ -345,7 +345,7 @@
 
     @endif
 
-    @if (count($tests) > 0)
+    @if (count($tests) > 1)
 
     <section class="date_section ">
 
