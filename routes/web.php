@@ -1,6 +1,6 @@
 <?php
-Route::get('generate_key','HomeController@generate_key');
-Route::get('pay_response','HomeController@pay_response')->name('pay_response');
+// Route::get('generate_key','HomeController@generate_key');
+// Route::get('pay_response','HomeController@pay_response')->name('pay_response');
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
