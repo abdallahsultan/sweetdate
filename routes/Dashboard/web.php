@@ -61,6 +61,8 @@ Route::resource('scategory', 'ScategoryController');
 
 Route::resource('reservation', 'ReservationController');
 
+Route::resource('tables', 'TablesController');
+
 });
 
 });

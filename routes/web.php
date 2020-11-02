@@ -1,10 +1,11 @@
 <?php
-// Route::get('generate_key','HomeController@generate_key');
-// Route::get('pay_response','HomeController@pay_response')->name('pay_response');
+
+
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
-
+    Route::get('generate_key','HomeController@generate_key');
+    Route::get('submit_reservation','HomeController@submit_reservation');
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('blogs', 'HomeController@blogs')->name('blogs');
@@ -36,6 +37,7 @@ Route::get('reserve/indoor', 'HomeController@reserveindoor')->name('reserve/indo
 Route::get('reserve/outdoor', 'HomeController@reserveoutdoor')->name('reserve/outdoor');
 Route::post('makereservationindoor', 'HomeController@makereservation')->name('makereservationindoor');
 Route::post('makereservationoutdoor', 'HomeController@makereservation')->name('makereservationoutdoor');
+Route::get('submit_payment/{name}/{phone}/{date}/{time}', 'HomeController@submit_payment')->name('submit_payment');
 
 
 Route::get('product/{id}', 'HomeController@product')->name('product');

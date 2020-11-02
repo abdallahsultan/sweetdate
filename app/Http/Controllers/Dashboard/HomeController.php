@@ -11,6 +11,7 @@ use App\Project;
 use App\Service;
 use App\Team;
 use App\Test;
+use App\Tables;
 
 class HomeController extends Controller
 {
@@ -30,9 +31,10 @@ class HomeController extends Controller
         $partnerCount = Partner::count();
 
         $productCount = Product::count();
+        $tablescount = Tables::count();
+ 
 
-
-        return view('admin.index', compact('blogsCounnt', 'servicesCount', 'projectsCount', 'productCount', 'partnerCount', 'teamCount', 'testsCount'));
+        return view('admin.index', compact('blogsCounnt', 'servicesCount', 'projectsCount', 'productCount', 'partnerCount', 'teamCount', 'testsCount','tablescount'));
     }
 
 }

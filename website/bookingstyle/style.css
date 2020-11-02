@@ -476,10 +476,10 @@ ol {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 992px) {
   .vip-plus {
-    right: 70%;
+    right: 65%;
     transform: rotate(90deg);
     position: absolute;
-    top: 40%;
+    top: 28%;
     /* width: 238px; */
 }
 .DEtable{

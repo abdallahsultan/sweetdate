@@ -111,6 +111,7 @@
                   <li class="back-btn"> <div class="mobile-back text-right"><span>Back</span><i class="fa fa-angle-right pl-2" aria-hidden="true"></i></div>  </li>
                   <li><a class="nav-link" href="{{ route('dashboard.')}}"><i data-feather="home"></i><span>الرئيسيه</span></a> </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.reservation.index') }}"><i data-feather="airplay"></i><span> الحجوزات</span>  @if($reservscount > 0) <label class="badge badge-danger"> {{ $reservscount }}</label> @endif</a> </li>
+                  <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.tables.index') }}"><i data-feather="airplay"></i><span> الطربيزات</span>  @if($tablescount > 0) <label class="badge badge-danger"> {{ $tablescount }}</label> @endif</a> </li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.slider.index') }}"><i data-feather="box"></i><span> الجزء العلوي</span></a></li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.product.index') }}"><i data-feather="server"></i><span>قائمة الطعام</span></a></li>
                   <li class="dropdown"><a class="nav-link" href="{{ route('dashboard.about.index') }}"><i data-feather="layout"></i><span>من نحن</span></a> </li>

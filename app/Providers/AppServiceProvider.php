@@ -12,6 +12,7 @@ use App\Seo;
 use App\Service;
 use App\Test;
 use App\Setting;
+use App\Tables;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -34,6 +35,7 @@ class AppServiceProvider extends ServiceProvider
         view()->share('testcount', Test::where('status', '=', 0)->count());
 
         view()->share('reservscount', Reservation::count());
+        view()->share('tablescount', Tables::count());
 
         // view()->share('seo', Seo::findOrFail(1));
 
@@ -44,5 +46,6 @@ class AppServiceProvider extends ServiceProvider
         view()->share('pservices', Service::all());
 
         view()->share('sactegory', Scategory::all());
+        
     }
 }

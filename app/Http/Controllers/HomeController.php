@@ -20,6 +20,7 @@ use App\Team;
 use App\Test;
 use App\Video;
 use App\Pcategory;
+use App\Tables;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -173,6 +174,7 @@ class HomeController extends Controller
     { 
         
         $reserve=Reservation::all();
+        $tables=Tables::all();
        
         $tables=[];
         foreach($reserve as $key => $value){
@@ -190,7 +192,7 @@ class HomeController extends Controller
      
    
     
-        return view('reserve',compact("tables","reserve"));
+        return view('reserve',compact("tables","reserve","tables"));
     }
 
 
@@ -264,40 +266,19 @@ class HomeController extends Controller
 
 
     public function makereservation (Request $request){
-        
-        
         if($request->table ==null){
             session()->flash('error','you Should Complete information Your Booking');
             return back();
         }
         $request->validate([
-
+            
             'name'         => 'required',
             'phone'        => 'required',
             'table'        =>'required',
             
-        ]);
-        
+            ]);
+            $this->generate_key($request->all());
        
-        
-        $values=[];
-        $table=$request->table;
-        foreach($table as $key => $value)
-    {
-        $values[] = $key;
-    }
-        
-         
-        
-        $input = array_merge(request()->all(), ['table' => implode(",",$values)]);
-        
-        Reservation::create($input);
-        
-       
-       session()->flash('message', 'Hi'.' '.$request->name.','.' '.'Your request has been booked'.' '.implode(",",$values));
-
-        return back();
-
     }
 
 
@@ -342,67 +323,103 @@ class HomeController extends Controller
 
     }
     
-// public function generate_key($trackId=null,$amount='1.00')
-// {
-//     $amount ='1.00';
-//     $trackId =10;
-//     $customerEmail="adiab9800@gmail.com";
-//     $Terminalid='sweetdate';
-//     $password ="4Cy@qs62VSPqC4h";
-//     $secret_key="33e5ab01b510526247c869ab7764a649a24509af9b8b6645bda9be89204f66a1";
-//     $currency_code="SAR";
-//     $txn_details =$trackId."|".$Terminalid."|".$password."|".$secret_key."|".$amount."|".$currency_code;
-//     $hash=hash('sha256', $txn_details);
-//    $fields = array(
-//         'trackid' => $trackId ,
-//         'terminalId' => $Terminalid,
-//         'customerEmail' => $customerEmail,
-//         'action' => "1", // action is always 1
-//         'merchantIp' =>'127.0.0.1',
-//         'password'=> $password,
-//         'currency' => $currency_code,
-//         'country'=>"SA",
-//         'amount' => $amount,
-//         'requestHash' => $hash ,
-//         'udf1'=>'trest',
-//         'udf2'=>route('pay_response'),
-//         'udf3'=>'',
-//         'udf4'=>'',
-//         'udf5'=>'trest',
+public function generate_key($request,$amount='1.00')
+{
+        $idorder = 'PHP_' . rand(1, 1000);//Customer Order ID
+        $terminalId = "sweetdate";// Will be provided by URWAY
+        $password = "sweetdate@123";// Will be provided by URWAY
+        $merchant_key = "33e5ab01b510526247c869ab7764a649a24509af9b8b6645bda9be89204f66a1";// Will be provided by URWAY
+        $currencycode = "SAR";
+        $amount = "1.00";
+        $ipp = '127.0.0.1';
+        //Generate Hash
+        $txn_details= $idorder.'|'.$terminalId.'|'.$password.'|'.$merchant_key.'|'.$amount.'|'.$currencycode; 
+        $hash=hash('sha256', $txn_details); 
+        
+        $name = $request['name'];
+        $phone = $request['phone'];
+        $date = $request['date'];
+        $time = $request['time'];
+        $table=$request['table'];
+        $fields = array( 
+                    'trackid' => $idorder, 
+                    'terminalId' => $terminalId, 
+                    'customerEmail' => 'customer@email.com', 
+                    'action' => "1",  // action is always 1 
+                    'merchantIp' =>$ipp, 
+                    'password'=> $password, 
+                    'currency' => $currencycode, 
+                    'country'=>"SA", 
+                    'amount' => $amount,  
+                     "udf1"              =>"",
+                    "udf2"              =>url('submit_payment/'.$name.'/'.$phone.'/'.$date.'/'.$time),//Response page URL
+                     "udf3"              =>json_encode($table),
+                      "udf4"              =>"",
+                    "udf5"              =>"",
+                    'requestHash' => $hash  //generated Hash  
+                    );    
+          $data = json_encode($fields);  
+        $ch=curl_init('https://payments-dev.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest'); // Will be provided by URWAY
+         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST"); 
+         curl_setopt($ch, CURLOPT_POSTFIELDS, $data); 
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+         curl_setopt($ch, CURLOPT_HTTPHEADER, array( 
+               'Content-Type: application/json', 
+               'Content-Length: ' . strlen($data)) 
+              ); 
+         curl_setopt($ch, CURLOPT_TIMEOUT, 5); 
+         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5); 
+         //execute post 
+         $server_output =curl_exec($ch); 
+         //close connection 
+         curl_close($ch); 
+             $result = json_decode($server_output);
+           
+             if (!empty($result->payid) && !empty($result->targetUrl)) {
+                //  dd('asd');
+               $url = $result->targetUrl . '?paymentid=' .  $result->payid;
+            //    dd($url);
+                header('Location: '. $url, true, 307);//Redirect to Payment Page
+                exit();
+             }else{
+        
+           print_r($result);
+          echo "<br/><br/>";
+           print_r($data);
+           die();
+        }
+}
+public function pay_response()
+{
+    dd('asfasfasf');
+    return 'done';
+}
+public function submit_payment(Request $request,$name,$phone,$date,$time)
+{
+//    dd($name,$phone,$date,$time,$request['UserField3']);
+$table=json_decode($request['UserField3']);
+        
+$values=[];
+foreach($table as $key => $value)
+{
+$values[] = $key;
+}
 
-//     );
-//     $data = json_encode($fields);
-//     $ch=curl_init('https://payments-dev.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest');
-//     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-//     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-//     'Content-Type: application/json',
-//     'Content-Length: ' . strlen($data))
-//     );
-//     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-//     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-//     //execute post
-//     $result = curl_exec($ch);
-//     //close connection
-//     curl_close($ch);
-    
-//     $urldecode=(json_decode($result));
-//     // dd($urldecode['payid']);
-//     if (!empty($urldecode->payid) && !empty($urldecode->targetUrl)) {
-//         dd('as');
-//         $url = $urldecode->targetUrl . '?paymentid=' .  $urldecode->payid;
-//          header('Location: '. $url, true, 307);//Redirect to Payment Page
-//       }else{
-//     dd($urldecode);
-//    echo "<br/><br/>";
-//     print_r($data);
-//     die();
-//  }
-// }
-// public function pay_response()
-// {
-//     return 'done';
-// }
+ $input=array();
+$input['name']=$name;
+$input['phone']=$phone;
+// $input['date']=$date;
+// $input['time']=$time;
+$input['table']=implode(",",$values);
+// $input = array_merge(request()->all(), ['table' => implode(",",$values)]);
+// dd($input);
+Reservation::create($input);
+
+
+session()->flash('message', 'Hi'.' '.$request->name.','.' '.'Your request has been booked'.' '.implode(",",$values));
+
+return redirect('reserve');
+
+}
 }
  
