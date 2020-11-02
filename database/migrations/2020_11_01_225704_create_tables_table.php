@@ -13,7 +13,7 @@ class CreateTablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tables_price', function (Blueprint $table) {
+        Schema::create('tables', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('price');
@@ -31,6 +31,6 @@ class CreateTablesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tables_price');
+        Schema::dropIfExists('tables');
     }
 }
