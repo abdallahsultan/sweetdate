@@ -40,8 +40,8 @@ class TablesController extends Controller
     {
         $request->validate([
 
-            'name'       => 'required|string',
-            'price'       => 'required|string',
+            'name'       => 'required',
+            'price'       => 'required',
             // 'avatar'     => 'required',
  
         ]);
