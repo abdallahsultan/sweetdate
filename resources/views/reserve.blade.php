@@ -826,7 +826,7 @@
 </div>
 
 </div>
-@php $start='2:30 pm'; $end='11:59 pm'; @endphp
+@php $start='2:00 pm'; $end='11:59 pm';  @endphp
         @if( strtotime($start) <= strtotime( date('h:i a')) && strtotime( date('h:i a')) <=strtotime($end)  )
                      <div class="col-md-5 col-md-offset-1">
                         <label> @lang('site.name') </label>
