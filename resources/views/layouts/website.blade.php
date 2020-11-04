@@ -3,7 +3,8 @@
 
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=1024">
 <meta name="keywords" content="{{ $setting->meta }}" />
 <meta name="author" content="Mokhtar Ali" />
 <meta name="description" content="{{ $setting->meta }}" />
@@ -1608,6 +1609,7 @@
 
 <script src="{{ asset('website/js/jquery-1.12.4.min.js') }}"></script>
 
+
 	<!-- start script menue -->
 <script src="{{asset('website/magazine/js/jquery.js')}}"></script>
     <script>
@@ -1732,6 +1734,7 @@
 
         });
     </script>
+	
 	<!-- end script menue -->
 
 <script src="{{ asset('website/js/mokh_library.js') }}"></script>
@@ -1758,5 +1761,6 @@
 
 
 <script>$(window).on('load', function() { $(".loading").remove(); });</script>
+
 </body>
 </html>

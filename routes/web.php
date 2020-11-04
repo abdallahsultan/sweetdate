@@ -33,6 +33,7 @@ Route::get('project/{id}', 'HomeController@projectcat')->name('project');
 Route::get('menu', 'HomeController@products')->name('menu');
 //reserve
 Route::get('reserve', 'HomeController@reserve')->name('reserve');
+Route::get('gettabledate', 'HomeController@get_table_date')->name('gettabledate');
 Route::get('reserve/indoor', 'HomeController@reserveindoor')->name('reserve/indoor');
 Route::get('reserve/outdoor', 'HomeController@reserveoutdoor')->name('reserve/outdoor');
 Route::post('makereservationindoor', 'HomeController@makereservation')->name('makereservationindoor');

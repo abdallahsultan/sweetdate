@@ -69,7 +69,7 @@ return [
     'map' => 'Map' ,
     'list' => 'Menu' ,
     'res_req' => 'You Must Choose Your Location Before Click Send' ,
-    'time_booking' => 'Reservation times are from 2 am to 12 pm' ,
+    'time_booking' => 'Reservation times are from 8:30 am to 12 pm' ,
     'show_more' => 'Show More' ,
     'all_parts' => 'All Parts' ,
     'under_menu1' => 'All prices  include VAT.' ,

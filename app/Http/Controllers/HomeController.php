@@ -170,29 +170,62 @@ class HomeController extends Controller
         return view('menu');
     }
    
-    public function reserve ()
+    public function reserve ($data=null)
     { 
-        
-        $reserve=Reservation::all();
-        $tables=Tables::all();
        
-        $tables=[];
-        foreach($reserve as $key => $value){
 
-           $count= explode(',', $value['table']);
-            if(count($count) == 1 ){
-                array_push($tables,$value['table'] );
-            }else{
-                for ($i = 0; $i < count($count); $i++) {            
-                    array_push($tables,$count[$i] );
-                  }
+            
+            $reserve=Reservation::all();
+           
+            
+            $tables=[];
+            foreach($reserve as $key => $value){
+                
+                $count= explode(',', $value['table']);
+                if(count($count) == 1 ){
+                    array_push($tables,$value['table'] );
+                }else{
+                    for ($i = 0; $i < count($count); $i++) {            
+                        array_push($tables,$count[$i] );
+                    }
             }
-       
+            
         }
+        return view('reserve',compact("tables","reserve"));
+   
      
    
     
-        return view('reserve',compact("tables","reserve","tables"));
+       
+    }
+    public function get_table_date(Request $request)
+    {
+            $reserve=Reservation::where('date',$request->date)->get();
+            $date=$request->date;
+            
+            $tables=[];
+            
+            foreach($reserve as $key => $value)
+            {
+                
+                $count= explode(',', $value['table']);
+                if(count($count) == 1 )
+                {
+                    array_push($tables,$value['table'] );
+                }
+                else
+                {
+                    for ($i = 0; $i < count($count); $i++) {            
+                        array_push($tables,$count[$i] );
+                    }
+                }
+           
+            
+           
+          }
+        $array=array('tables'=>$tables,'reserve'=>$reserve ,'date'=>$date);
+        $arry=json_encode($array);
+        return $array;
     }
 
 
@@ -275,8 +308,55 @@ class HomeController extends Controller
             'name'         => 'required',
             'phone'        => 'required',
             'table'        =>'required',
+            'date'        =>'required',
+            'time'        =>'required',
             
             ]);
+            $name = $request['name'];
+            $phone = $request['phone'];
+            $date = $request['date'];
+            $time = $request['time'];
+            $table=$request['table'];
+            
+        $reserve=Reservation::where('date',$date)->get();
+
+
+        $tables=[];
+
+        foreach($reserve as $key => $value)
+        {
+            
+            $count= explode(',', $value['table']);
+            if(count($count) == 1 )
+            {
+                array_push($tables,$value['table'] );
+            }
+            else
+            {
+                for ($i = 0; $i < count($count); $i++) {            
+                    array_push($tables,$count[$i] );
+                }
+            }
+
+
+
+        }
+      
+            if(count($reserve) >0){
+                foreach($request['table'] as $key => $value){
+                   
+                    if(in_array($key, $tables)){
+                        session()->flash('error', 'Hi'.' '.$name.','.' '.'Make sure to choose the tables');
+            
+                         return redirect('reserve');
+            
+                    }
+                }
+            
+            }
+
+
+
             $this->generate_key($request->all());
        
     }
@@ -389,11 +469,7 @@ public function generate_key($request,$amount='1.00')
            die();
         }
 }
-public function pay_response()
-{
-    dd('asfasfasf');
-    return 'done';
-}
+
 public function submit_payment(Request $request,$name,$phone,$date,$time)
 {
 //    dd($name,$phone,$date,$time,$request['UserField3']);
@@ -408,18 +484,23 @@ $values[] = $key;
  $input=array();
 $input['name']=$name;
 $input['phone']=$phone;
-// $input['date']=$date;
-// $input['time']=$time;
+$input['date']=$date;
+$input['time']=$time;
 $input['table']=implode(",",$values);
-// $input = array_merge(request()->all(), ['table' => implode(",",$values)]);
-// dd($input);
+
+
+
+
 Reservation::create($input);
 
 
-session()->flash('message', 'Hi'.' '.$request->name.','.' '.'Your request has been booked'.' '.implode(",",$values));
+session()->flash('message', 'Hi'.' '.$request->name.','.' '.'Your request has been booked'.' '.implode(",",$values) .' '.$request->date);
 
 return redirect('reserve');
 
 }
+
+
+
 }
  

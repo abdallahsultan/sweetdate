@@ -131,7 +131,7 @@
                      <div class="col-md-12" style="margin-left:10%"  >
 
                        
-                        @for( $i = 1 ; $i < 10 ; $i++ )
+                        @for( $i = 1 ; $i < count($pcategory) ; $i++ )
                       <div id="{{$i}}" @if($i=='1')  style="display: block;" @else style="display: none;" @endif class="tabcontent">
                     
                         @foreach ($products as $product)

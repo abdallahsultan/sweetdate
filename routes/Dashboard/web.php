@@ -1,10 +1,12 @@
 <?php
+
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
 
 Route::prefix('dashboard')->name('dashboard.')->middleware(['auth','Admin'])->group(function() {
 
 Route::get('/', 'HomeController@index');
+
 
 Route::resource('category', 'CategoryController');
 
@@ -62,6 +64,7 @@ Route::resource('scategory', 'ScategoryController');
 Route::resource('reservation', 'ReservationController');
 
 Route::resource('tables', 'TablesController');
+
 
 });
 
