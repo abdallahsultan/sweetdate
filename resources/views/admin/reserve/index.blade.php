@@ -53,14 +53,8 @@
                      $table=str_replace(",","  ","$table") @endphp
                     <td>{{$table}} </td>
                     @php 
-                    $splitTimeStamp= explode(" ",$value->created_at);
-                    $date = $splitTimeStamp[0];
-                    $time = $splitTimeStamp[1];
-                    @endphp
-                 
-                    <td>{{ $date }}</td>
-                    <td>{{ $time }}</td>
-                   
+                    <td>{{ $value->date }}</td>
+                    <td>{{ $value->time }}</td>
                     <td>
                         <div class="btn-group m-1">
                             <form method="post" action="{{ route('dashboard.reservation.destroy', $value->id ) }}">
