@@ -405,13 +405,15 @@ class HomeController extends Controller
     
 public function generate_key($request,$amount='1.00')
 {
+   
         $idorder = 'PHP_' . rand(1, 1000);//Customer Order ID
         $terminalId = "sweetdate";// Will be provided by URWAY
         $password = "sweetdate@123";// Will be provided by URWAY
         $merchant_key = "33e5ab01b510526247c869ab7764a649a24509af9b8b6645bda9be89204f66a1";// Will be provided by URWAY
         $currencycode = "SAR";
-        $amount = "1.00";
+        $amount = "149.00";
         $ipp = '127.0.0.1';
+       
         //Generate Hash
         $txn_details= $idorder.'|'.$terminalId.'|'.$password.'|'.$merchant_key.'|'.$amount.'|'.$currencycode; 
         $hash=hash('sha256', $txn_details); 
