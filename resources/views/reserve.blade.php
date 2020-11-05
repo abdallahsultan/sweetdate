@@ -109,7 +109,7 @@
 @php $table= app\Tables::where('name','A')->first(); @endphp
 <input type="checkbox" name="table[A1]" id="A1" />
 <label for="A1"><img type="image" for="A1" data-toggle="tooltip"  @if( $table->name == 'A' )   title="A1 | price {{$table->price}}" @endif src="{{asset('website/img/a.png')}}"   /> </label>
-<div class="centered"><b>VIP  </b></div>
+<div class="centered"><b>A1  </b></div>
 
 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill A1" fill="currentColor" >
   <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
@@ -184,7 +184,7 @@
 @php $table= app\Tables::where('name','VIP')->first(); @endphp
 <input type="checkbox" name="table[A2]" id="A2" />
 <label for="A2"><img type="image" for="A2" data-toggle="tooltip"  @if( $table->name == 'A' )   title="A2 | price {{$table->price}}" @endif  src="{{asset('website/img/a.png')}}"   /> </label>
-<div class="centered"><b>VIP  </b></div>
+<div class="centered"><b>A2  </b></div>
 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill A2" fill="currentColor" >
   <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
 </svg></div>
@@ -267,7 +267,7 @@
 @php $table= app\Tables::where('name','A')->first(); @endphp
 <input type="checkbox" name="table[A3]" id="A3" />
 <label for="A3"><img type="image" for="A3" data-toggle="tooltip"   @if( $table->name == 'A' )   title="A3 | price {{$table->price}}" @endif src="{{asset('website/img/a.png')}}"   /> </label>
-<div class="centered"><b>VIP  </b></div>
+<div class="centered"><b>A3  </b></div>
 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill A3" fill="currentColor" >
   <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
 </svg>
@@ -427,7 +427,7 @@
                 <input type="checkbox" name="table[Cbig2]" id="Cbig2" />
                 <label style="width: max-content;" for="Cbig2"><img type="image" width="150" for="Cbig2" data-toggle="tooltip"   title="Cbig2" src="{{asset('website/img/cbig.png')}}"   /> </label>
                 <div class="centered"><b>Cbig2  </b></div>
-                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill Cbig" fill="currentColor" >
+                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill Cbig2" fill="currentColor" >
                 <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg></div>
               
@@ -435,34 +435,29 @@
 
             <ul class="seats">
                 <li  class="seat">
-                @if(in_array('C7', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="C7 @lang('site.reserved')" src="{{asset('website/img/thirdc.png')}}"   /> </label>
-                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                </svg></div>
-                @else
-                @php $table= app\Tables::where('name','VIP')->first(); @endphp
+              
+                @php $table= app\Tables::where('name','C')->first(); @endphp
                 <input type="checkbox" name="table[C7]" id="C7" />
                 <label for="C7"><img type="image" for="C7" data-toggle="tooltip"   title="C7" src="{{asset('website/img/thirdc.png')}}"   /> </label>
-            <div class="centered"><b>VIP  </b></div>
-
-                @endif
+                <div class="centered"><b>C7  </b></div>
+                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill C7" fill="currentColor" >
+                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                </svg></div>
+                
                 </li>
 
               <ul class="seats">
                 <li  class="seat">
-                @if(in_array('C6', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="C6 @lang('site.reserved')" src="{{asset('website/img/thirdc.png')}}"   /> </label>
-                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                </svg></div>
-                @else
-                @php $table= app\Tables::where('name','VIP')->first(); @endphp
+              
+                @php $table= app\Tables::where('name','C')->first(); @endphp
                 <input type="checkbox" name="table[C6]" id="C6" />
                 <label for="C6"><img type="image" for="C6" data-toggle="tooltip"   title="C6" src="{{asset('website/img/thirdc.png')}}"   /> </label>
-            <div class="centered"><b>VIP  </b></div>
+            <div class="centered"><b>C6  </b></div>
+            <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill C6" fill="currentColor" >
+                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                </svg></div> 
 
-                @endif
+                
                 </li>
                 
               </ul>
@@ -471,33 +466,31 @@
               <ul class="seats">
                 <ul class="seats">
                     <li style="margin-left: -24%;" class="seat">
-                    @if(in_array('Cbig1', $tables))
-                    <label style="width: max-content;" ><img type="image"  width="150" data-toggle="tooltip"   title="Cbig1 @lang('site.reserved')" src="{{asset('website/img/cbig.png')}}"   /> </label>
-                    <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
+                 
+                    @php $table= app\Tables::where('name','Cbig')->first(); @endphp
+                    <input type="checkbox" name="table[Cbig1]" id="Cbig1" />
+                   
+                    <label style="width: max-content;" for="Cbig1"><img type="image" width="150" for="Cbig1" data-toggle="tooltip"   title="Cbig1" src="{{asset('website/img/cbig.png')}}"   /> </label>
+                    <div class="centered"><b>Cbig1  </b></div>
+                    <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill Cbig1" fill="currentColor" >
                     <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                     </svg></div>
-                    @else
-                    @php $table= app\Tables::where('name','VIP')->first(); @endphp
-                    <input type="checkbox" name="table[Cbig1]" id="Cbig1" />
-                    <label style="width: max-content;" for="Cbig1"><img type="image" width="150" for="Cbig1" data-toggle="tooltip"   title="Cbig1" src="{{asset('website/img/cbig.png')}}"   /> </label>
-                
-                    @endif
+                   
                     </li>
 
                 </ul>
                 <li  class="seat">
-                @if(in_array('C5', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="C5 @lang('site.reserved')" src="{{asset('website/img/c.png')}}"   /> </label>
-                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                </svg></div>
-                @else
-                @php $table= app\Tables::where('name','VIP')->first(); @endphp
+              
+                @php $table= app\Tables::where('name','C')->first(); @endphp
                 <input type="checkbox" name="table[C5]" id="C5" />
                 <label for="C5"><img type="image" for="C5" data-toggle="tooltip"   title="C5" src="{{asset('website/img/c.png')}}"   /> </label>
-            <div class="centered"><b>VIP  </b></div>
+            <div class="centered"><b>C5  </b></div>
+           
+                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill C5" fill="currentColor" >
+                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                </svg></div>
 
-                @endif
+               
                 </li>
                 
               </ul>
@@ -514,26 +507,25 @@
     <ul class="seats">
 
               <li  style="right: 21%; top: 25%;" class="seat">
-                @if(in_array('D1', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="D1 @lang('site.reserved')" src="{{asset('website/img/d.png')}}"   /> </label>
-                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                </svg></div>
-                @else
-                @php $table= app\Tables::where('name','VIP')->first(); @endphp
+               
+                @php $table= app\Tables::where('name','D')->first(); @endphp
                 <input type="checkbox" name="table[D1]" id="D1" />
                 <label for="D1"><img type="image" for="D1" data-toggle="tooltip"   title="D1" src="{{asset('website/img/d.png')}}"   /> </label>
-            <div class="centered"><b>VIP  </b></div>
+            <div class="centered"><b>D1  </b></div>
+            <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill D1" fill="currentColor" >
+                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                </svg></div>
 
-                @endif
+                
             </li>
     
                 <li style="right: 12%; top: 50%;"  class="seat">
                
                 
-                @php $table= app\Tables::where('name','VIP')->first(); @endphp
+                @php $table= app\Tables::where('name','E')->first(); @endphp
                 <input type="checkbox" name="table[E1]" id="E1" />
                 <label style="max-width: max-content;" for="E1"><img type="image" height="85" for="E1" data-toggle="tooltip"   title="E1" src="{{asset('website/img/e.png')}}"   /> </label>
+                <div class="centered"><b>E1  </b></div>
                 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill E1" fill="currentColor" >
                 <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg></div>
@@ -545,9 +537,10 @@
                
                 
                
-                @php $table= app\Tables::where('name','VIP')->first(); @endphp
+                @php $table= app\Tables::where('name','E')->first(); @endphp
                 <input type="checkbox" name="table[E2]" id="E2" />
                 <label style="max-width: max-content;" for="E2"><img type="image" height="85" for="E2" data-toggle="tooltip"   title="E2" src="{{asset('website/img/e.png')}}"   /> </label>
+                <div class="centered"><b>E2  </b></div>
                 <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill E2" fill="currentColor" >
                 <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg></div>
@@ -560,34 +553,30 @@
             
               <ul class="seats">
                 <li  class="seat">
-                @if(in_array('D2', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="D2 @lang('site.reserved')" src="{{asset('website/img/d.png')}}"   /> </label>
-                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                </svg></div>
-                @else
-                @php $table= app\Tables::where('name','VIP')->first(); @endphp
+              
+                @php $table= app\Tables::where('name','D')->first(); @endphp
                 <input type="checkbox" name="table[D2]" id="D2" />
                 <label for="D2"><img type="image" for="D2" data-toggle="tooltip"   title="D2" src="{{asset('website/img/d.png')}}"   /> </label>
-            <div class="centered"><b>VIP  </b></div>
+            <div class="centered"><b>D2  </b></div>
+            <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill D2" fill="currentColor" >
+                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                </svg></div>
 
-                @endif
+               
                 </li>
               </ul>
 
               <ul class="seats">
                 <li  class="seat D3table">
-                @if(in_array('D3', $tables))
-                <label ><img type="image"  data-toggle="tooltip"   title="D3 @lang('site.reserved')" src="{{asset('website/img/d.png')}}"   /> </label>
-                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                </svg></div>
-                @else
-                @php $table= app\Tables::where('name','VIP')->first(); @endphp
+              
+                @php $table= app\Tables::where('name','D')->first(); @endphp
                 <input type="checkbox" name="table[D3]" id="D3" />
                 <label for="D3"><img type="image" for="D3" data-toggle="tooltip"   title="D3" src="{{asset('website/img/d.png')}}"   /> </label>
-                <div class="centered"><b>VIP  </b></div>
-                @endif
+                <div class="centered"><b>D3  </b></div>
+                <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill D3" fill="currentColor" >
+                <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                </svg></div>
+                
                 </li>
               </ul>
             
@@ -645,17 +634,15 @@
           </li>
   
               <li style="bottom: 50%; right: 13%;"  class="seat">
-              @if(in_array('E3', $tables))
-              <label style="max-width: max-content;" ><img type="image" height="85"  data-toggle="tooltip"   title="E3 @lang('site.reserved')" src="{{asset('website/img/e.png')}}"   /> </label>
-              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></div>
-              @else
-              @php $table= app\Tables::where('name','VIP')->first(); @endphp
+            
+              @php $table= app\Tables::where('name','E')->first(); @endphp
               <input type="checkbox" name="table[E3]" id="E3" />
               <label style="max-width: max-content;" for="E3"><img type="image" height="85"  for="E3" data-toggle="tooltip"   title="E3" src="{{asset('website/img/e.png')}}"   /> </label>
-          
-              @endif
+              <div class="centered"><b>E3  </b></div>
+              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill E3" fill="currentColor" >
+              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+              </svg></div>
+            
               </li>
 
             <ul class="seats">
@@ -678,35 +665,31 @@
             
               <ul class="seats">
               <li  class="seat D%table">
-              @if(in_array('D5', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="D5 @lang('site.reserved')" src="{{asset('website/img/d.png')}}"   /> </label>
-              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></div>
-              @else
-              @php $table= app\Tables::where('name','VIP')->first(); @endphp
+             
+             
+              @php $table= app\Tables::where('name','D')->first(); @endphp
               <input type="checkbox" name="table[D5]" id="D5" />
               <label for="D5"><img type="image" for="D5" data-toggle="tooltip"   title="D5" src="{{asset('website/img/d.png')}}"   /> </label>
-          <div class="centered"><b>VIP  </b></div>
+          <div class="centered"><b>D5  </b></div>
+          <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill D5" fill="currentColor" >
+              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+              </svg></div>
 
-              @endif
+           
               </li>
 
               </ul>
               <ul class="seats">
               <li  class="seat">
-              @if(in_array('D6', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="D6 @lang('site.reserved')" src="{{asset('website/img/d.png')}}"   /> </label>
-              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></div>
-              @else
-              @php $table= app\Tables::where('name','VIP')->first(); @endphp
+             
+              @php $table= app\Tables::where('name','D')->first(); @endphp
               <input type="checkbox" name="table[D6]" id="D6" />
               <label for="D6"><img type="image" for="D6" data-toggle="tooltip"   title="D6" src="{{asset('website/img/d.png')}}"   /> </label>
-          <div class="centered"><b>VIP  </b></div>
-
-              @endif
+              <div class="centered"><b>D6  </b></div>
+              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill D6" fill="currentColor" >
+              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+              </svg></div>
+              
               </li>
               
             </ul>
@@ -721,48 +704,45 @@
   <ol class="seats ftables" type="D" >
   <ul class="seats">
             <li style="right: 20%;" class="seat">
-              @if(in_array('F1', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="F1 @lang('site.reserved')" src="{{asset('website/img/f.png')}}"   /> </label>
-              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></div>
-              @else
-              @php $table= app\Tables::where('name','VIP')->first(); @endphp
+              
+              @php $table= app\Tables::where('name','F')->first(); @endphp
               <input type="checkbox" name="table[F1]" id="F1" />
               <label for="F1"><img type="image" for="F1" data-toggle="tooltip"   title="F1" src="{{asset('website/img/f.png')}}"   /> </label>
-          <div class="centered"><b>VIP  </b></div>
-
-              @endif
-          </li>
-          <li style="right: 20%;" class="seat">
-              @if(in_array('F2', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="F2 @lang('site.reserved')" src="{{asset('website/img/f.png')}}"   /> </label>
-              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
+            <div class="centered"><b>F1  </b></div>
+            <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill F1" fill="currentColor" >
               <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
               </svg></div>
-              @else
-              @php $table= app\Tables::where('name','VIP')->first(); @endphp
+
+             
+          </li>
+          <li style="right: 20%;" class="seat">
+             
+             
+             
+              @php $table= app\Tables::where('name','F')->first(); @endphp
               <input type="checkbox" name="table[F2]" id="F2" />
               <label for="F2"><img type="image" for="F2" data-toggle="tooltip"   title="F2" src="{{asset('website/img/f.png')}}"   /> </label>
-          <div class="centered"><b>VIP  </b></div>
+          <div class="centered"><b>F2  </b></div>
+          <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill F2" fill="currentColor" >
+              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+              </svg></div>
 
-              @endif
+             
               </li>
         
              <ul class="seats">
                  
              <li style="right: 50%;" class="seat">
-              @if(in_array('Fbig', $tables))
-              <label style="width: max-content;" ><img type="image" width="150"  data-toggle="tooltip"   title="Fbig @lang('site.reserved')" src="{{asset('website/img/fbig.png')}}"   /> </label>
-              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></div>
-              @else
-              @php $table= app\Tables::where('name','VIP')->first(); @endphp
+             
+             
+              @php $table= app\Tables::where('name','Fbig')->first(); @endphp
               <input type="checkbox" name="table[Fbig]" id="Fbig" />
               <label style="width: max-content;" for="Fbig"><img type="image" width="150"  for="Fbig" data-toggle="tooltip"   title="Fbig" src="{{asset('website/img/fbig.png')}}"   /> </label>
+              <div class="centered"><b>Fbig  </b></div>
+              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill Fbig" fill="currentColor" >
+              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+              </svg></div>
           
-              @endif
               </li>
              </ul>
             
@@ -770,49 +750,42 @@
             
               
               <li  class="seat">
-              @if(in_array('F3', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="F3 @lang('site.reserved')" src="{{asset('website/img/f.png')}}"   /> </label>
-              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></div>
-              @else
-              @php $table= app\Tables::where('name','VIP')->first(); @endphp
+           
+              @php $table= app\Tables::where('name','F')->first(); @endphp
               <input type="checkbox" name="table[F3]" id="F3" />
               <label for="F3"><img type="image" for="F3" data-toggle="tooltip"   title="F3" src="{{asset('website/img/f.png')}}"   /> </label>
-          <div class="centered"><b>VIP  </b></div>
-
-              @endif
+          <div class="centered"><b>F3  </b></div>
+          <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill F3" fill="currentColor" >
+              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+              </svg></div>
+              
               </li>
 
             
             
               <li  class="seat">
-              @if(in_array('F4', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="F4 @lang('site.reserved')" src="{{asset('website/img/f.png')}}"   /> </label>
-              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
-              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-              </svg></div>
-              @else
-              @php $table= app\Tables::where('name','VIP')->first(); @endphp
+           
+              @php $table= app\Tables::where('name','F')->first(); @endphp
               <input type="checkbox" name="table[F4]" id="F4" />
               <label for="F4"><img type="image" for="F4" data-toggle="tooltip"   title="F4" src="{{asset('website/img/f.png')}}"   /> </label>
-          <div class="centered"><b>VIP  </b></div>
-
-              @endif
-              </li>
-              <li  class="seat">
-              @if(in_array('F5', $tables))
-              <label ><img type="image"  data-toggle="tooltip"   title="F5 @lang('site.reserved')" src="{{asset('website/img/f.png')}}"   /> </label>
-              <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill" fill="currentColor" >
+          <div class="centered"><b>F4  </b></div>
+          <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill F4" fill="currentColor" >
               <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
               </svg></div>
-              @else
-              @php $table= app\Tables::where('name','VIP')->first(); @endphp
+
+            
+              </li>
+              <li  class="seat">
+             
+              @php $table= app\Tables::where('name','F')->first(); @endphp
               <input type="checkbox" name="table[F5]" id="F5" />
               <label for="F5"><img type="image" for="F5" data-toggle="tooltip"   title="F5" src="{{asset('website/img/f.png')}}"   /> </label>
-          <div class="centered"><b>VIP  </b></div>
+          <div class="centered"><b>F5  </b></div>
+          <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill F5" fill="currentColor" >
+              <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+              </svg></div>
 
-              @endif
+             
               </li>
             
             

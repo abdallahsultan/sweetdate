@@ -4,7 +4,13 @@
 <head>
 <meta charset="utf-8">
 
-<meta name="viewport" content="width=1024">
+
+
+
+<!-- <meta name="viewport" id="reseve_showonmoblie"  content="width=1024"> -->
+
+<meta name="viewport" class="viewport"    content="width=device-width, initial-scale=1">
+
 <meta name="keywords" content="{{ $setting->meta }}" />
 <meta name="author" content="Mokhtar Ali" />
 <meta name="description" content="{{ $setting->meta }}" />
@@ -1741,7 +1747,29 @@
 <script src="{{ asset('website/js/mokh_script.js') }}"></script>
 <script src="{{ asset('main/js/sweet-alert/sweetalert.min.js') }}"></script>
 <!-- <script src="{{ asset('main/js/sweet-alert/app.js') }}"></script> -->
+<script>
 
+var pageURL = window.location.href;
+var lastURLSegment = pageURL.substr(pageURL.lastIndexOf('/') + 1);
+
+
+
+$(document).ready(function(){
+	
+	if(lastURLSegment == 'reserve')
+	{
+		
+ 
+
+	$('.viewport').attr('content','width=1024');
+	
+	}else{
+		$('.viewport').attr('content','width=device-width, initial-scale=1');
+		
+	}
+
+});
+</script>
 
 @php if(session()->has('message')){  @endphp
 
