@@ -27,6 +27,8 @@
         </div>
     </div>
 </div>
+
+<!-- 
 @php $photos = explode('/', $blog->gallery);  @endphp
     @if (count($photos) >1 )
 
@@ -54,7 +56,7 @@
 
             </section>
 
-          @endif
+          @endif -->
 
     <section id="date_content" class="date_content">
 
@@ -62,14 +64,16 @@
 
             <div class="container text-center">
                 <h2 class="date_gold">  {{ $blog->title  }}</h2>
-                <div class="col-md-6">
-               <blockquote style=" text-align: initial;   color: #e3cc6f;" class="wp-block-quote">
+               
+               <img class="img-thumbnail" src="{{ asset('images/' . $blog->avatar ) }}" alt="image">
+               
+            <br><br>
+            
+               <blockquote style="border-left: none; text-align: initial;   color: #e3cc6f;" class="wp-block-quote">
                     {!! $blog->body !!}
                 </blockquote>
-               </div>
-               <div class="col-md-6">
-               <img class="img-thumbnail" src="{{ asset('images/' . $blog->avatar ) }}" alt="image">
-               </div>
+            
+                <a class="tablinks active btn success" href="{{route('reserve')}}" style="    border: 2px solid #e3cc6f;border-radius: 4px; font-weight: bold; color:#ffffff;" >@lang('site.reserve​​now')  <i class="ti ti-arrow-circle-right"></i> </a>
                
                
 
@@ -82,7 +86,7 @@
 
 
     </section>
-    
+<!--     
     @if ($blog->video)
 
 
@@ -107,7 +111,7 @@
 
         </div>
     </section>
-@endif
+@endif -->
 
    
 

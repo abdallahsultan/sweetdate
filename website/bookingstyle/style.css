@@ -72,26 +72,93 @@ html {
 
 .exit {
   position: relative;
-  height: 50px;
+  left: 10%;
 }
 .exit:before, .exit:after {
-  content: "EXIT";
+ content: "Exit";
+    right: 50%;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 1px 5px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    display: block;
+    position: absolute;
+    background: green;
+    color: white;
+    font-weight: bold;
+    top: 50%;
+}
+
+
+.Tower {
+  position: relative;
+  height: 50px;
+}
+.Tower:before, .Tower:after {
+  content: "Tower View";
   font-size: 14px;
   line-height: 18px;
   padding: 0px 2px;
   font-family: "Arial Narrow", Arial, sans-serif;
   display: block;
   position: absolute;
-  background: green;
+  background: #5bc0de;
   color: white;
+   font-weight: bold;
   top: 50%;
   transform: translate(0, -50%);
 }
-.exit:before {
+.Tower:before {
   left: 0;
 }
-.exit:after {
+.Tower:after {
   right: 0;
+}
+
+.screen {
+      left: 98%;
+    transform: rotate(90deg);
+    position: relative;
+    
+}
+.screen:before, .screen:after {
+ left: 75%;
+    /* right: 0%; */
+    content: "Screen";
+    font-size: 24px;
+    line-height: 21px;
+    padding: 0px 100px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    display: block;
+    position: absolute;
+    background: #1213137a;
+    color: white;
+    font-weight: bold;
+    top: 63%;
+    transform: translate(0, -50%);
+}
+.screen2 {
+      left: 100%;
+  
+    position: relative;
+    
+}
+.screen2:before, .screen2:after {
+ 
+    right: 90px;
+    content: "Screen";
+    /* font-size: 24px; */
+    line-height: 19px;
+    padding: 0px 98px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    display: block;
+    position: absolute;
+    background: #1213137a;
+    color: white;
+    font-weight: bold;
+    /* top: -18%; */
+    bottom: 100%;
+    
 }
 
 /* .fuselage {

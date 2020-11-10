@@ -50,7 +50,7 @@
                             <h2 class="date_gold date_title_animation">@lang('site.ourstory')</h2>
                             <p style="color: #e3cc6f;"><b>{{ strip_tags($about->body) }}</b></p>
                             
-                            <a href="{{ route('ourstory')}}" class="btn"> @lang('site.view_more') <i class="ti ti-truck"></i></a>
+                            <a href="{{ route('ourstory')}}" style="    border: 2px solid #e3cc6f;border-radius: 4px; font-weight: bold; color:#ffffff;" class="btn"> @lang('site.view_more') <i class="ti ti-arrow-circle-right"></i></a>
 
                         </div>
                     </div>
@@ -241,7 +241,7 @@
               
                 </div>
                 <div class="col-md-12">
-              <a class="tablinks active btn success" href="{{route('menu')}}" style="background: #e3cc6f3b;border-radius: 4px; font-weight: bold; color:#ffffff;" >@lang('site.show_more')</a>
+              <a class="tablinks active btn success" href="{{route('menu')}}" style="border: 2px solid #e3cc6f;border-radius: 4px; font-weight: bold; color:#ffffff;" >@lang('site.show_more') <i class="ti ti-list"></i></a>
               </div>
                 </div>
                <br>

@@ -7,11 +7,11 @@
     <div class="page-header">
       <div class="row">
         <div class="col-lg-6">
-          <h3>قائمة الطعام</h3>
+          <h3>قائمة الطاولات</h3>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('dashboard.')}}"><i data-feather="home"></i></a></li>
             <li class="breadcrumb-item">الرئيسيه</li>
-            <li class="breadcrumb-item active">قائمة الطربيزات</li>
+            <li class="breadcrumb-item active">قائمة الطاولات</li>
           </ol>
         </div>
         <div class="col-lg-6">

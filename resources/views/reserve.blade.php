@@ -1,6 +1,7 @@
 @extends('layouts.website')
 
 @section('content')
+
 <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 
@@ -26,20 +27,23 @@
         <section class="date_section">
 
                 <div class="container text-center">
+  
 
-
-                    <div class="row">
+                  <div class="row ">
+                   
                         <form method="POST" action="{{ route('makereservationoutdoor') }}">
                             @csrf
                             <div class="col-md-5 col-md-offset-1">
           
-          <label> @lang('site.date')  </label>
-          <input type="date" placeholder="date" value="" class="date_jq form-control" name="date" required>
+          <label > @lang('site.date')  </label>
+          <input type="date"   onkeypress="return false;"   class="date_jq form-control" name="date" required>
           <br>
           </div>
           <div class="col-md-5">
-          <label> @lang('site.time') </label>
-          <input type="time" placeholder="Time" class="form-control" name="time" required>
+          <label for="appt-time"> @lang('site.time') </label>
+          
+          <input id="appt-time" type="time"   onkeypress="return false;"  min="20:00" max="23:59" id="calendar" class="form-control"   name="time" required>
+          
           <br>
           </div>
                         
@@ -53,7 +57,7 @@
 
 <div class="row">
 <div class="col-md-12">
-<div class="date_slide_subtitle">@lang('site.indoor') & @lang('site.outdoor')</div>
+<div class="date_slide_subtitle">@lang('site.indoor') </div>
 </div>
 
 
@@ -70,6 +74,7 @@
 <h1>Satge </h1>
 </div>
 <div class="row fuselage1">
+<div class="screen"> </div>
 <div class="col-md-8">
 <ol class="cabin ">
 <li class="row row--1">
@@ -101,6 +106,7 @@
 </svg>
 
 </li>
+<div class="screen2"> </div>
 <li class="seat">
 
 
@@ -288,12 +294,12 @@
 </li>
 
         <ul>
-        <li style="left: -18%;" class="seat">
+        <li style="left: -18%;" class="seat" >
       
         
         @php $table= app\Tables::where('name','C')->first(); @endphp
         <input type="checkbox" name="table[C3]" id="C3" />
-        <label ><img type="image"  data-toggle="tooltip"   @if( $table->name == 'C' )   title="C3 | price {{$table->price}}" @endif src="{{asset('website/img/c.png')}}"   /> </label>
+        <label for="C3"  ><img type="image" for="C3"  data-toggle="tooltip"   @if( $table->name == 'C' )   title="C3 | price {{$table->price}}" @endif src="{{asset('website/img/c.png')}}"   /> </label>
         <div class="centered"><b>C3  </b></div>
         <div class="centered"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-x-square-fill C3" fill="currentColor" >
         <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
@@ -378,7 +384,7 @@
 </li>
 
 
-
+<div class="exit exit--back fuselage"></div>
 </div>
 
 <div class="col-md-4 vip-plus">
@@ -464,7 +470,9 @@
               
             
               <ul class="seats">
+              
                 <ul class="seats">
+
                     <li style="margin-left: -24%;" class="seat">
                  
                     @php $table= app\Tables::where('name','Cbig')->first(); @endphp
@@ -497,6 +505,7 @@
               
             </ul>
     </ol>
+    <div class="date_slide_subtitle" style="position: absolute;margin-left: 35%;color: #0000002e;"> @lang('site.outdoor')</div>
 </div>
 
   <!-- trabezat 2 saf -->
@@ -633,7 +642,7 @@
              
           </li>
   
-              <li style="bottom: 50%; right: 13%;"  class="seat">
+              <li style="bottom: 50%; right: 14%;"  class="seat">
             
               @php $table= app\Tables::where('name','E')->first(); @endphp
               <input type="checkbox" name="table[E3]" id="E3" />
@@ -796,7 +805,7 @@
 </div>
 </div>
 
-<div class="exit exit--back fuselage">
+<div class="Tower Tower--back fuselage">
 
 </div>
 </div>
@@ -993,7 +1002,32 @@ $(document).ready(function(){
      });
 });
 
+webshim.setOptions('forms-ext', {
+    replaceUI: 'auto',
+    types: 'date',
+    date: {
+        startView: 2,
+        inlinePicker: true,
+        classes: 'hide-inputbtns'
+    }
+});
+webshim.setOptions('forms', {
+    lazyCustomMessages: true
+});
+//start polyfilling
+webshim.polyfill('forms forms-ext');
 
+//only last example using format display
+$(function () {
+    $('.format-date').each(function () {
+        var $display = $('.date-display', this);
+        $(this).on('change', function (e) {
+            //webshim.format will automatically format date to according to webshim.activeLang or the browsers locale
+            var localizedDate = webshim.format.date($.prop(e.target, 'value'));
+            $display.html(localizedDate);
+        });
+    });
+});
 
 </script>
 @endsection

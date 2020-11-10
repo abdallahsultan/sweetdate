@@ -51,7 +51,7 @@ return [
     'reserve' => 'Reservation',
   
     'date' => 'Date',
-    'time' => 'Time',
+    'time' => 'Time (08:30 PM To 12:00 PM)',
     'tnumber' => 'Table Number',
     'menu' => 'Menu',
     'menu_catalog' => 'Menu Catalog ',
@@ -67,6 +67,7 @@ return [
     'drinksmenu' => 'Drinks Menu' ,
     'foodmenu' => 'Food Menu ' ,
     'map' => 'Map' ,
+    'reserve​​now' => 'Reserve ​​Now' ,
     'list' => 'Menu' ,
     'res_req' => 'You Must Choose Your Location Before Click Send' ,
     'time_booking' => 'Reservation times are from 8:30 am to 12 pm' ,
