@@ -69,7 +69,7 @@
                
             <br><br>
             
-               <blockquote style="border-left: none; text-align: initial;   color: #e3cc6f;" class="wp-block-quote">
+               <blockquote style="border-left: none;    color: #e3cc6f;" class="wp-block-quote">
                     {!! $blog->body !!}
                 </blockquote>
             
