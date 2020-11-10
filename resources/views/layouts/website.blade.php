@@ -1761,7 +1761,7 @@ $(document).ready(function(){
 		
  
 
-	$('.viewport').attr('content','width=1024');
+	$('.viewport').attr('content','width=1360');
 	
 	}else{
 		$('.viewport').attr('content','width=device-width, initial-scale=1');
