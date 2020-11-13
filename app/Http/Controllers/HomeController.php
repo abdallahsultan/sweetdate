@@ -176,6 +176,7 @@ class HomeController extends Controller
 
             
             $reserve=Reservation::all();
+            $main_tables=Tables::all();
            
             
             $tables=[];
@@ -191,7 +192,7 @@ class HomeController extends Controller
             }
             
         }
-        return view('reserve',compact("tables","reserve"));
+        return view('reserve',compact("tables","reserve","main_tables"));
    
      
    
@@ -316,7 +317,9 @@ class HomeController extends Controller
             $phone = $request['phone'];
             $date = $request['date'];
             $time = $request['time'];
+         
             $table=$request['table'];
+            $persons=$request['persons'];
             
         $reserve=Reservation::where('date',$date)->get();
 
@@ -354,8 +357,34 @@ class HomeController extends Controller
                 }
             
             }
+            $amount=0;
+            foreach($request['table'] as $key => $value){
+               
+                if($key == 'vip+' || $key == 'DE' || $key == 'DE'){
+                    $tables=Tables::where('name',$key)->first();
+                    $amount+=$tables->price;
 
-        $amount="149.00";
+                }else{
+                    
+                    if(substr($key,0, 3) == 'vip'){
+                        $tables=Tables::where('name',substr($key,0, 3))->first();
+                        
+                        $amount+=$tables->price;
+                       
+                    }else{
+
+                        $tables=Tables::where('name',$key[0])->first();
+                        
+                        $amount+=$tables->price;
+                    }
+                    
+                }
+                
+            }
+            if($amount == null){
+                $amount="149.00" ;
+            }
+       
 
             $this->generate_key($request->all(),$amount);
        
@@ -424,6 +453,8 @@ public function generate_key($request,$amount='1.00')
         $date = $request['date'];
         $time = $request['time'];
         $table=$request['table'];
+        $persons=$request['persons'];
+       
         $fields = array( 
                     'trackid' => $idorder, 
                     'terminalId' => $terminalId, 
@@ -435,7 +466,7 @@ public function generate_key($request,$amount='1.00')
                     'country'=>"SA", 
                     'amount' => $amount,  
                      "udf1"              =>"",
-                    "udf2"              =>url('submit_payment/'.$name.'/'.$phone.'/'.$date.'/'.$time),//Response page URL
+                    "udf2"              =>url('submit_payment/'.$name.'/'.$phone.'/'.$date.'/'.$persons.'/'.$time),//Response page URL
                      "udf3"              =>json_encode($table),
                       "udf4"              =>"",
                     "udf5"              =>"",
@@ -473,7 +504,7 @@ public function generate_key($request,$amount='1.00')
         }
 }
 
-public function submit_payment(Request $request,$name,$phone,$date,$time)
+public function submit_payment(Request $request,$name,$phone,$date,$persons,$time)
 {
 //    dd($name,$phone,$date,$time,$request['UserField3']);
 $table=json_decode($request['UserField3']);
@@ -489,6 +520,8 @@ $input['name']=$name;
 $input['phone']=$phone;
 $input['date']=$date;
 $input['time']=$time;
+$input['num_persons']=$persons;
+
 $input['table']=implode(",",$values);
 
 

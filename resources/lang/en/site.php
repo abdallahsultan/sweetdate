@@ -49,6 +49,7 @@ return [
     'egallery' => 'Event Gallery',
     'evideo' => 'Event Video',
     'reserve' => 'Reservation',
+    'person' => 'Number Of Persons',
   
     'date' => 'Date',
     'time' => 'Time (08:30 PM To 12:00 PM)',

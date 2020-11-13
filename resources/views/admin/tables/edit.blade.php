@@ -39,13 +39,19 @@
                   <div class="form-group row">
                     <label for="input-5" class="col-sm-3 col-form-label">الاسم </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="name" value="{{ $table->name }}"> 
+                      <input type="text" class="form-control" name="name" disabled value="{{ $table->name }}"> 
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="input-6" class="col-sm-3 col-form-label">السعر </label>
                     <div class="col-sm-6">
                       <input type="text" class="form-control" id="input-6" name="price" value="{{ $table->price }}"> 
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input-5" class="col-sm-3 col-form-label">الأشخاص  </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" name="persons" value="{{ $table->persons }}"> 
                     </div>
                   </div>
 

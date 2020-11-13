@@ -38,7 +38,7 @@ Route::get('reserve/indoor', 'HomeController@reserveindoor')->name('reserve/indo
 Route::get('reserve/outdoor', 'HomeController@reserveoutdoor')->name('reserve/outdoor');
 Route::post('makereservationindoor', 'HomeController@makereservation')->name('makereservationindoor');
 Route::post('makereservationoutdoor', 'HomeController@makereservation')->name('makereservationoutdoor');
-Route::get('submit_payment/{name}/{phone}/{date}/{time}', 'HomeController@submit_payment')->name('submit_payment');
+Route::get('submit_payment/{name}/{phone}/{date}/{persons}/{time}', 'HomeController@submit_payment')->name('submit_payment');
 
 
 Route::get('product/{id}', 'HomeController@product')->name('product');

@@ -40,11 +40,41 @@
           <br>
           </div>
           <div class="col-md-5">
-          <label for="appt-time"> @lang('site.time') </label>
+          <div class="form-group">
+          <label for="time"> @lang('site.time') </label>
           
-          <input id="appt-time" type="time"   onkeypress="return false;"  min="20:00" max="23:59" id="calendar" class="form-control"   name="time" required>
+          <select  class=" form-control" name="time" id="time" required>
+            <option  value="20:30">8:30 PM to 12:00 PM</option>
+           
+            
+          </select>
           
           <br>
+          
+          </div>
+          </div>
+          <div class="col-md-5 col-md-offset-1">
+          <div class="form-group">
+          <label for="persons"> @lang('site.person') </label>
+          
+          <select  class=" form-control" name="persons" id="persons" required>
+            <option  value="1">1</option>
+            <option  value="2">2</option>
+            <option  value="3">3</option>
+            <option  value="4">4</option>
+            <option  value="5">5</option>
+            <option  value="6">6</option>
+            <option  value="7">7</option>
+            <option  value="8">8</option>
+            <option  value="9">9</option>
+            <option  value="10">10</option>
+           
+            
+          </select>
+          
+          <br>
+          
+          </div>
           </div>
                         
 
@@ -74,7 +104,7 @@
 <h1>Satge </h1>
 </div>
 <div class="row fuselage1">
-<div class="screen"> </div>
+
 <div class="col-md-8">
 <ol class="cabin ">
 <li class="row row--1">
@@ -425,6 +455,7 @@
 <div class="row">
     
     <div class="col-md-12">
+    <div class="screen"> </div>
     <ol class="seats" type="B" >
         
             <li style="margin-left: -24%;" class="seat">
@@ -811,8 +842,23 @@
 </div>
 
 </div>
-@php $start='12:30 am'; $end='11:59 pm';  @endphp
-        @if( strtotime($start) <= strtotime( date('h:i a')) && strtotime( date('h:i a')) <=strtotime($end)  )
+                  <div class="col-md-12">
+                  <blockquote style="text-align: left;"  class="wp-block-quote">
+                  @foreach($main_tables as $key => $value)
+                  <div class="col-md-3">
+                  <dl>
+                    <dt>{{$value->name}} &nbsp; Class</dt>
+                    <dd>{{$value->persons}}</dd>
+                       
+                        
+                  </dl>
+                  </div>
+                  @endforeach
+                 
+                  
+                </blockquote>
+                   
+                    </div>
         
                      <div class="col-md-5 col-md-offset-1">
                         <label> @lang('site.name') </label>
@@ -831,13 +877,11 @@
                           
  
                             <input type="submit" style="background: #e3cd71;" class="btn btn-warning btn-lg btn-block" value="@lang('site.send')" >
-                     @else
                    
-                     <div class="col-md-12">
-                        <div class="date_slide_subtitle">@lang('site.time_booking')</div>
-                        </div>
+                   
+                  
                      
-                @endif    
+                
               </form>
 
 

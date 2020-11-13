@@ -14,13 +14,13 @@
             <li class="breadcrumb-item active">قائمة الطاولات</li>
           </ol>
         </div>
-        <div class="col-lg-6">
+        <!-- <div class="col-lg-6">
 
           <div class="bookmark pull-right">
                 <a href="{{ route('dashboard.tables.create') }}"  class="btn btn-primary"> اضافه جديد </a>
           </div>
 
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -37,6 +37,7 @@
                     <tr>
                       <th>#</th>
                       <th>الاسم </th>
+                      <th>الأشخاص </th>
                      
                       <th>السعر</th>
                      
@@ -50,19 +51,20 @@
                     <tr>
                     <td>{{ $key + 1}}</td>
                     <td>{{ $value->name }}</td>
+                    <td>{{ $value->persons }}</td>
                     <td>{{ $value->price }} SAR</td>
                    
                    
                     <td>
                         <div class="btn-group m-1">
                         <a href="{{ route('dashboard.tables.edit', $value->id)}}" type="button" class="btn btn-outline-primary waves-effect waves-light"> <i class="fa fa-edit"></i> </a>
-                            <form method="post" action="{{ route('dashboard.tables.destroy', $value->id ) }}">
+                            <!-- <form method="post" action="{{ route('dashboard.tables.destroy', $value->id ) }}">
 
                                @method('DELETE')
                                @csrf
 
                                <button type="submit" class="delete-btn btn btn-outline-danger waves-effect waves-light"> <i class="fa fa fa-trash-o"></i> </button>
-                            </form>
+                            </form> -->
 
                         </div>
                     </td>
@@ -73,7 +75,8 @@
                 <tfoot>
                     <tr>
                       <th>#</th>
-                      <th>العنوان</th>
+                      <th>الاسم</th>
+                      <th>الأشخاص</th>
                      
                       <th>السعر</th>
                      

@@ -116,7 +116,7 @@ html {
 }
 
 .screen {
-      left: 98%;
+      left: 102%;
     transform: rotate(90deg);
     position: relative;
     
@@ -145,15 +145,15 @@ html {
 }
 .screen2:before, .screen2:after {
  
-    right: 90px;
-    content: "Screen";
+   right: 196px;
+    content: "Enter";
     /* font-size: 24px; */
     line-height: 19px;
-    padding: 0px 98px;
+     padding: 0px 8px; 
     font-family: "Arial Narrow", Arial, sans-serif;
     display: block;
     position: absolute;
-    background: #1213137a;
+    background: #008000;
     color: white;
     font-weight: bold;
     /* top: -18%; */

@@ -35,10 +35,11 @@
                     <th>الهاتف</th>
                     <th>  رقم الطاوله </th>
                    
+                    <th>عدد الأشخاص</th>
                     <th>  تاريخ الحجز</th>
                     <th>  الوقت الحجز</th>
                     
-                    <th>التحكم</th>
+                    
                   </tr>
                 </thead>
                 <tbody>
@@ -52,7 +53,8 @@
                     $table=$value->table; 
                      $table=str_replace(",","  ","$table") @endphp
                     <td>{{$table}} </td>
-                    @php 
+                    <td>{{$value->num_persons}} </td>
+                   
                     <td>{{ $value->date }}</td>
                     <td>{{ $value->time }}</td>
                     <td>
@@ -77,10 +79,10 @@
                     <th>الاسم</th>
                     <th>الهاتف</th>
                     <th>  رقم الطاوله </th>
+                    <th>عدد الأشخاص</th>
                     <th>  تاريخ الحجز</th>
                     <th>  الوقت الحجز</th>
                    
-                    <th>التحكم</th>
                   </tr>
                 </tfoot>
               </table>
