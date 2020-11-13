@@ -39,7 +39,7 @@
                   <div class="form-group row">
                     <label for="input-5" class="col-sm-3 col-form-label">الاسم </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="name" disabled value="{{ $table->name }}"> 
+                      <input type="text" class="form-control" name="name" readonly value="{{ $table->name }}"> 
                     </div>
                   </div>
                   <div class="form-group row">
