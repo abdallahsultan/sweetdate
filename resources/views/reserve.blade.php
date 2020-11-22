@@ -53,29 +53,7 @@
           
           </div>
           </div>
-          <div class="col-md-5 col-md-offset-1">
-          <div class="form-group">
-          <label for="persons"> @lang('site.person') </label>
           
-          <select  class=" form-control" name="persons" id="persons" required>
-            <option  value="1">1</option>
-            <option  value="2">2</option>
-            <option  value="3">3</option>
-            <option  value="4">4</option>
-            <option  value="5">5</option>
-            <option  value="6">6</option>
-            <option  value="7">7</option>
-            <option  value="8">8</option>
-            <option  value="9">9</option>
-            <option  value="10">10</option>
-           
-            
-          </select>
-          
-          <br>
-          
-          </div>
-          </div>
                         
 
                         <div class="col-md-12">
@@ -848,7 +826,7 @@
                   <div class="col-md-3">
                   <dl>
                     <dt>{{$value->name}} &nbsp; Class</dt>
-                    <dd>{{$value->persons}}</dd>
+                    <dd>minimum {{$value->minperson}} persons to {{$value->maxperson}}</dd>
                        
                         
                   </dl>
@@ -859,6 +837,20 @@
                 </blockquote>
                    
                     </div>
+                    <div class="col-md-6 col-md-offset-1">
+          <div class="form-group">
+          <label for="persons"> @lang('site.person') </label>
+          
+          <select  class=" form-control" name="persons" id="persons" required>
+          <option id="deleteoption" >سوف يتم اظهار الأختيارات بعد اختيار الطاولة</option>
+           
+            
+          </select>
+          
+          <br>
+          
+          </div>
+          </div>
         
                      <div class="col-md-5 col-md-offset-1">
                         <label> @lang('site.name') </label>
@@ -976,12 +968,106 @@ menuItems.on("click", function(event) {
 </script>
 <script>
 $(document).ready(function(){
+  var main_tables="{{$main_tables}}"
+ 
+    $('input[type="checkbox"]').click(function(){
+        var table = this.id;
+        
+        
+        $('input[type="checkbox"]').prop("checked", false);
+
+         $("#"+table ).prop("checked", true);;
+        
+
+        $('#persons').find('option').remove().end();
+
+        if(table == 'vipplus' || table == 'Cbig1' || table == 'Cbig2' ||table == 'Fbig' ||table == 'DE'){
+            if(table == 'vipplus')
+            {
+            //  for(var t =1; 1 <= main_tables.length ; t++){
+            //    if(main_tables.name == "vip+"){
+            //      alert('asfsaf');
+            //    }
+            //  }
+            var persons=10;
+              var i=4;
+             
+               
+            }
+            if(table == 'Cbig1')
+            {
+              var persons=10;
+              var i=4;
+            }
+            if(table == 'Cbig2')
+            {
+              var persons=10;
+              var i=4;
+            }
+            if(table == 'Fbig')
+            {
+              var persons=10;
+              var i=4;
+            }
+            if(table == 'DE')
+            {
+              var persons=10;
+              var i=4;
+            }
+              for(i; i<= persons; i++)
+              {
+                $('#persons').append($('<option>').val(i).text(i))
+               
+              }
+            
+        }else{
+          
+         
+          // alert(table.charAt(0));
+          if(table.charAt(0) == 'v' )
+            {
+              var persons=6;
+              var i=4;
+            }
+          if(table.charAt(0) == 'D' )
+            {
+              var persons=4;
+              var i=1;
+            }
+          if(table.charAt(0) == 'E' )
+            {
+              var persons=2;
+              var i=1;
+            }
+          if(table.charAt(0) == 'F' )
+            {
+              var persons=6;
+              var i=2;
+            }
+          if(table.charAt(0) == 'A' || table.charAt(0) == 'B' || table.charAt(0) == 'C' )
+            {
+              var persons=4;
+              var i=2;
+            }
+          
+          for(i; i<= persons; i++)
+              {
+                $('#persons').append($('<option>').val(i).text(i))
+               
+              }
+        }
+       
+    });
+});
+$(document).ready(function(){
 
    $(".centered svg").hide();
     $(".date_jq").change(function(){
       $(".centered svg").hide();
         $('input[type="checkbox"]').off("click", false);
         $('input[type="checkbox"]').removeAttr('checked');
+
+
 
         let _url   = $('meta[name="url"]').attr('content');
 

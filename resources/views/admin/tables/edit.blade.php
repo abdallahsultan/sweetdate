@@ -49,9 +49,15 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="input-5" class="col-sm-3 col-form-label">الأشخاص  </label>
+                    <label for="input-5" class="col-sm-3 col-form-label">حد ادنى  الأشخاص  </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="persons" value="{{ $table->persons }}"> 
+                      <input type="text" class="form-control" name="minperson" value="{{ $table->minperson }}"> 
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input-5" class="col-sm-3 col-form-label">حد اقصى  الأشخاص  </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" name="maxperson" value="{{ $table->maxperson }}"> 
                     </div>
                   </div>
 

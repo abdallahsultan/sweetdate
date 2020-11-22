@@ -381,6 +381,7 @@ class HomeController extends Controller
                 }
                 
             }
+            $amount=$amount * $persons;
             if($amount == null){
                 $amount="149.00" ;
             }

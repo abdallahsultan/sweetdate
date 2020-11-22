@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tables extends Model
 {
-    protected $fillable = ['name', 'price','persons'];
+    protected $fillable = ['name', 'price','minperson','maxperson'];
     //
     public function resevation()
     {

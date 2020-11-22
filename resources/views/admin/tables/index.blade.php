@@ -37,7 +37,8 @@
                     <tr>
                       <th>#</th>
                       <th>الاسم </th>
-                      <th>الأشخاص </th>
+                      <th>الأشخاص  حد ادنى </th>
+                      <th>الأشخاص  حد اقصى </th>
                      
                       <th>السعر</th>
                      
@@ -51,7 +52,8 @@
                     <tr>
                     <td>{{ $key + 1}}</td>
                     <td>{{ $value->name }}</td>
-                    <td>{{ $value->persons }}</td>
+                    <td>{{ $value->minperson }}</td>
+                    <td>{{ $value->maxperson }}</td>
                     <td>{{ $value->price }} SAR</td>
                    
                    
@@ -76,7 +78,8 @@
                     <tr>
                       <th>#</th>
                       <th>الاسم</th>
-                      <th>الأشخاص</th>
+                      <th>الأشخاص  حد ادنى </th>
+                      <th>الأشخاص  حد اقصى </th>
                      
                       <th>السعر</th>
                      
