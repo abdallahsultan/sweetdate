@@ -550,6 +550,7 @@ public function setCookie(Request $request){
     $minutes = 60;
     $response = new Response('Set Cookie');
     $response->withCookie(cookie('name', 'MyValue', $minutes));
+    dd($response);
     return $response;
  }
  public function getCookie(Request $request){
