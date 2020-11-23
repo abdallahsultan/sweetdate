@@ -22,6 +22,7 @@ use App\Video;
 use App\Pcategory;
 use App\Tables;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
