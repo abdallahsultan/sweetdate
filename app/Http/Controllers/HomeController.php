@@ -540,7 +540,7 @@ return redirect('reserve');
 public function  testRehampost(Request $request){
    
    
-    return "success";
+    return $request;
 
 
 }
