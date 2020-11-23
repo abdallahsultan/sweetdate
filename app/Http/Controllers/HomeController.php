@@ -547,7 +547,7 @@ public function  testRehampost(Request $request){
 public function  testrehamget(Request $request){
 
      echo  "Welcom to get Page ";
-     dd($request);
+     
      return $request;
 }
 
