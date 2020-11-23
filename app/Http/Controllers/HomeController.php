@@ -550,7 +550,7 @@ public function setCookie(Request $request){
     file_put_contents("SAP.json",$request->all());
     
     
-    return 'true';
+    return $request->all();
  }
  public function getCookie(){
     $value =  file_get_contents('SAP.json');
