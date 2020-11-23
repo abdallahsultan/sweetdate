@@ -547,14 +547,16 @@ return redirect('reserve');
 
 // }
 public function setCookie(Request $request){
-    $minutes = 60;
+    $minutes = 450000;
     $response = new Response('Set Cookie');
-    $response->withCookie(cookie('SAP_data', serialize($request), $minutes));
+    $array_json=json_encode($request);
+    $response->withCookie(cookie('SAP_data', $array_json, $minutes));
+    
     dd($response);
     return $response;
  }
  public function getCookie(Request $request){
-    $value = $request->cookie('name');
+    $value = $request->cookie('SAP_data');
     dd ($value);
  }
 
