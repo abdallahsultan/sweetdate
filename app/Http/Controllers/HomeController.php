@@ -539,8 +539,8 @@ return redirect('reserve');
 
 public function  testRehampost(Request $request){
    
-   dd($request);
-    return $request;
+   
+    return "success";
 
 
 }
