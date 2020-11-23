@@ -554,7 +554,7 @@ public function setCookie(Request $request){
  }
  public function getCookie(Request $request){
     $value = $request->cookie('name');
-    echo $value;
+    dd ($value);
  }
 
 
