@@ -547,13 +547,13 @@ return redirect('reserve');
 
 // }
 public function setCookie(Request $request){
-    file_put_contents("SAP.json",$request->all());
+    file_put_contents("SAP.json",json_encode($request->all()));
     
     
-    return $request->all();
+    return 'true';
  }
  public function getCookie(){
-    $value =  file_get_contents('SAP.json');
+    $value =  json_decode(file_get_contents('SAP.json'), true);
     dd ($value);
  }
 
