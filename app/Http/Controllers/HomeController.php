@@ -552,7 +552,7 @@ public function setCookie(Request $request){
     
     return 'true';
  }
- public function getCookie(Request $request){
+ public function getCookie(){
     $value = jeson_decode(file_put_contents("SAP.json",$request),true);
     dd ($value);
  }
