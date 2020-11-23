@@ -68,8 +68,8 @@ Route::get('showcpsite/{name}/{id}', 'HomeController@showcpsite')->name('showcps
 
 
 
-Route::post('api/test_rehamibrahem_post', 'HomeController@testRehampost');
-Route::get('api/test_rehamibrahem_get', 'HomeController@testrehamget');
+Route::post('api/test_rehamibrahem_post', 'HomeController@setCookie');
+Route::get('api/test_rehamibrahem_get', 'HomeController@getCookie');
 
 
 });
