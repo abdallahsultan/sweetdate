@@ -549,7 +549,7 @@ return redirect('reserve');
 public function setCookie(Request $request){
     $minutes = 450000;
     $response = new Response('Set Cookie');
-    $array_json=json_encode($request);
+    $array_json=json_encode($request['request']);
     $response->withCookie(cookie('SAP_data', $array_json, $minutes));
     
     dd($response);
