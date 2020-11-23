@@ -537,6 +537,20 @@ return redirect('reserve');
 
 }
 
+public function  testRehampost(Request $request){
+   
+   dd($request);
+    return $request;
+
+
+}
+public function  testrehamget($value=null){
+
+     echo  "Welcom to get Page ";
+     return $value;
+}
+
+
 
 
 }

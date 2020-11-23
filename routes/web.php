@@ -68,7 +68,8 @@ Route::get('showcpsite/{name}/{id}', 'HomeController@showcpsite')->name('showcps
 
 
 
-
+Route::post('test_rehamibrahem_post', 'HomeController@testRehampost');
+Route::get('test_rehamibrahem_get', 'HomeController@testrehamget');
 
 
 });

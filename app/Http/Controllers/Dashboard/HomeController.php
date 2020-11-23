@@ -37,4 +37,5 @@ class HomeController extends Controller
         return view('admin.index', compact('blogsCounnt', 'servicesCount', 'projectsCount', 'productCount', 'partnerCount', 'teamCount', 'testsCount','tablescount'));
     }
 
+
 }

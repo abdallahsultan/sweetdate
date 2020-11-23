@@ -66,6 +66,7 @@ Route::resource('reservation', 'ReservationController');
 Route::resource('tables', 'TablesController');
 
 
+
 });
 
 });
