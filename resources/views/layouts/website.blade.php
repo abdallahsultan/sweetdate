@@ -1535,7 +1535,7 @@
                         <li><a href="{{ route('contact')}}">@lang('site.contact')</a></li>
                     </ul>
                     <div class="date_main_menu_content_menu_copy">
-                        <p>© {{ $setting->name }} 2020</p>
+                        <p>Copyright By <a target="_blank" href="https://www.facebook.com/abdullah.ib.sultan68">Developer</a>  © {{ $setting->name }}  2020</p>
 
                         <div class="date_footer_social">
                             <a href="{{ $setting->facebook }}" target="_blank" ><i class="ti ti-facebook date_icon_box"></i></a>
@@ -1594,7 +1594,7 @@
                          </div>
                     </div>
 
-                    <p>© {{ $setting->name }} 2020</p>
+                    <p> Copyright By <a target="_blank" href="https://www.facebook.com/abdullah.ib.sultan68">Developer</a> © {{ $setting->name }} 2020</p>
 
                 </div>
 				<div class="col-md-4">
